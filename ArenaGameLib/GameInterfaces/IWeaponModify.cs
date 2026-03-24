@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace ArenaGameLib.GameInterfaces
 {
-	public interface IWeaponImprove
+	public interface IWeaponModify
 	{
 		Weapon ImproveWeaponDamage(int modifier);
+		Weapon DegradeWeaponDamage(int modifier);
 	}
 }

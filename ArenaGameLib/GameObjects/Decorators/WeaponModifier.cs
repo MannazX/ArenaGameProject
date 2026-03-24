@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ArenaGameLib.GameObjects.Decorators
 {
-	public class WeaponModifier : IWeaponImprove
+	public class WeaponModifier : IWeaponModify
 	{
 		private readonly IWeapon _weapon;
 
@@ -16,11 +16,20 @@ namespace ArenaGameLib.GameObjects.Decorators
 			_weapon = weapon;
 		}
 
+		public Weapon DegradeWeaponDamage(int modifier)
+		{
+			throw new NotImplementedException();
+		}
+
 		public Weapon ImproveWeaponDamage(int modifier)
 		{
 			if (modifier > 0)
 			{
 				_weapon.Damage *= modifier;
+				return (Weapon)_weapon;
+			}
+			else if (modifier == 0)
+			{
 				return (Weapon)_weapon;
 			}
 			else

@@ -2,8 +2,10 @@
 using ArenaGameLib.GameObjects.AbstractClasses;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ArenaGameLib.GameObjects
@@ -19,17 +21,29 @@ namespace ArenaGameLib.GameObjects
 			Name = name;
 			ReduceDamage = reduceDmg;
 			ArmourDurability = armourDur;
-			Claimed = false;
+			LocationX = locX;
+			LocationY = locY;
+		}
+
+		public void SetClaim()
+		{
+			if (!Claimed)
+			{
+				Claimed = true;
+			}
+			else
+			{
+				Claimed = false;
+			}
+		}
+
+		public void SetLocation()
+		{
 			if (Claimed)
 			{
 				LocationX = null;
 				LocationY = null;
 			}
-			else
-			{
-				LocationX = locX;
-				LocationY = locY;
-			}
-		}
+		} 
 	}
 }

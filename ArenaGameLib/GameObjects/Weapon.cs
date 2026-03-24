@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ArenaGameLib.GameObjects
@@ -23,15 +24,26 @@ namespace ArenaGameLib.GameObjects
 			Damage = damage;
 			Range = range;
 			Claimed = false;
+		}
+
+		public void SetClaim()
+		{
+			if (!Claimed)
+			{
+				Claimed = true;
+			}
+			else
+			{
+				Claimed = false;
+			}
+		}
+
+		public void SetLocation()
+		{
 			if (Claimed)
 			{
 				LocationX = null;
 				LocationY = null;
-			}
-			else
-			{
-				LocationX = locX;
-				LocationY = locY;
 			}
 		}
 	}
