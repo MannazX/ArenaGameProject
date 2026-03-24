@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ArenaGameLib.GameObjects
+namespace ArenaGameLib.GameObjects.AbstractClasses
 {
 	public abstract class ArenaObject : IArenaObject
 	{

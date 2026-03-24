@@ -1,0 +1,46 @@
+﻿using ArenaGameLib.GameInterfaces;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ArenaGameLib.GameObjects.AbstractClasses
+{
+	public abstract class CreatureTemplate : ICreatureTemplate
+	{
+		public string Name { get; set; }
+		public int Health { get; set; }
+		public int UnarmedDamage { get; set; }
+		public List<IArenaObject> Inventory { get; set; }
+		public int InventoryCapacity { get; set; }
+
+		public int LocationX { get; set; }
+		public int LocationY { get; set; }
+
+		protected CreatureTemplate(string name, int health, int unarmedDmg, List<IArenaObject> inventory, int inventoryCapacity, int locX, int locY)
+		{
+			Health = health;
+			UnarmedDamage = unarmedDmg;
+		}
+
+		public virtual int Attack(int targetDist)
+		{
+			if (targetDist > 1)
+			{
+				return UnarmedDamage;
+			}
+			else
+			{
+				return 0;
+			}
+		}
+
+		public abstract void Loot(ArenaObject item);
+
+		public virtual void TakeDamage(int damage)
+		{
+			Health -= damage;
+		}
+	}
+}

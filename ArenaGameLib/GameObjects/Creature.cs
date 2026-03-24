@@ -1,4 +1,6 @@
 ﻿using ArenaGameLib.GameInterfaces;
+using ArenaGameLib.GameObjects.AbstractClasses;
+using ArenaGameLib.GameObjects.Composite;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
@@ -8,37 +10,32 @@ using System.Threading.Tasks;
 
 namespace ArenaGameLib.GameObjects
 {
-	public class Creature : ICreature
+	public class Creature : CreatureTemplate, ICreatureTemplate
 	{
-		public string Name { get; set; }
-		public int Health { get; set; }
-		public int UnarmedDamage { get; set; }
-		public List<IArenaObject> Inventory { get; set; }
-		public int InventoryCapacity { get; set; }
-		public List<Weapon> Weapons { get; set; }
-		public List<Armour> ArmourPieces { get; set; }
-		public int LocationX { get; set; }
-		public int LocationY { get; set; }
+		
+		public WeaponCollection WeaponCollection { get; set; }
+		public ArmourCollection ArmourCollection { get; set; }
+		
 
-		public Creature(string name, int health, int UnarmedDmg, List<IArenaObject> inventory, int inventoryCapacity, List<Weapon> weapons, List<Armour> armour, int locX, int locY)
+		public Creature(string name, int health, int unarmedDmg, List<IArenaObject> inventory, int inventoryCapacity, int locX, int locY) : base(name, health, unarmedDmg, inventory, armour, locX, locY
 		{
 			Name = name;
 			Health = health;
-			UnarmedDamage = UnarmedDmg;
+			UnarmedDamage = unarmedDmg;
 			Inventory = inventory;
 			InventoryCapacity = inventoryCapacity;
-			Weapons = weapons;
-			ArmourPieces = armour;
+			WeaponCollection = new WeaponCollection(200);
+			ArmourCollection = new ArmourCollection(200);
 			LocationX = locX;
 			LocationY = locY;
 		}
 
-		public int Attack(int targetDist)
+		public override int Attack(int targetDist)
 		{
 			int totalDmg = 0;
-			if (Weapons.Count() > 0)
+			if (WeaponCollection.Weapons.Count() > 0)
 			{
-				foreach (Weapon wep in Weapons)
+				foreach (Weapon wep in WeaponCollection.Weapons)
 				{
 					if (wep.Range >= targetDist)
 					{
@@ -48,22 +45,22 @@ namespace ArenaGameLib.GameObjects
 			}
 			else
 			{
-				totalDmg = UnarmedDamage;
+				totalDmg = base.Attack(targetDist);
 			}
 			return totalDmg;
 		}
 
-		public void Loot(ArenaObject item)
+		public override void Loot(ArenaObject item)
 		{
 			if ((LocationX - item.LocationX <= 1 || LocationY - item.LocationY <= 1) && Inventory.Sum(x => x.Weight) + item.Weight < InventoryCapacity)
 			{
 				if (item.GetType() == typeof(Weapon))
 				{
-					Weapons.Add((Weapon)item);
+					WeaponCollection.Weapons.Add((Weapon)item);
 				}
 				else if (item.GetType() == typeof(Armour))
 				{
-					ArmourPieces.Add((Armour)item);
+					ArmourCollection.ArmourSet.Add((Armour)item);
 				}
 				else
 				{
@@ -72,12 +69,12 @@ namespace ArenaGameLib.GameObjects
 			}
 		}
 
-		public void TakeDamage(int damage)
+		public override void TakeDamage(int damage)
 		{
-			int absorbed = 0;
-			if (ArmourPieces.Count() > 0)
+			if (ArmourCollection.ArmourSet.Count() > 0)
 			{
-				foreach (Armour armour in ArmourPieces)
+				int absorbed = 0;
+				foreach (Armour armour in ArmourCollection.ArmourSet)
 				{
 					if (armour.ArmourDurability > 0)
 					{
@@ -85,8 +82,12 @@ namespace ArenaGameLib.GameObjects
 						armour.ArmourDurability -= 1;
 					}
 				}
+				Health -= damage - absorbed;
 			}
-			Health -= damage - absorbed;
+			else
+			{
+				base.TakeDamage(damage);
+			}
 		}
 	}
 }

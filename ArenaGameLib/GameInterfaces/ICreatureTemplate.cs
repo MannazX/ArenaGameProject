@@ -1,4 +1,4 @@
-﻿using ArenaGameLib.GameObjects;
+﻿using ArenaGameLib.GameObjects.AbstractClasses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,13 +7,11 @@ using System.Threading.Tasks;
 
 namespace ArenaGameLib.GameInterfaces
 {
-	public interface ICreature
+	public interface ICreatureTemplate
 	{
 		public string Name { get; set; }
 		public int Health { get; set; }
 		public List<IArenaObject> Inventory { get; set; }
-		public List<Weapon> Weapons { get; set; }
-		public List<Armour> ArmourPieces { get; set; }
 		public int LocationX { get; set; }
 		public int LocationY { get; set; }
 		public int Attack(int targetDist);
