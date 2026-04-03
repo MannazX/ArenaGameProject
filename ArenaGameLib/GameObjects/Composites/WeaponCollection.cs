@@ -1,4 +1,5 @@
 ﻿using ArenaGameLib.GameInterfaces;
+using ArenaGameLib.GameInterfaces.Composites;
 using System;
 using System.Collections.Generic;
 using System.Linq;

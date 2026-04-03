@@ -1,5 +1,5 @@
 ﻿using ArenaGameLib.GameInterfaces;
-using ArenaGameLib.GameObjects.AbstractClasses;
+using ArenaGameLib.GameObjects.Templates;
 using System;
 using System.Collections.Generic;
 using System.Data;

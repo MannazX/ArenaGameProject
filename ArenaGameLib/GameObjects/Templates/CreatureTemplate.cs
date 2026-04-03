@@ -1,4 +1,6 @@
-﻿using ArenaGameLib.GameInterfaces;
+﻿using ArenaGameLib.GameInterfaces.Strategies;
+using ArenaGameLib.GameInterfaces.Templates;
+using ArenaGameLib.GameObjects.Templates;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +16,6 @@ namespace ArenaGameLib.GameObjects.AbstractClasses
 		public int UnarmedDamage { get; set; }
 		public List<IArenaObject> Inventory { get; set; }
 		public int InventoryCapacity { get; set; }
-
 		public int LocationX { get; set; }
 		public int LocationY { get; set; }
 
@@ -24,23 +25,10 @@ namespace ArenaGameLib.GameObjects.AbstractClasses
 			UnarmedDamage = unarmedDmg;
 		}
 
-		public virtual int Attack(int targetDist)
-		{
-			if (targetDist > 1)
-			{
-				return UnarmedDamage;
-			}
-			else
-			{
-				return 0;
-			}
-		}
+		public abstract int Attack(int targetDist, IAttackStrategy attack);
 
 		public abstract void Loot(ArenaObject item);
 
-		public virtual void TakeDamage(int damage)
-		{
-			Health -= damage;
-		}
+		public abstract void TakeDamage(int damage, IAbsorbDamageStrategy reducedDamage);
 	}
 }

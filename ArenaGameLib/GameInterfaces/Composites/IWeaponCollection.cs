@@ -5,14 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ArenaGameLib.GameInterfaces
+namespace ArenaGameLib.GameInterfaces.Composites
 {
-	public interface IArmourCollection
+	public interface IWeaponCollection
 	{
-		List<IArmour> ArmourSet { get; set; }
+		List<IWeapon> Weapons { get; set; }
 
-		void Add(IArmour item);
-		void Remove(IArmour item);
+		void Add(IWeapon item);
+		void Remove(IWeapon item);
 		int TotalWeight();
 	}
 }

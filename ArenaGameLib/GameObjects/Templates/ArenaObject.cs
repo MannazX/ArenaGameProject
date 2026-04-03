@@ -1,11 +1,11 @@
-﻿using ArenaGameLib.GameInterfaces;
+﻿using ArenaGameLib.GameInterfaces.Templates;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ArenaGameLib.GameObjects.AbstractClasses
+namespace ArenaGameLib.GameObjects.Templates
 {
 	public abstract class ArenaObject : IArenaObject
 	{

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ArenaGameLib.GameInterfaces
+namespace ArenaGameLib.GameInterfaces.Templates
 {
 	public interface IArenaObject
 	{

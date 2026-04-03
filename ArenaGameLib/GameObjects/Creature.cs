@@ -1,6 +1,8 @@
-﻿using ArenaGameLib.GameInterfaces;
+﻿using ArenaGameLib.GameInterfaces.Strategies;
+using ArenaGameLib.GameInterfaces.Templates;
 using ArenaGameLib.GameObjects.AbstractClasses;
 using ArenaGameLib.GameObjects.Composite;
+using ArenaGameLib.GameObjects.Templates;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
@@ -13,7 +15,7 @@ namespace ArenaGameLib.GameObjects
 	/// <summary>
 	/// Class representing Creatures battling in the arena, inheriting from CreatureTemplate Class
 	/// </summary>
-	public class Creature : CreatureTemplate, ICreatureTemplate
+	public class Creature : CreatureTemplate
 	{
 		public WeaponCollection WeaponCollection { get; set; }
 		public ArmourCollection ArmourCollection { get; set; }
@@ -46,24 +48,18 @@ namespace ArenaGameLib.GameObjects
 		/// </summary>
 		/// <param name="targetDist">Type: int - Distance to creatures opponent.</param>
 		/// <returns></returns>
-		public override int Attack(int targetDist)
+		public override int Attack(int targetDist, IAttackStrategy attack)
 		{
-			int totalDmg = 0;
+			int dmgOutput;
 			if (WeaponCollection.Weapons.Count() > 0)
 			{
-				foreach (Weapon wep in WeaponCollection.Weapons)
-				{
-					if (wep.Range >= targetDist)
-					{
-						totalDmg += wep.Damage;
-					}
-				}
+				dmgOutput = attack.ArmedAttack(targetDist, WeaponCollection);
 			}
 			else
 			{
-				totalDmg = base.Attack(targetDist);
+				dmgOutput = attack.UnarmedAttack(targetDist, UnarmedDamage);
 			}
-			return totalDmg;
+			return dmgOutput;
 		}
 
 		/// <summary>
@@ -93,24 +89,15 @@ namespace ArenaGameLib.GameObjects
 		/// Method for the creature to take damage from an opponent's attack, the armour rating of its ArmourCollection will reduce the amount of health the creature will take.
 		/// </summary>
 		/// <param name="damage">Type: int - The damage of the incoming attack from the opponent.</param>
-		public override void TakeDamage(int damage)
+		public override void TakeDamage(int damage, IAbsorbDamageStrategy reducedDamage)
 		{
 			if (ArmourCollection.ArmourSet.Count() > 0)
 			{
-				int absorbed = 0;
-				foreach (Armour armour in ArmourCollection.ArmourSet)
-				{
-					if (armour.ArmourDurability > 0)
-					{
-						absorbed += armour.ReduceDamage;
-						armour.ArmourDurability -= 1;
-					}
-				}
-				Health -= damage - absorbed;
+				Health = reducedDamage.ReducedDamage(damage, ArmourCollection, Health);
 			}
 			else
 			{
-				base.TakeDamage(damage);
+				Health -= damage;
 			}
 		}
 	}

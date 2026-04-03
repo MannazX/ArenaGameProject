@@ -1,5 +1,5 @@
 ﻿using ArenaGameLib.GameInterfaces;
-using ArenaGameLib.GameObjects.AbstractClasses;
+using ArenaGameLib.GameObjects.Templates;
 
 namespace ArenaGameLib.GameObjects
 {

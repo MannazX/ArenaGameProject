@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ArenaGameLib.GameInterfaces
+namespace ArenaGameLib.GameInterfaces.Decorators
 {
 	public interface IArmourModify
 	{
