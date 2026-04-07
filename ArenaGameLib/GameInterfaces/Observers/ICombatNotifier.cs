@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ArenaGameLib.GameObjects;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,8 @@ namespace ArenaGameLib.GameInterfaces.Observers
 {
 	public interface ICombatNotifier
 	{
-		void NotifyHit(int damage);
+		Creature Creature { get; set; }
+		void NotifyHit(int damage, int absorbed);
 		void NotifyDefeated();
 	}
 }

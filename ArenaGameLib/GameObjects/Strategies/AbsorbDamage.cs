@@ -10,7 +10,7 @@ namespace ArenaGameLib.GameObjects.Strategies
 {
 	public class AbsorbDamage : IAbsorbDamageStrategy
 	{
-		public int ReducedDamage(int damage, ArmourCollection armourSet, int health)
+		public int AbsorbedDamage(int damage, ArmourCollection armourSet)
 		{
 			int absorbed = 0;
 			foreach (Armour armour in armourSet.ArmourSet)
@@ -21,8 +21,7 @@ namespace ArenaGameLib.GameObjects.Strategies
 					armour.ArmourDurability -= 1;
 				}
 			}
-			health -= damage - absorbed;
-			return health;
+			return absorbed;
 		}
 	}
 }

@@ -9,6 +9,6 @@ namespace ArenaGameLib.GameInterfaces.Strategies
 {
 	public interface IAbsorbDamageStrategy
 	{
-		int ReducedDamage(int damage, ArmourCollection armourSet, int health);
+		int AbsorbedDamage(int damage, ArmourCollection armourSet);
 	}
 }

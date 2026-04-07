@@ -11,31 +11,27 @@ namespace ArenaGameLib.GameObjects.Observers
 	public class CombatNotifier : ICombatNotifier
 	{
 		private string message;
-		private Creature creature;
-		public Creature Creature
-		{
-			get { return creature; }
-			set { creature = value; }
-		}
+
+		public Creature Creature { get; set; }
 
 		public CombatNotifier(Creature creature)
 		{
-			this.creature = creature;
+			Creature = creature;
 		}
 		public void NotifyDefeated()
 		{
-			if (this.creature.Health <= 0)
+			if (Creature.Health <= 0)
 			{
-				this.message = "Your creature's is defeated";
+				this.message = "Your creature is defeated";
 			}
 			Console.WriteLine(this.message);
 		}
 
-		public void NotifyHit(int damage)
+		public void NotifyHit(int damage, int absorbed)
 		{
 			if (damage > 0)
 			{
-				this.message = $"The incoming attack dealt {damage} to your creature";
+				this.message = $"The incoming attack dealt {damage} to your creature. Your creature absorbed {absorbed} damage.";
 			}
 			else
 			{
