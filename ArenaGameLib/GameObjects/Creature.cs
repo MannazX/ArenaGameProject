@@ -32,15 +32,19 @@ namespace ArenaGameLib.GameObjects
 		/// <param name="inventoryCapacity"></param>
 		/// <param name="locX"></param>
 		/// <param name="locY"></param>
-		public Creature(string name, int health, int unarmedDmg, List<IArenaObject> inventory, int inventoryCapacity, int locX, int locY) : base(name, health, unarmedDmg, inventory, armour, locX, locY
+		public Creature(string name, int health, int unarmedDmg, List<IArenaObject> inventory, int inventoryCapacity, int weaponCapacity, int armourCapicity, int locX, int locY) : base(name, health, unarmedDmg, inventory, inventoryCapacity, locX, locY)
 		{
+			if (weaponCapacity + armourCapicity > inventoryCapacity)
+			{
+				throw new ArgumentOutOfRangeException("The weapons and armour capacity exceeds the inventory capacity");
+			}
 			Name = name;
 			Health = health;
 			UnarmedDamage = unarmedDmg;
 			Inventory = inventory;
 			InventoryCapacity = inventoryCapacity;
-			WeaponCollection = new WeaponCollection(200);
-			ArmourCollection = new ArmourCollection(200);
+			WeaponCollection = new WeaponCollection(weaponCapacity);
+			ArmourCollection = new ArmourCollection(armourCapicity);
 			CombatNotifications = new List<ICombatNotifier>();
 			LocationX = locX;
 			LocationY = locY;
@@ -82,10 +86,7 @@ namespace ArenaGameLib.GameObjects
 				{
 					ArmourCollection.ArmourSet.Add((Armour)item);
 				}
-				else
-				{
-					Inventory.Add(item);
-				}
+				Inventory.Add(item);
 			}
 		}
 
