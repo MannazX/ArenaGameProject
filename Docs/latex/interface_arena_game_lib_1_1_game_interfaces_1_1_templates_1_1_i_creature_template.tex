@@ -1,0 +1,75 @@
+\doxysection{Arena\+Game\+Lib.\+Game\+Interfaces.\+Templates.\+ICreature\+Template Interface Reference}
+\hypertarget{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template}{}\label{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template}\index{ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate@{ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate}}
+Inheritance diagram for Arena\+Game\+Lib.\+Game\+Interfaces.\+Templates.\+ICreature\+Template:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template_a7a086b940af29c4666ae2d1fedb5e0ad}{Attack}} (int target\+Dist, \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_strategies_1_1_i_attack_strategy}{IAttack\+Strategy}} attack)
+\item 
+void \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template_ad051e0623d0acd73d6ab165f9f1eeb66}{Take\+Damage}} (int damage, \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_strategies_1_1_i_absorb_damage_strategy}{IAbsorb\+Damage\+Strategy}} reduced\+Damage)
+\item 
+void \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template_a8c11de7ca0e2b295cb95f5855914995c}{Loot}} (\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object}{Arena\+Object}} item)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template_a7dd7356b74089289f7e19627031f4e94}\label{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template_a7dd7356b74089289f7e19627031f4e94} 
+string {\bfseries Name}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+\Hypertarget{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template_a52fab32371f273b54c67c7cbebc25f09}\label{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template_a52fab32371f273b54c67c7cbebc25f09} 
+int {\bfseries Health}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+\Hypertarget{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template_a83588aae919ac5a1eaa4fdf5d47285a8}\label{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template_a83588aae919ac5a1eaa4fdf5d47285a8} 
+List$<$ \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_arena_object}{IArena\+Object}} $>$ {\bfseries Inventory}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+\Hypertarget{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template_afae87a7be62ac2e9f42de69cec61472d}\label{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template_afae87a7be62ac2e9f42de69cec61472d} 
+int {\bfseries LocationX}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+\Hypertarget{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template_a0401f3b2d627ed1d419c39fa46d400e9}\label{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template_a0401f3b2d627ed1d419c39fa46d400e9} 
+int {\bfseries LocationY}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template_a7a086b940af29c4666ae2d1fedb5e0ad}\index{ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate@{ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate}!Attack@{Attack}}
+\index{Attack@{Attack}!ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate@{ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate}}
+\doxysubsubsection{\texorpdfstring{Attack()}{Attack()}}
+{\footnotesize\ttfamily \label{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template_a7a086b940af29c4666ae2d1fedb5e0ad} 
+int Arena\+Game\+Lib.\+Game\+Interfaces.\+Templates.\+ICreature\+Template.\+Attack (\begin{DoxyParamCaption}\item[{int}]{target\+Dist}{, }\item[{\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_strategies_1_1_i_attack_strategy}{IAttack\+Strategy}}}]{attack}{}\end{DoxyParamCaption})}
+
+
+
+Implemented in \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_creature_a892cd360344668af1fb6f63e4c8dd892}{Arena\+Game\+Lib.\+Game\+Objects.\+Creature}}.
+
+\Hypertarget{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template_a8c11de7ca0e2b295cb95f5855914995c}\index{ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate@{ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate}!Loot@{Loot}}
+\index{Loot@{Loot}!ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate@{ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate}}
+\doxysubsubsection{\texorpdfstring{Loot()}{Loot()}}
+{\footnotesize\ttfamily \label{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template_a8c11de7ca0e2b295cb95f5855914995c} 
+void Arena\+Game\+Lib.\+Game\+Interfaces.\+Templates.\+ICreature\+Template.\+Loot (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object}{Arena\+Object}}}]{item}{}\end{DoxyParamCaption})}
+
+
+
+Implemented in \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_creature_abbe4e376ed26017fdc337b79b307b457}{Arena\+Game\+Lib.\+Game\+Objects.\+Creature}}.
+
+\Hypertarget{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template_ad051e0623d0acd73d6ab165f9f1eeb66}\index{ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate@{ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate}!TakeDamage@{TakeDamage}}
+\index{TakeDamage@{TakeDamage}!ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate@{ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate}}
+\doxysubsubsection{\texorpdfstring{TakeDamage()}{TakeDamage()}}
+{\footnotesize\ttfamily \label{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template_ad051e0623d0acd73d6ab165f9f1eeb66} 
+void Arena\+Game\+Lib.\+Game\+Interfaces.\+Templates.\+ICreature\+Template.\+Take\+Damage (\begin{DoxyParamCaption}\item[{int}]{damage}{, }\item[{\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_strategies_1_1_i_absorb_damage_strategy}{IAbsorb\+Damage\+Strategy}}}]{reduced\+Damage}{}\end{DoxyParamCaption})}
+
+
+
+Implemented in \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_creature_a6696e46549278a20025b09dfa9973c70}{Arena\+Game\+Lib.\+Game\+Objects.\+Creature}}.
+
+
+
+The documentation for this interface was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+C:\+/\+\+Users/\+magnu/\+\+One\+Drive/\+\+Skrivebord/\+\+Datamatiker/\+4-\/\+Sem/\+\+Advanced-\/\+Software-\/\+Construction/\+\+Arena\+Game\+Lib/\+\+Arena\+Game\+Lib/\+\+Game\+Interfaces/\+\+Templates/\+ICreature\+Template.\+cs\end{DoxyCompactItemize}

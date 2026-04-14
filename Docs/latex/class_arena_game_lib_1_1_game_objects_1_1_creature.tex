@@ -1,0 +1,233 @@
+\doxysection{Arena\+Game\+Lib.\+Game\+Objects.\+Creature Class Reference}
+\hypertarget{class_arena_game_lib_1_1_game_objects_1_1_creature}{}\label{class_arena_game_lib_1_1_game_objects_1_1_creature}\index{ArenaGameLib.GameObjects.Creature@{ArenaGameLib.GameObjects.Creature}}
+
+
+Class representing Creatures battling in the arena, inheriting from \doxylink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template}{Creature\+Template} Class.  
+
+
+Inheritance diagram for Arena\+Game\+Lib.\+Game\+Objects.\+Creature:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_arena_game_lib_1_1_game_objects_1_1_creature}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_creature_aa0b626c544d1c4a2cb47166376b0c902}{Creature}} (string name, int health, int unarmed\+Dmg, List$<$ \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_arena_object}{IArena\+Object}} $>$ inventory, int inventory\+Capacity, int weapon\+Capacity, int armour\+Capicity, int locX, int locY)
+\begin{DoxyCompactList}\small\item\em Constructor for making initial instance of the creature. \end{DoxyCompactList}\item 
+override int \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_creature_a892cd360344668af1fb6f63e4c8dd892}{Attack}} (int target\+Dist, \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_strategies_1_1_i_attack_strategy}{IAttack\+Strategy}} attack)
+\begin{DoxyCompactList}\small\item\em Method for a creatures attack, that is predicated on the distance that a creature has to its opponent. \end{DoxyCompactList}\item 
+override void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_creature_abbe4e376ed26017fdc337b79b307b457}{Loot}} (\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object}{Arena\+Object}} item)
+\begin{DoxyCompactList}\small\item\em Method for the creatures action of looting an item and adding it to \doxylink{class_arena_game_lib_1_1_game_objects_1_1_armour}{Armour} Collection, \doxylink{class_arena_game_lib_1_1_game_objects_1_1_weapon}{Weapon} Collection or Inventory. The Method is predicated on the creature being in reaching distance (1 Square) of item. \end{DoxyCompactList}\item 
+override void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_creature_a6696e46549278a20025b09dfa9973c70}{Take\+Damage}} (int damage, \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_strategies_1_1_i_absorb_damage_strategy}{IAbsorb\+Damage\+Strategy}} reduced\+Damage)
+\begin{DoxyCompactList}\small\item\em Method for the creature to take damage from an opponent\textquotesingle{}s attack, the armour rating of its \doxylink{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection}{Armour\+Collection} will reduce the amount of health the creature will take. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_creature_ab22845d1ab61b27efc40606004a9a517}{Add\+Observer}} (\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_observers_1_1_i_combat_notifier}{ICombat\+Notifier}} notifier)
+\begin{DoxyCompactList}\small\item\em Method for adding a new observer to notify this \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} object. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_creature_a3ad64dc91df52422907e44e3d92947dc}{Remove\+Observer}} (\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_observers_1_1_i_combat_notifier}{ICombat\+Notifier}} notifier)
+\begin{DoxyCompactList}\small\item\em Metod for removing an observer in on this \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} object. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_creature_a08ea70dbd2cdbc8326d20111ab58b9a9}{Notify\+All\+Hits}} (int damage, int absorbed)
+\begin{DoxyCompactList}\small\item\em Method for executing Hit notification from all observers. \end{DoxyCompactList}\item 
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_creature_a01bb106f9dd8f4312358253e400dfbcd}\label{class_arena_game_lib_1_1_game_objects_1_1_creature_a01bb106f9dd8f4312358253e400dfbcd} 
+void {\bfseries Notify\+All\+Defeated} ()
+\begin{DoxyCompactList}\small\item\em Method for executing Defeat notification from all observers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template}{Arena\+Game\+Lib.\+Game\+Objects.\+Abstract\+Classes.\+Creature\+Template}}}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_aa58433136f0bf98ebdd4852986f01286}{Attack}} (int target\+Dist, \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_strategies_1_1_i_attack_strategy}{IAttack\+Strategy}} attack)
+\item 
+void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_ad7d288e8d5472f9a3a04c2f2a580a064}{Loot}} (\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object}{Arena\+Object}} item)
+\item 
+void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a0a4afd59e62474a569c271e1962fc519}{Take\+Damage}} (int damage, \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_strategies_1_1_i_absorb_damage_strategy}{IAbsorb\+Damage\+Strategy}} reduced\+Damage)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_creature_ab5a26b0b8593aa5ea5d7def548645114}\label{class_arena_game_lib_1_1_game_objects_1_1_creature_ab5a26b0b8593aa5ea5d7def548645114} 
+Weapon\+Collection {\bfseries Weapon\+Collection}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_creature_a8023a3560e1c66664ce2bfb9dfab1a10}\label{class_arena_game_lib_1_1_game_objects_1_1_creature_a8023a3560e1c66664ce2bfb9dfab1a10} 
+\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection}{Armour\+Collection}} {\bfseries Armour\+Collection}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_creature_a4c6a59c12aa71dc514530491ac6eaaf1}\label{class_arena_game_lib_1_1_game_objects_1_1_creature_a4c6a59c12aa71dc514530491ac6eaaf1} 
+List$<$ \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_observers_1_1_i_combat_notifier}{ICombat\+Notifier}} $>$ {\bfseries Combat\+Notifications}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template}{Arena\+Game\+Lib.\+Game\+Objects.\+Abstract\+Classes.\+Creature\+Template}}}
+\begin{DoxyCompactItemize}
+\item 
+string \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a59ee8f2a651ab6d8c1bffd1cab5acebc}{Name}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+int \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a892c10dc9433a6137bbbcd1b07d81652}{Health}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+int {\bfseries Unarmed\+Damage}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+List$<$ \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_arena_object}{IArena\+Object}} $>$ \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_ae98146b0b128d0448d5ede5a6486ce8e}{Inventory}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+int {\bfseries Inventory\+Capacity}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+int \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_ab06661c4a27d2aa297ee6e76ab3075b8}{LocationX}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+int \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_afd9f1a4d2521c4eed4423d3aad25e7ce}{LocationY}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template}{Arena\+Game\+Lib.\+Game\+Objects.\+Abstract\+Classes.\+Creature\+Template}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Creature\+Template} (string name, int health, int unarmed\+Dmg, List$<$ \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_arena_object}{IArena\+Object}} $>$ inventory, int inventory\+Capacity, int locX, int locY)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing Creatures battling in the arena, inheriting from \doxylink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template}{Creature\+Template} Class. 
+
+\label{doc-constructors}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_creature_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_creature_aa0b626c544d1c4a2cb47166376b0c902}\index{ArenaGameLib.GameObjects.Creature@{ArenaGameLib.GameObjects.Creature}!Creature@{Creature}}
+\index{Creature@{Creature}!ArenaGameLib.GameObjects.Creature@{ArenaGameLib.GameObjects.Creature}}
+\doxysubsubsection{\texorpdfstring{Creature()}{Creature()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_creature_aa0b626c544d1c4a2cb47166376b0c902} 
+Arena\+Game\+Lib.\+Game\+Objects.\+Creature.\+Creature (\begin{DoxyParamCaption}\item[{string}]{name}{, }\item[{int}]{health}{, }\item[{int}]{unarmed\+Dmg}{, }\item[{List$<$ \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_arena_object}{IArena\+Object}} $>$}]{inventory}{, }\item[{int}]{inventory\+Capacity}{, }\item[{int}]{weapon\+Capacity}{, }\item[{int}]{armour\+Capicity}{, }\item[{int}]{locX}{, }\item[{int}]{locY}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for making initial instance of the creature. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em health} & \\
+\hline
+{\em unarmed\+Dmg} & \\
+\hline
+{\em inventory} & \\
+\hline
+{\em inventory\+Capacity} & \\
+\hline
+{\em locX} & \\
+\hline
+{\em locY} & \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_creature_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_creature_ab22845d1ab61b27efc40606004a9a517}\index{ArenaGameLib.GameObjects.Creature@{ArenaGameLib.GameObjects.Creature}!AddObserver@{AddObserver}}
+\index{AddObserver@{AddObserver}!ArenaGameLib.GameObjects.Creature@{ArenaGameLib.GameObjects.Creature}}
+\doxysubsubsection{\texorpdfstring{AddObserver()}{AddObserver()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_creature_ab22845d1ab61b27efc40606004a9a517} 
+void Arena\+Game\+Lib.\+Game\+Objects.\+Creature.\+Add\+Observer (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_observers_1_1_i_combat_notifier}{ICombat\+Notifier}}}]{notifier}{}\end{DoxyParamCaption})}
+
+
+
+Method for adding a new observer to notify this \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em notifier} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_creature_a892cd360344668af1fb6f63e4c8dd892}\index{ArenaGameLib.GameObjects.Creature@{ArenaGameLib.GameObjects.Creature}!Attack@{Attack}}
+\index{Attack@{Attack}!ArenaGameLib.GameObjects.Creature@{ArenaGameLib.GameObjects.Creature}}
+\doxysubsubsection{\texorpdfstring{Attack()}{Attack()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_creature_a892cd360344668af1fb6f63e4c8dd892} 
+override int Arena\+Game\+Lib.\+Game\+Objects.\+Creature.\+Attack (\begin{DoxyParamCaption}\item[{int}]{target\+Dist}{, }\item[{\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_strategies_1_1_i_attack_strategy}{IAttack\+Strategy}}}]{attack}{}\end{DoxyParamCaption})}
+
+
+
+Method for a creatures attack, that is predicated on the distance that a creature has to its opponent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Dist} & \\
+\hline
+{\em attack} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Templates.\+ICreature\+Template}}.
+
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_creature_abbe4e376ed26017fdc337b79b307b457}\index{ArenaGameLib.GameObjects.Creature@{ArenaGameLib.GameObjects.Creature}!Loot@{Loot}}
+\index{Loot@{Loot}!ArenaGameLib.GameObjects.Creature@{ArenaGameLib.GameObjects.Creature}}
+\doxysubsubsection{\texorpdfstring{Loot()}{Loot()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_creature_abbe4e376ed26017fdc337b79b307b457} 
+override void Arena\+Game\+Lib.\+Game\+Objects.\+Creature.\+Loot (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object}{Arena\+Object}}}]{item}{}\end{DoxyParamCaption})}
+
+
+
+Method for the creatures action of looting an item and adding it to \doxylink{class_arena_game_lib_1_1_game_objects_1_1_armour}{Armour} Collection, \doxylink{class_arena_game_lib_1_1_game_objects_1_1_weapon}{Weapon} Collection or Inventory. The Method is predicated on the creature being in reaching distance (1 Square) of item. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & Type:\+ \doxylink{class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object}{Arena\+Object} -\/ The item looted, if \doxylink{class_arena_game_lib_1_1_game_objects_1_1_weapon}{Weapon} -\/ Added to Weapon\+Collection, if \doxylink{class_arena_game_lib_1_1_game_objects_1_1_armour}{Armour} -\/ Added to \doxylink{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection}{Armour\+Collection}.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Templates.\+ICreature\+Template}}.
+
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_creature_a08ea70dbd2cdbc8326d20111ab58b9a9}\index{ArenaGameLib.GameObjects.Creature@{ArenaGameLib.GameObjects.Creature}!NotifyAllHits@{NotifyAllHits}}
+\index{NotifyAllHits@{NotifyAllHits}!ArenaGameLib.GameObjects.Creature@{ArenaGameLib.GameObjects.Creature}}
+\doxysubsubsection{\texorpdfstring{NotifyAllHits()}{NotifyAllHits()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_creature_a08ea70dbd2cdbc8326d20111ab58b9a9} 
+void Arena\+Game\+Lib.\+Game\+Objects.\+Creature.\+Notify\+All\+Hits (\begin{DoxyParamCaption}\item[{int}]{damage}{, }\item[{int}]{absorbed}{}\end{DoxyParamCaption})}
+
+
+
+Method for executing Hit notification from all observers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em damage} & \\
+\hline
+{\em absorbed} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_creature_a3ad64dc91df52422907e44e3d92947dc}\index{ArenaGameLib.GameObjects.Creature@{ArenaGameLib.GameObjects.Creature}!RemoveObserver@{RemoveObserver}}
+\index{RemoveObserver@{RemoveObserver}!ArenaGameLib.GameObjects.Creature@{ArenaGameLib.GameObjects.Creature}}
+\doxysubsubsection{\texorpdfstring{RemoveObserver()}{RemoveObserver()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_creature_a3ad64dc91df52422907e44e3d92947dc} 
+void Arena\+Game\+Lib.\+Game\+Objects.\+Creature.\+Remove\+Observer (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_observers_1_1_i_combat_notifier}{ICombat\+Notifier}}}]{notifier}{}\end{DoxyParamCaption})}
+
+
+
+Metod for removing an observer in on this \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em notifier} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_creature_a6696e46549278a20025b09dfa9973c70}\index{ArenaGameLib.GameObjects.Creature@{ArenaGameLib.GameObjects.Creature}!TakeDamage@{TakeDamage}}
+\index{TakeDamage@{TakeDamage}!ArenaGameLib.GameObjects.Creature@{ArenaGameLib.GameObjects.Creature}}
+\doxysubsubsection{\texorpdfstring{TakeDamage()}{TakeDamage()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_creature_a6696e46549278a20025b09dfa9973c70} 
+override void Arena\+Game\+Lib.\+Game\+Objects.\+Creature.\+Take\+Damage (\begin{DoxyParamCaption}\item[{int}]{damage}{, }\item[{\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_strategies_1_1_i_absorb_damage_strategy}{IAbsorb\+Damage\+Strategy}}}]{reduced\+Damage}{}\end{DoxyParamCaption})}
+
+
+
+Method for the creature to take damage from an opponent\textquotesingle{}s attack, the armour rating of its \doxylink{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection}{Armour\+Collection} will reduce the amount of health the creature will take. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em damage} & \\
+\hline
+{\em reduced\+Damage} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Templates.\+ICreature\+Template}}.
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+C:\+/\+\+Users/\+magnu/\+\+One\+Drive/\+\+Skrivebord/\+\+Datamatiker/\+4-\/\+Sem/\+\+Advanced-\/\+Software-\/\+Construction/\+\+Arena\+Game\+Lib/\+\+Arena\+Game\+Lib/\+\+Game\+Objects/\+Creature.\+cs\end{DoxyCompactItemize}

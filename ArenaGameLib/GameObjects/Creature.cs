@@ -4,12 +4,16 @@ using ArenaGameLib.GameInterfaces.Templates;
 using ArenaGameLib.GameObjects.AbstractClasses;
 using ArenaGameLib.GameObjects.Composite;
 using ArenaGameLib.GameObjects.Templates;
+using ArenaGameLib.GameLogger;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
+using ArenaGameLib.GameObjects.Overloads;
+
 
 namespace ArenaGameLib.GameObjects
 {
@@ -18,6 +22,7 @@ namespace ArenaGameLib.GameObjects
 	/// </summary>
 	public class Creature : CreatureTemplate
 	{
+		private readonly Logger logger;
 		public WeaponCollection WeaponCollection { get; set; }
 		public ArmourCollection ArmourCollection { get; set; }
 		public List<ICombatNotifier> CombatNotifications { get; set; }
@@ -32,19 +37,20 @@ namespace ArenaGameLib.GameObjects
 		/// <param name="inventoryCapacity"></param>
 		/// <param name="locX"></param>
 		/// <param name="locY"></param>
-		public Creature(string name, int health, int unarmedDmg, List<IArenaObject> inventory, int inventoryCapacity, int weaponCapacity, int armourCapicity, int locX, int locY) : base(name, health, unarmedDmg, inventory, inventoryCapacity, locX, locY)
+		public Creature(string name, int health, int unarmedDmg, List<IArenaObject> inventory, int inventoryCapacity, int weaponCapacity, int armourCapacity, int locX, int locY) : base(name, health, unarmedDmg, inventory, inventoryCapacity, weaponCapacity, armourCapacity, locX, locY)
 		{
-			if (weaponCapacity + armourCapicity > inventoryCapacity)
-			{
-				throw new ArgumentOutOfRangeException("The weapons and armour capacity exceeds the inventory capacity");
-			}
+			XmlDocument configDoc = new XmlDocument();
+			logger = Logger.InitLogger();
+			string config = Environment.GetEnvironmentVariable("ArenaGameConfig");
+			configDoc.Load(config);
+			logger.StartLogger();
 			Name = name;
 			Health = health;
 			UnarmedDamage = unarmedDmg;
 			Inventory = inventory;
 			InventoryCapacity = inventoryCapacity;
 			WeaponCollection = new WeaponCollection(weaponCapacity);
-			ArmourCollection = new ArmourCollection(armourCapicity);
+			ArmourCollection = new ArmourCollection(armourCapacity);
 			CombatNotifications = new List<ICombatNotifier>();
 			LocationX = locX;
 			LocationY = locY;
@@ -101,6 +107,10 @@ namespace ArenaGameLib.GameObjects
 			if (ArmourCollection.ArmourSet.Count() > 0)
 			{
 				absorbed = reducedDamage.AbsorbedDamage(damage, ArmourCollection);
+				if (absorbed > damage)
+				{
+					absorbed = damage;
+				}
 				Health -= damage - absorbed;
 			}
 			else
