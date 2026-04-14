@@ -4,6 +4,15 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>ArenaGame</PackageId>
+    <Title>ArenaGame</Title>
+    <Version>0.0.9</Version>
+    <Authors>mas019</Authors>
+    <Company>mas019</Company>
+    <Product>Arena Game Library</Product>
+    <Description>This package contains the source code files for the Arena Game.</Description>
   </PropertyGroup>
 
 </Project>

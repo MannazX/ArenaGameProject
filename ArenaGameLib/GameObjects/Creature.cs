@@ -97,7 +97,7 @@ namespace ArenaGameLib.GameObjects
 		}
 
 		/// <summary>
-		/// Method for the creature to take damage from an opponent's attack, the armour rating of its ArmourCollection will reduce the amount of health the creature will take.
+		/// Method for the creature to take damage from an opponent's attack, the armour rating of its ArmourCollection will reduce the amount of health the creature will take, it ensures that if the absorbtion is higher than the damage the damage the creature takes is zero.
 		/// </summary>
 		/// <param name="damage"></param>
 		/// <param name="reducedDamage"></param>
