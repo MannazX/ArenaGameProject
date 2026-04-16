@@ -3,6 +3,9 @@ using ArenaGameLib.GameObjects.Templates;
 
 namespace ArenaGameLib.GameObjects
 {
+	/// <summary>
+	/// Class defining the Arena for the creatures to combat in.
+	/// </summary>
 	public class Arena : IArena
 	{
 		public int MaxX { get; set; }
@@ -10,6 +13,11 @@ namespace ArenaGameLib.GameObjects
 		public List<Creature> Creatures { get; set; }
 		public List<ArenaObject> LootItems { get; set; }
 
+		/// <summary>
+		/// Constructor method for instanciating the arena.
+		/// </summary>
+		/// <param name="maxX">Type: int - The maximum X coordinate for the Arena grid</param>
+		/// <param name="maxY">Type: int - The maximum Y coordinate for the Arena grid</param>
 		public Arena(int maxX, int maxY)
 		{
 			MaxX = maxX;

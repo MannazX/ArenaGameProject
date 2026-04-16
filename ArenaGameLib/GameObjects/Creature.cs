@@ -12,13 +12,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
-using ArenaGameLib.GameObjects.Overloads;
 
 
 namespace ArenaGameLib.GameObjects
 {
 	/// <summary>
-	/// Class representing Creatures battling in the arena, inheriting from CreatureTemplate Class
+	/// Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class
 	/// </summary>
 	public class Creature : CreatureTemplate
 	{
@@ -28,7 +27,7 @@ namespace ArenaGameLib.GameObjects
 		public List<ICombatNotifier> CombatNotifications { get; set; }
 
 		/// <summary>
-		/// Constructor for making initial instance of the creature.
+		/// Constructor for instanciating Creature object and logging of creature actions.
 		/// </summary>
 		/// <param name="name"></param>
 		/// <param name="health"></param>
