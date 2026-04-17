@@ -60,7 +60,7 @@ namespace ArenaGameLib.GameObjects
 		/// </summary>
 		/// <param name="targetDist"></param>
 		/// <param name="attack"></param>
-		/// <returns></returns>
+		/// <returns>Type: int - Damage output of the attack</returns>
 		public override int Attack(int targetDist, IAttackStrategy attack)
 		{
 			int dmgOutput;
@@ -116,7 +116,7 @@ namespace ArenaGameLib.GameObjects
 			{
 				Health -= damage;
 			}
-			NotifyAllHits(damage, absorbed);
+			NotifyAllDamageTaken(damage, absorbed);
 			if (Health <= 0)
 			{
 				NotifyAllDefeated();
@@ -143,15 +143,15 @@ namespace ArenaGameLib.GameObjects
 		}
 
 		/// <summary>
-		/// Method for executing Hit notification from all observers.
+		/// Method for executing Damage Taken notification from all observers.
 		/// </summary>
 		/// <param name="damage"></param>
 		/// <param name="absorbed"></param>
-		public void NotifyAllHits(int damage, int absorbed)
+		public void NotifyAllDamageTaken(int damage, int absorbed)
 		{
 			foreach (ICombatNotifier notifier in CombatNotifications)
 			{
-				notifier.NotifyHit(damage, absorbed);
+				notifier.NotifyDamageTaken(damage, absorbed);
 			}
 		}
 

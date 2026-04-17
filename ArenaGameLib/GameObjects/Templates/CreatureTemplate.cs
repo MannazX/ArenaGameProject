@@ -25,7 +25,7 @@ namespace ArenaGameLib.GameObjects.AbstractClasses
 		public int LocationY { get; set; }
 
 		/// <summary>
-		/// Constructor method for the Creature template clas that sets the argument constraint for the inventory that the Creature is capable of carrying - regarding weapons and armour.
+		/// Constructor method for the Creature template class that sets the argument constraint for the inventory that the creature is capable of carrying - regarding weapons and armour.
 		/// </summary>
 		/// <param name="name">Type: string - Creature name</param>
 		/// <param name="health">Type: int - Creature health</param>
@@ -52,7 +52,7 @@ namespace ArenaGameLib.GameObjects.AbstractClasses
 		/// </summary>
 		/// <param name="creature">Type: Creature - The creature looting the item</param>
 		/// <param name="item">Type: ArenaObject - The item looted by the creature</param>
-		/// <returns></returns>
+		/// <returns>Type: Creature - Creature that looted the item</returns>
 		public static CreatureTemplate operator +(CreatureTemplate creature, ArenaObject item)
 		{
 			creature.Loot(item);

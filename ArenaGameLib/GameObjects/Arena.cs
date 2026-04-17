@@ -14,7 +14,7 @@ namespace ArenaGameLib.GameObjects
 		public List<ArenaObject> LootItems { get; set; }
 
 		/// <summary>
-		/// Constructor method for instanciating the arena.
+		/// Constructor method for instanciating the Arena object.
 		/// </summary>
 		/// <param name="maxX">Type: int - The maximum X coordinate for the Arena grid</param>
 		/// <param name="maxY">Type: int - The maximum Y coordinate for the Arena grid</param>

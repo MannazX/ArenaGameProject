@@ -7,11 +7,12 @@ var searchData=
   ['arenagamelib_3a_3agameinterfaces_3a_3aobservers_4',['Observers',['../namespace_arena_game_lib_1_1_game_interfaces_1_1_observers.html',1,'ArenaGameLib::GameInterfaces']]],
   ['arenagamelib_3a_3agameinterfaces_3a_3astrategies_5',['Strategies',['../namespace_arena_game_lib_1_1_game_interfaces_1_1_strategies.html',1,'ArenaGameLib::GameInterfaces']]],
   ['arenagamelib_3a_3agameinterfaces_3a_3atemplates_6',['Templates',['../namespace_arena_game_lib_1_1_game_interfaces_1_1_templates.html',1,'ArenaGameLib::GameInterfaces']]],
-  ['arenagamelib_3a_3agameobjects_7',['GameObjects',['../namespace_arena_game_lib_1_1_game_objects.html',1,'ArenaGameLib']]],
-  ['arenagamelib_3a_3agameobjects_3a_3aabstractclasses_8',['AbstractClasses',['../namespace_arena_game_lib_1_1_game_objects_1_1_abstract_classes.html',1,'ArenaGameLib::GameObjects']]],
-  ['arenagamelib_3a_3agameobjects_3a_3acomposite_9',['Composite',['../namespace_arena_game_lib_1_1_game_objects_1_1_composite.html',1,'ArenaGameLib::GameObjects']]],
-  ['arenagamelib_3a_3agameobjects_3a_3adecorators_10',['Decorators',['../namespace_arena_game_lib_1_1_game_objects_1_1_decorators.html',1,'ArenaGameLib::GameObjects']]],
-  ['arenagamelib_3a_3agameobjects_3a_3aobservers_11',['Observers',['../namespace_arena_game_lib_1_1_game_objects_1_1_observers.html',1,'ArenaGameLib::GameObjects']]],
-  ['arenagamelib_3a_3agameobjects_3a_3astrategies_12',['Strategies',['../namespace_arena_game_lib_1_1_game_objects_1_1_strategies.html',1,'ArenaGameLib::GameObjects']]],
-  ['arenagamelib_3a_3agameobjects_3a_3atemplates_13',['Templates',['../namespace_arena_game_lib_1_1_game_objects_1_1_templates.html',1,'ArenaGameLib::GameObjects']]]
+  ['arenagamelib_3a_3agamelogger_7',['GameLogger',['../namespace_arena_game_lib_1_1_game_logger.html',1,'ArenaGameLib']]],
+  ['arenagamelib_3a_3agameobjects_8',['GameObjects',['../namespace_arena_game_lib_1_1_game_objects.html',1,'ArenaGameLib']]],
+  ['arenagamelib_3a_3agameobjects_3a_3aabstractclasses_9',['AbstractClasses',['../namespace_arena_game_lib_1_1_game_objects_1_1_abstract_classes.html',1,'ArenaGameLib::GameObjects']]],
+  ['arenagamelib_3a_3agameobjects_3a_3acomposite_10',['Composite',['../namespace_arena_game_lib_1_1_game_objects_1_1_composite.html',1,'ArenaGameLib::GameObjects']]],
+  ['arenagamelib_3a_3agameobjects_3a_3adecorators_11',['Decorators',['../namespace_arena_game_lib_1_1_game_objects_1_1_decorators.html',1,'ArenaGameLib::GameObjects']]],
+  ['arenagamelib_3a_3agameobjects_3a_3aobservers_12',['Observers',['../namespace_arena_game_lib_1_1_game_objects_1_1_observers.html',1,'ArenaGameLib::GameObjects']]],
+  ['arenagamelib_3a_3agameobjects_3a_3astrategies_13',['Strategies',['../namespace_arena_game_lib_1_1_game_objects_1_1_strategies.html',1,'ArenaGameLib::GameObjects']]],
+  ['arenagamelib_3a_3agameobjects_3a_3atemplates_14',['Templates',['../namespace_arena_game_lib_1_1_game_objects_1_1_templates.html',1,'ArenaGameLib::GameObjects']]]
 ];

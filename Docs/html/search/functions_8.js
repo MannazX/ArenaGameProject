@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['takedamage_0',['TakeDamage',['../class_arena_game_lib_1_1_game_objects_1_1_creature.html#a6696e46549278a20025b09dfa9973c70',1,'ArenaGameLib.GameObjects.Creature.TakeDamage()'],['../class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template.html#a0a4afd59e62474a569c271e1962fc519',1,'ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate.TakeDamage()']]],
+  ['totalweight_1',['TotalWeight',['../class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection.html#aeaea6dfb5e42c10ff4f1c443cc2f1085',1,'ArenaGameLib::GameObjects::Composite::ArmourCollection']]]
+];

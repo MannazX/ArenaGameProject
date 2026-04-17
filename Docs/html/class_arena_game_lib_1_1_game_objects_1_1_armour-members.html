@@ -10,9 +10,6 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -45,27 +42,11 @@ $(function() { codefold.init(); });
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search',false);
   $(function() { init_search(); });
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(function(){initNavTree('class_arena_game_lib_1_1_game_objects_1_1_armour.html','',''); });
-</script>
-<div id="container">
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -87,6 +68,12 @@ $(function(){initNavTree('class_arena_game_lib_1_1_game_objects_1_1_armour.html'
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="namespace_arena_game_lib.html">ArenaGameLib</a></li><li class="navelem"><a href="namespace_arena_game_lib_1_1_game_objects.html">GameObjects</a></li><li class="navelem"><a href="class_arena_game_lib_1_1_game_objects_1_1_armour.html">Armour</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">ArenaGameLib.GameObjects.Armour Member List</div></div>
 </div><!--header-->
@@ -94,8 +81,8 @@ $(function(){initNavTree('class_arena_game_lib_1_1_game_objects_1_1_armour.html'
 
 <p>This is the complete list of members for <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html">ArenaGameLib.GameObjects.Armour</a>, including all inherited members.</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>ArenaObject</b>(string name, int weight, int locX, int locY) (defined in <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object.html">ArenaGameLib.GameObjects.Templates.ArenaObject</a>)</td><td class="entry"><a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object.html">ArenaGameLib.GameObjects.Templates.ArenaObject</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>Armour</b>(string name, int weight, int reduceDmg, int armourDur, int locX, int locY) (defined in <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html">ArenaGameLib.GameObjects.Armour</a>)</td><td class="entry"><a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html">ArenaGameLib.GameObjects.Armour</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object.html#a6adcbadca4e7f7d052db7fed7522bc36">ArenaObject</a>(string name, int weight, int locX, int locY)</td><td class="entry"><a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object.html">ArenaGameLib.GameObjects.Templates.ArenaObject</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html#a156b462ad7fb6b34f902e950ab808d42">Armour</a>(string name, int? weight, int reduceDmg, int armourDur, int? locX, int? locY)</td><td class="entry"><a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html">ArenaGameLib.GameObjects.Armour</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>ArmourDurability</b> (defined in <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html">ArenaGameLib.GameObjects.Armour</a>)</td><td class="entry"><a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html">ArenaGameLib.GameObjects.Armour</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>Claimed</b> (defined in <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html">ArenaGameLib.GameObjects.Armour</a>)</td><td class="entry"><a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html">ArenaGameLib.GameObjects.Armour</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>LocationX</b> (defined in <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object.html">ArenaGameLib.GameObjects.Templates.ArenaObject</a>)</td><td class="entry"><a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object.html">ArenaGameLib.GameObjects.Templates.ArenaObject</a></td><td class="entry"></td></tr>
@@ -104,17 +91,14 @@ $(function(){initNavTree('class_arena_game_lib_1_1_game_objects_1_1_armour.html'
   <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>Name</b> (defined in <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object.html">ArenaGameLib.GameObjects.Templates.ArenaObject</a>)</td><td class="entry"><a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object.html">ArenaGameLib.GameObjects.Templates.ArenaObject</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>ReduceDamage</b> (defined in <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html">ArenaGameLib.GameObjects.Armour</a>)</td><td class="entry"><a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html">ArenaGameLib.GameObjects.Armour</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>Removeable</b> (defined in <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object.html">ArenaGameLib.GameObjects.Templates.ArenaObject</a>)</td><td class="entry"><a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object.html">ArenaGameLib.GameObjects.Templates.ArenaObject</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>SetClaim</b>() (defined in <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html">ArenaGameLib.GameObjects.Armour</a>)</td><td class="entry"><a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html">ArenaGameLib.GameObjects.Armour</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>SetLocation</b>() (defined in <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html">ArenaGameLib.GameObjects.Armour</a>)</td><td class="entry"><a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html">ArenaGameLib.GameObjects.Armour</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html#aa3a8b42af195876328e6c8e7954d3327">SetClaim</a>()</td><td class="entry"><a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html">ArenaGameLib.GameObjects.Armour</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html#a03a89538ec63f283dce6c46833681ae4">SetLocation</a>()</td><td class="entry"><a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html">ArenaGameLib.GameObjects.Armour</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Weight</b> (defined in <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object.html">ArenaGameLib.GameObjects.Templates.ArenaObject</a>)</td><td class="entry"><a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object.html">ArenaGameLib.GameObjects.Templates.ArenaObject</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
-</div><!-- doc-content -->
-</div><!-- container -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

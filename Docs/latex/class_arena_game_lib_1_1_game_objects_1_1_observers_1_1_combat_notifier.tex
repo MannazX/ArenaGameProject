@@ -1,5 +1,10 @@
 \doxysection{Arena\+Game\+Lib.\+Game\+Objects.\+Observers.\+Combat\+Notifier Class Reference}
 \hypertarget{class_arena_game_lib_1_1_game_objects_1_1_observers_1_1_combat_notifier}{}\label{class_arena_game_lib_1_1_game_objects_1_1_observers_1_1_combat_notifier}\index{ArenaGameLib.GameObjects.Observers.CombatNotifier@{ArenaGameLib.GameObjects.Observers.CombatNotifier}}
+
+
+Observer class for notifying when a creature is hit.  
+
+
 Inheritance diagram for Arena\+Game\+Lib.\+Game\+Objects.\+Observers.\+Combat\+Notifier:\+\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -14,7 +19,13 @@ Inheritance diagram for Arena\+Game\+Lib.\+Game\+Objects.\+Observers.\+Combat\+N
 \item 
 void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_observers_1_1_combat_notifier_a017fac68c933460b73a34910a0048b23}{Notify\+Defeated}} ()
 \item 
-void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_observers_1_1_combat_notifier_ac3d89e32d946a0d1071673ad5f472181}{Notify\+Hit}} (int damage, int absorbed)
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_observers_1_1_combat_notifier_a2d2e84b3b96fc8a9032dba75ab4aa3ca}\label{class_arena_game_lib_1_1_game_objects_1_1_observers_1_1_combat_notifier_a2d2e84b3b96fc8a9032dba75ab4aa3ca} 
+void {\bfseries Notify\+Damage\+Taken} (int damage, int absorbed)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_observers_1_1_i_combat_notifier}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Observers.\+ICombat\+Notifier}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Notify\+Hit} (int damage, int absorbed)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Properties}
 \begin{DoxyCompactItemize}
@@ -22,6 +33,9 @@ void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_observers_1_
 Creature \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_observers_1_1_combat_notifier_a9d54a94c23ab3ad577dac0e62bd2ab6b}{Creature}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Observer class for notifying when a creature is hit. 
 
 \label{doc-func-members}
 \Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_observers_1_1_combat_notifier_doc-func-members}
@@ -31,16 +45,6 @@ Creature \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_observer
 \doxysubsubsection{\texorpdfstring{NotifyDefeated()}{NotifyDefeated()}}
 {\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_observers_1_1_combat_notifier_a017fac68c933460b73a34910a0048b23} 
 void Arena\+Game\+Lib.\+Game\+Objects.\+Observers.\+Combat\+Notifier.\+Notify\+Defeated (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
-
-
-
-Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_observers_1_1_i_combat_notifier}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Observers.\+ICombat\+Notifier}}.
-
-\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_observers_1_1_combat_notifier_ac3d89e32d946a0d1071673ad5f472181}\index{ArenaGameLib.GameObjects.Observers.CombatNotifier@{ArenaGameLib.GameObjects.Observers.CombatNotifier}!NotifyHit@{NotifyHit}}
-\index{NotifyHit@{NotifyHit}!ArenaGameLib.GameObjects.Observers.CombatNotifier@{ArenaGameLib.GameObjects.Observers.CombatNotifier}}
-\doxysubsubsection{\texorpdfstring{NotifyHit()}{NotifyHit()}}
-{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_observers_1_1_combat_notifier_ac3d89e32d946a0d1071673ad5f472181} 
-void Arena\+Game\+Lib.\+Game\+Objects.\+Observers.\+Combat\+Notifier.\+Notify\+Hit (\begin{DoxyParamCaption}\item[{int}]{damage}{, }\item[{int}]{absorbed}{}\end{DoxyParamCaption})}
 
 
 

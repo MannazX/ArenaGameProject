@@ -1,5 +1,10 @@
 \doxysection{Arena\+Game\+Lib.\+Game\+Objects.\+Armour Class Reference}
 \hypertarget{class_arena_game_lib_1_1_game_objects_1_1_armour}{}\label{class_arena_game_lib_1_1_game_objects_1_1_armour}\index{ArenaGameLib.GameObjects.Armour@{ArenaGameLib.GameObjects.Armour}}
+
+
+Class defining \doxylink{class_arena_game_lib_1_1_game_objects_1_1_armour}{Armour} objects, inheriting from Arena\+Object template class.  
+
+
 Inheritance diagram for Arena\+Game\+Lib.\+Game\+Objects.\+Armour:\+\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,15 +14,14 @@ Inheritance diagram for Arena\+Game\+Lib.\+Game\+Objects.\+Armour:\+\begin{figur
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_armour_a4894e814ee3ee17b80db1ae5b5418fcf}\label{class_arena_game_lib_1_1_game_objects_1_1_armour_a4894e814ee3ee17b80db1ae5b5418fcf} 
-{\bfseries Armour} (string name, int weight, int reduce\+Dmg, int armour\+Dur, int locX, int locY)
-\item 
+\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_armour_a156b462ad7fb6b34f902e950ab808d42}{Armour}} (string name, int? weight, int reduce\+Dmg, int armour\+Dur, int? locX, int? locY)
+\begin{DoxyCompactList}\small\item\em Constructor for instanciating the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_armour}{Armour} object. \end{DoxyCompactList}\item 
 \Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_armour_aa3a8b42af195876328e6c8e7954d3327}\label{class_arena_game_lib_1_1_game_objects_1_1_armour_aa3a8b42af195876328e6c8e7954d3327} 
 void {\bfseries Set\+Claim} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Method for setting the Claimed Boolean to true or false, if the armour has been looted by a creature. \end{DoxyCompactList}\item 
 \Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_armour_a03a89538ec63f283dce6c46833681ae4}\label{class_arena_game_lib_1_1_game_objects_1_1_armour_a03a89538ec63f283dce6c46833681ae4} 
 void {\bfseries Set\+Location} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Method for setting the X and Y locations to null, if the armour has been looted by a creature. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
@@ -46,8 +50,41 @@ int? \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_templates_1_
 \doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object}{Arena\+Game\+Lib.\+Game\+Objects.\+Templates.\+Arena\+Object}}}
 \begin{DoxyCompactItemize}
 \item 
-{\bfseries Arena\+Object} (string name, int weight, int locX, int locY)
-\end{DoxyCompactItemize}
+\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object_a6adcbadca4e7f7d052db7fed7522bc36}{Arena\+Object}} (string name, int weight, int locX, int locY)
+\begin{DoxyCompactList}\small\item\em Constructor method for the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_arena}{Arena} Object specifying the lootable constraint for the items -\/ If lootable items are assigned a weight, if not the weight is set to null. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class defining \doxylink{class_arena_game_lib_1_1_game_objects_1_1_armour}{Armour} objects, inheriting from Arena\+Object template class. 
+
+\label{doc-constructors}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_armour_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_armour_a156b462ad7fb6b34f902e950ab808d42}\index{ArenaGameLib.GameObjects.Armour@{ArenaGameLib.GameObjects.Armour}!Armour@{Armour}}
+\index{Armour@{Armour}!ArenaGameLib.GameObjects.Armour@{ArenaGameLib.GameObjects.Armour}}
+\doxysubsubsection{\texorpdfstring{Armour()}{Armour()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_armour_a156b462ad7fb6b34f902e950ab808d42} 
+Arena\+Game\+Lib.\+Game\+Objects.\+Armour.\+Armour (\begin{DoxyParamCaption}\item[{string}]{name}{, }\item[{int?}]{weight}{, }\item[{int}]{reduce\+Dmg}{, }\item[{int}]{armour\+Dur}{, }\item[{int?}]{locX}{, }\item[{int?}]{locY}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for instanciating the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_armour}{Armour} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Type:\+ string -\/ Name of the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_armour}{Armour} object\\
+\hline
+{\em weight} & Type:\+ int (nullable) -\/ Weight of the object\\
+\hline
+{\em reduce\+Dmg} & Type:\+ int -\/ The amount of damage the armour object reduces\\
+\hline
+{\em armour\+Dur} & Type:\+ int -\/ The amount of hits the armour object can take before it breaks and is unable to reduce damage\\
+\hline
+{\em locX} & Type:\+ int (nullable) -\/ The X coordinate of the armour object in the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_arena}{Arena}\\
+\hline
+{\em locY} & Type:\+ int (nullable) -\/ The Y coordinate of the armour object in the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_arena}{Arena}\\
+\hline
+\end{DoxyParams}
 
 
 \label{doc-property-members}

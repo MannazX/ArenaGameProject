@@ -1,0 +1,138 @@
+\doxysection{Arena\+Game\+Lib.\+Game\+Logger.\+Logger Class Reference}
+\hypertarget{class_arena_game_lib_1_1_game_logger_1_1_logger}{}\label{class_arena_game_lib_1_1_game_logger_1_1_logger}\index{ArenaGameLib.GameLogger.Logger@{ArenaGameLib.GameLogger.Logger}}
+
+
+Singleton class for logging creature actions -\/ Dealing damage, taking damage and looting items.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_arena_game_lib_1_1_game_logger_1_1_logger_ab6d0a13fe73a3604f0af9a0466c666a1}\label{class_arena_game_lib_1_1_game_logger_1_1_logger_ab6d0a13fe73a3604f0af9a0466c666a1} 
+void {\bfseries Start\+Logger} ()
+\begin{DoxyCompactList}\small\item\em Method for starting the logger. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_logger_1_1_logger_ac8c44ef0b51bd03ea8e373869efdc156}{Add\+New\+Listener}} (Trace\+Listener listener)
+\begin{DoxyCompactList}\small\item\em Method for adding new trace listeners to the Trace Source. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_logger_1_1_logger_a4bce697c7b7dd8259bd82816f169e3ae}{Write\+Info}} (string log\+Entry)
+\begin{DoxyCompactList}\small\item\em Method for writing information to the log. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_logger_1_1_logger_aaf4323448f6a8dd1523a434372700f35}{Log\+Warning}} (string log\+Entry)
+\begin{DoxyCompactList}\small\item\em Method for writing warnings to the log. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_logger_1_1_logger_a97f33d16918728f6d80f4a540439865b}{Log\+Error}} (string log\+Entry)
+\begin{DoxyCompactList}\small\item\em Method for writing errors to the log. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_logger_1_1_logger_ae5c09bcbafa71910afa8b0dfd504d547}{Log\+Critical}} (string log\+Entry)
+\begin{DoxyCompactList}\small\item\em Method for writing critical to the log. \end{DoxyCompactList}\item 
+\Hypertarget{class_arena_game_lib_1_1_game_logger_1_1_logger_a6603eaca4b32383a75531ced0e1f1c05}\label{class_arena_game_lib_1_1_game_logger_1_1_logger_a6603eaca4b32383a75531ced0e1f1c05} 
+void {\bfseries Close\+Logger} ()
+\begin{DoxyCompactList}\small\item\em Method for closing the logger. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Logger \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_logger_1_1_logger_a338a5f21c43756446a6d62a33818e10a}{Init\+Logger}} ()
+\begin{DoxyCompactList}\small\item\em Method for instanciating the logger. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_arena_game_lib_1_1_game_logger_1_1_logger_aa8dc7ead2e4b93b3406a3a861f5ce093}\label{class_arena_game_lib_1_1_game_logger_1_1_logger_aa8dc7ead2e4b93b3406a3a861f5ce093} 
+Trace\+Source {\bfseries Trace\+Source}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Singleton class for logging creature actions -\/ Dealing damage, taking damage and looting items. 
+
+\label{doc-func-members}
+\Hypertarget{class_arena_game_lib_1_1_game_logger_1_1_logger_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_arena_game_lib_1_1_game_logger_1_1_logger_ac8c44ef0b51bd03ea8e373869efdc156}\index{ArenaGameLib.GameLogger.Logger@{ArenaGameLib.GameLogger.Logger}!AddNewListener@{AddNewListener}}
+\index{AddNewListener@{AddNewListener}!ArenaGameLib.GameLogger.Logger@{ArenaGameLib.GameLogger.Logger}}
+\doxysubsubsection{\texorpdfstring{AddNewListener()}{AddNewListener()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_logger_1_1_logger_ac8c44ef0b51bd03ea8e373869efdc156} 
+void Arena\+Game\+Lib.\+Game\+Logger.\+Logger.\+Add\+New\+Listener (\begin{DoxyParamCaption}\item[{Trace\+Listener}]{listener}{}\end{DoxyParamCaption})}
+
+
+
+Method for adding new trace listeners to the Trace Source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em listener} & Type:\+ Trace\+Listener -\/ New trace listener to add to the trace source\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_arena_game_lib_1_1_game_logger_1_1_logger_a338a5f21c43756446a6d62a33818e10a}\index{ArenaGameLib.GameLogger.Logger@{ArenaGameLib.GameLogger.Logger}!InitLogger@{InitLogger}}
+\index{InitLogger@{InitLogger}!ArenaGameLib.GameLogger.Logger@{ArenaGameLib.GameLogger.Logger}}
+\doxysubsubsection{\texorpdfstring{InitLogger()}{InitLogger()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_logger_1_1_logger_a338a5f21c43756446a6d62a33818e10a} 
+Logger Arena\+Game\+Lib.\+Game\+Logger.\+Logger.\+Init\+Logger (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Method for instanciating the logger. 
+
+\begin{DoxyReturn}{Returns}
+Type:\+ \doxylink{class_arena_game_lib_1_1_game_logger_1_1_logger}{Logger} -\/ Instance of \doxylink{class_arena_game_lib_1_1_game_logger_1_1_logger}{Logger}
+\end{DoxyReturn}
+\Hypertarget{class_arena_game_lib_1_1_game_logger_1_1_logger_ae5c09bcbafa71910afa8b0dfd504d547}\index{ArenaGameLib.GameLogger.Logger@{ArenaGameLib.GameLogger.Logger}!LogCritical@{LogCritical}}
+\index{LogCritical@{LogCritical}!ArenaGameLib.GameLogger.Logger@{ArenaGameLib.GameLogger.Logger}}
+\doxysubsubsection{\texorpdfstring{LogCritical()}{LogCritical()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_logger_1_1_logger_ae5c09bcbafa71910afa8b0dfd504d547} 
+void Arena\+Game\+Lib.\+Game\+Logger.\+Logger.\+Log\+Critical (\begin{DoxyParamCaption}\item[{string}]{log\+Entry}{}\end{DoxyParamCaption})}
+
+
+
+Method for writing critical to the log. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em log\+Entry} & Type:\+ string -\/ Critical to write to the log\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_arena_game_lib_1_1_game_logger_1_1_logger_a97f33d16918728f6d80f4a540439865b}\index{ArenaGameLib.GameLogger.Logger@{ArenaGameLib.GameLogger.Logger}!LogError@{LogError}}
+\index{LogError@{LogError}!ArenaGameLib.GameLogger.Logger@{ArenaGameLib.GameLogger.Logger}}
+\doxysubsubsection{\texorpdfstring{LogError()}{LogError()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_logger_1_1_logger_a97f33d16918728f6d80f4a540439865b} 
+void Arena\+Game\+Lib.\+Game\+Logger.\+Logger.\+Log\+Error (\begin{DoxyParamCaption}\item[{string}]{log\+Entry}{}\end{DoxyParamCaption})}
+
+
+
+Method for writing errors to the log. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em log\+Entry} & Type:\+ string -\/ Error to write to the log\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_arena_game_lib_1_1_game_logger_1_1_logger_aaf4323448f6a8dd1523a434372700f35}\index{ArenaGameLib.GameLogger.Logger@{ArenaGameLib.GameLogger.Logger}!LogWarning@{LogWarning}}
+\index{LogWarning@{LogWarning}!ArenaGameLib.GameLogger.Logger@{ArenaGameLib.GameLogger.Logger}}
+\doxysubsubsection{\texorpdfstring{LogWarning()}{LogWarning()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_logger_1_1_logger_aaf4323448f6a8dd1523a434372700f35} 
+void Arena\+Game\+Lib.\+Game\+Logger.\+Logger.\+Log\+Warning (\begin{DoxyParamCaption}\item[{string}]{log\+Entry}{}\end{DoxyParamCaption})}
+
+
+
+Method for writing warnings to the log. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em log\+Entry} & Type:\+ string -\/ Warning to write to the log\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_arena_game_lib_1_1_game_logger_1_1_logger_a4bce697c7b7dd8259bd82816f169e3ae}\index{ArenaGameLib.GameLogger.Logger@{ArenaGameLib.GameLogger.Logger}!WriteInfo@{WriteInfo}}
+\index{WriteInfo@{WriteInfo}!ArenaGameLib.GameLogger.Logger@{ArenaGameLib.GameLogger.Logger}}
+\doxysubsubsection{\texorpdfstring{WriteInfo()}{WriteInfo()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_logger_1_1_logger_a4bce697c7b7dd8259bd82816f169e3ae} 
+void Arena\+Game\+Lib.\+Game\+Logger.\+Logger.\+Write\+Info (\begin{DoxyParamCaption}\item[{string}]{log\+Entry}{}\end{DoxyParamCaption})}
+
+
+
+Method for writing information to the log. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em log\+Entry} & Type:\+ string -\/ Information to write to the log\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+C:\+/\+\+Users/\+magnu/\+\+One\+Drive/\+\+Skrivebord/\+\+Datamatiker/\+4-\/\+Sem/\+\+Advanced-\/\+Software-\/\+Construction/\+\+Arena\+Game\+Lib/\+\+Arena\+Game\+Lib/\+\+Game\+Logger/\+Logger.\+cs\end{DoxyCompactItemize}

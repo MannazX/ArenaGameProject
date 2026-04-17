@@ -20,7 +20,7 @@ namespace ArenaGameLib.GameObjects.Templates
 		public int? Weight { get; set; }
 
 		/// <summary>
-		/// Constructor method for the Arena Object specifying the lootable constraint for the items - If lootable items are assigned a weight, if not the weight is set to null. 
+		/// Constructor method for the Arena Object super class specifying the lootable constraint for the subclass items - If lootable items are assigned a weight, if not the weight is set to null. 
 		/// </summary>
 		/// <param name="name">Type: string - Name of object</param>
 		/// <param name="weight">Type: int (nullable) - Weight of object</param>

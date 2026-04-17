@@ -39,7 +39,7 @@ namespace ArenaGameLib.GameObjects
 		}
 
 		/// <summary>
-		/// Method for setting the Claimed Boolean to true or false, if the weapon has been looted by a creature.
+		/// Method for setting the Claimed boolean to true or false, if the weapon has been looted by a creature.
 		/// </summary>
 		public void SetClaim()
 		{

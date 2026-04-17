@@ -10,7 +10,7 @@ namespace ArenaGameLib.GameInterfaces.Observers
 	public interface ICombatNotifier
 	{
 		Creature Creature { get; set; }
-		void NotifyHit(int damage, int absorbed);
+		void NotifyDamageTaken(int damage, int absorbed);
 		void NotifyDefeated();
 	}
 }

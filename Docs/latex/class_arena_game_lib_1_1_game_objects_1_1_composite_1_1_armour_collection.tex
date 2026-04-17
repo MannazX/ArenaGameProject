@@ -1,5 +1,10 @@
 \doxysection{Arena\+Game\+Lib.\+Game\+Objects.\+Composite.\+Armour\+Collection Class Reference}
 \hypertarget{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection}{}\label{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection}\index{ArenaGameLib.GameObjects.Composite.ArmourCollection@{ArenaGameLib.GameObjects.Composite.ArmourCollection}}
+
+
+\doxylink{namespace_arena_game_lib_1_1_game_objects_1_1_composite}{Composite} class representing a creature\textquotesingle{}s collection of armour.  
+
+
 Inheritance diagram for Arena\+Game\+Lib.\+Game\+Objects.\+Composite.\+Armour\+Collection:\+\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,15 +14,14 @@ Inheritance diagram for Arena\+Game\+Lib.\+Game\+Objects.\+Composite.\+Armour\+C
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection_aa969781f623bb596299340d94b5ee376}\label{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection_aa969781f623bb596299340d94b5ee376} 
-{\bfseries Armour\+Collection} (int capacity)
-\item 
+\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection_aa969781f623bb596299340d94b5ee376}{Armour\+Collection}} (int capacity)
+\begin{DoxyCompactList}\small\item\em Constructor method for instanciating the armour collection. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection_afdce106200f591bec2dd31a5a5fd988a}{Add}} (\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_armour}{IArmour}} item)
-\item 
+\begin{DoxyCompactList}\small\item\em Method for adding an armour piece to the collection. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection_a0008c9bbb0e35e8a1d395121e0cdc5e7}{Remove}} (\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_armour}{IArmour}} item)
-\item 
+\begin{DoxyCompactList}\small\item\em Method for removing an armour piece from the collection. \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection_aeaea6dfb5e42c10ff4f1c443cc2f1085}{Total\+Weight}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Method for computing the total weight of the collection. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
@@ -26,6 +30,29 @@ List$<$ \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_
 \Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection_aab1ab1ff6af6df1c1a90aa483fdfc3a4}\label{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection_aab1ab1ff6af6df1c1a90aa483fdfc3a4} 
 int {\bfseries Capacity}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{namespace_arena_game_lib_1_1_game_objects_1_1_composite}{Composite} class representing a creature\textquotesingle{}s collection of armour. 
+
+\label{doc-constructors}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection_aa969781f623bb596299340d94b5ee376}\index{ArenaGameLib.GameObjects.Composite.ArmourCollection@{ArenaGameLib.GameObjects.Composite.ArmourCollection}!ArmourCollection@{ArmourCollection}}
+\index{ArmourCollection@{ArmourCollection}!ArenaGameLib.GameObjects.Composite.ArmourCollection@{ArenaGameLib.GameObjects.Composite.ArmourCollection}}
+\doxysubsubsection{\texorpdfstring{ArmourCollection()}{ArmourCollection()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection_aa969781f623bb596299340d94b5ee376} 
+Arena\+Game\+Lib.\+Game\+Objects.\+Composite.\+Armour\+Collection.\+Armour\+Collection (\begin{DoxyParamCaption}\item[{int}]{capacity}{}\end{DoxyParamCaption})}
+
+
+
+Constructor method for instanciating the armour collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacity} & Type:\+ int -\/ The maximum capacity for the weight of the armour\\
+\hline
+\end{DoxyParams}
 
 
 \label{doc-func-members}
@@ -39,6 +66,20 @@ void Arena\+Game\+Lib.\+Game\+Objects.\+Composite.\+Armour\+Collection.\+Add (\b
 
 
 
+Method for adding an armour piece to the collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & Type:\+ \doxylink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_armour}{IArmour} -\/ \doxylink{class_arena_game_lib_1_1_game_objects_1_1_armour}{Armour} piece to be added to the collection\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Out\+Of\+Range\+Exception} & Exception thrown if total weight exceeds the capacity\\
+\hline
+\end{DoxyExceptions}
+
+
 Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_composites_1_1_i_armour_collection}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Composites.\+IArmour\+Collection}}.
 
 \Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection_a0008c9bbb0e35e8a1d395121e0cdc5e7}\index{ArenaGameLib.GameObjects.Composite.ArmourCollection@{ArenaGameLib.GameObjects.Composite.ArmourCollection}!Remove@{Remove}}
@@ -49,6 +90,20 @@ void Arena\+Game\+Lib.\+Game\+Objects.\+Composite.\+Armour\+Collection.\+Remove 
 
 
 
+Method for removing an armour piece from the collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & Type:\+ \doxylink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_armour}{IArmour} -\/ \doxylink{class_arena_game_lib_1_1_game_objects_1_1_armour}{Armour} piece to be removed from the collection\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Exception} & Exception thrown if armour is not in the collection\\
+\hline
+\end{DoxyExceptions}
+
+
 Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_composites_1_1_i_armour_collection}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Composites.\+IArmour\+Collection}}.
 
 \Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection_aeaea6dfb5e42c10ff4f1c443cc2f1085}\index{ArenaGameLib.GameObjects.Composite.ArmourCollection@{ArenaGameLib.GameObjects.Composite.ArmourCollection}!TotalWeight@{TotalWeight}}
@@ -57,6 +112,13 @@ Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1
 {\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection_aeaea6dfb5e42c10ff4f1c443cc2f1085} 
 int Arena\+Game\+Lib.\+Game\+Objects.\+Composite.\+Armour\+Collection.\+Total\+Weight (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
+
+
+Method for computing the total weight of the collection. 
+
+\begin{DoxyReturn}{Returns}
+Type:\+ int -\/ Total weight of armour pieces in the collection
+\end{DoxyReturn}
 
 
 Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_composites_1_1_i_armour_collection}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Composites.\+IArmour\+Collection}}.

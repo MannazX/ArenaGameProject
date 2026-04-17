@@ -10,9 +10,6 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -45,27 +42,11 @@ $(function() { codefold.init(); });
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search',false);
   $(function() { init_search(); });
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(function(){initNavTree('class_arena_game_lib_1_1_game_objects_1_1_armour.html','','class_arena_game_lib_1_1_game_objects_1_1_armour-members'); });
-</script>
-<div id="container">
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -87,17 +68,30 @@ $(function(){initNavTree('class_arena_game_lib_1_1_game_objects_1_1_armour.html'
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="namespace_arena_game_lib.html">ArenaGameLib</a></li><li class="navelem"><a href="namespace_arena_game_lib_1_1_game_objects.html">GameObjects</a></li><li class="navelem"><a href="class_arena_game_lib_1_1_game_objects_1_1_armour.html">Armour</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a> &#124;
+<a href="class_arena_game_lib_1_1_game_objects_1_1_armour-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">ArenaGameLib.GameObjects.Armour Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class defining <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html" title="Class defining Armour objects, inheriting from ArenaObject template class.">Armour</a> objects, inheriting from ArenaObject template class.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for ArenaGameLib.GameObjects.Armour:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_arena_game_lib_1_1_game_objects_1_1_armour.png" usemap="#ArenaGameLib_2EGameObjects_2EArmour_map" alt=""/>
   <map id="ArenaGameLib_2EGameObjects_2EArmour_map" name="ArenaGameLib_2EGameObjects_2EArmour_map">
-<area href="class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object.html" alt="ArenaGameLib.GameObjects.Templates.ArenaObject" shape="rect" coords="0,56,327,80"/>
+<area href="class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object.html" title="Template class for Arena Object classes - Abstract class that the individual objects in the arena inh..." alt="ArenaGameLib.GameObjects.Templates.ArenaObject" shape="rect" coords="0,56,327,80"/>
 <area href="interface_arena_game_lib_1_1_game_interfaces_1_1_i_armour.html" alt="ArenaGameLib.GameInterfaces.IArmour" shape="rect" coords="337,56,664,80"/>
 <area href="interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_arena_object.html" alt="ArenaGameLib.GameInterfaces.Templates.IArenaObject" shape="rect" coords="0,0,327,24"/>
 <area href="interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_arena_object.html" alt="ArenaGameLib.GameInterfaces.Templates.IArenaObject" shape="rect" coords="337,0,664,24"/>
@@ -106,12 +100,14 @@ Inheritance diagram for ArenaGameLib.GameObjects.Armour:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4894e814ee3ee17b80db1ae5b5418fcf" id="r_a4894e814ee3ee17b80db1ae5b5418fcf"><td class="memItemLeft"><a id="a4894e814ee3ee17b80db1ae5b5418fcf" name="a4894e814ee3ee17b80db1ae5b5418fcf"></a>
-&#160;</td><td class="memItemRight"><b>Armour</b> (string name, int weight, int reduceDmg, int armourDur, int locX, int locY)</td></tr>
+<tr class="memitem:a156b462ad7fb6b34f902e950ab808d42" id="r_a156b462ad7fb6b34f902e950ab808d42"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a156b462ad7fb6b34f902e950ab808d42">Armour</a> (string name, int? weight, int reduceDmg, int armourDur, int? locX, int? locY)</td></tr>
+<tr class="memdesc:a156b462ad7fb6b34f902e950ab808d42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for instanciating the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html" title="Class defining Armour objects, inheriting from ArenaObject template class.">Armour</a> object.  <br /></td></tr>
 <tr class="memitem:aa3a8b42af195876328e6c8e7954d3327" id="r_aa3a8b42af195876328e6c8e7954d3327"><td class="memItemLeft"><a id="aa3a8b42af195876328e6c8e7954d3327" name="aa3a8b42af195876328e6c8e7954d3327"></a>
 void&#160;</td><td class="memItemRight"><b>SetClaim</b> ()</td></tr>
+<tr class="memdesc:aa3a8b42af195876328e6c8e7954d3327"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method for setting the Claimed Boolean to true or false, if the armour has been looted by a creature. <br /></td></tr>
 <tr class="memitem:a03a89538ec63f283dce6c46833681ae4" id="r_a03a89538ec63f283dce6c46833681ae4"><td class="memItemLeft"><a id="a03a89538ec63f283dce6c46833681ae4" name="a03a89538ec63f283dce6c46833681ae4"></a>
 void&#160;</td><td class="memItemRight"><b>SetLocation</b> ()</td></tr>
+<tr class="memdesc:a03a89538ec63f283dce6c46833681ae4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method for setting the X and Y locations to null, if the armour has been looted by a creature. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
@@ -129,9 +125,66 @@ Properties</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object.html">ArenaGameLib.GameObjects.Templates.ArenaObject</a></td></tr>
-<tr class="memitem:a6adcbadca4e7f7d052db7fed7522bc36 inherit pro_methods_class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object" id="r_a6adcbadca4e7f7d052db7fed7522bc36"><td class="memItemLeft">
-&#160;</td><td class="memItemRight"><b>ArenaObject</b> (string name, int weight, int locX, int locY)</td></tr>
+<tr class="memitem:a6adcbadca4e7f7d052db7fed7522bc36 inherit pro_methods_class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object" id="r_a6adcbadca4e7f7d052db7fed7522bc36"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object.html#a6adcbadca4e7f7d052db7fed7522bc36">ArenaObject</a> (string name, int weight, int locX, int locY)</td></tr>
+<tr class="memdesc:a6adcbadca4e7f7d052db7fed7522bc36 inherit pro_methods_class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor method for the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_arena.html" title="Class defining the Arena for the creatures to combat in.">Arena</a> Object specifying the lootable constraint for the items - If lootable items are assigned a weight, if not the weight is set to null.  <br /></td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class defining <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html" title="Class defining Armour objects, inheriting from ArenaObject template class.">Armour</a> objects, inheriting from ArenaObject template class. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a156b462ad7fb6b34f902e950ab808d42" name="a156b462ad7fb6b34f902e950ab808d42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a156b462ad7fb6b34f902e950ab808d42">&#9670;&#160;</a></span>Armour()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ArenaGameLib.GameObjects.Armour.Armour </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int?</td>          <td class="paramname"><span class="paramname"><em>weight</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>reduceDmg</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>armourDur</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int?</td>          <td class="paramname"><span class="paramname"><em>locX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int?</td>          <td class="paramname"><span class="paramname"><em>locY</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor for instanciating the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html" title="Class defining Armour objects, inheriting from ArenaObject template class.">Armour</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Type: string - Name of the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html" title="Class defining Armour objects, inheriting from ArenaObject template class.">Armour</a> object</td></tr>
+    <tr><td class="paramname">weight</td><td>Type: int (nullable) - Weight of the object</td></tr>
+    <tr><td class="paramname">reduceDmg</td><td>Type: int - The amount of damage the armour object reduces</td></tr>
+    <tr><td class="paramname">armourDur</td><td>Type: int - The amount of hits the armour object can take before it breaks and is unable to reduce damage</td></tr>
+    <tr><td class="paramname">locX</td><td>Type: int (nullable) - The X coordinate of the armour object in the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_arena.html" title="Class defining the Arena for the creatures to combat in.">Arena</a></td></tr>
+    <tr><td class="paramname">locY</td><td>Type: int (nullable) - The Y coordinate of the armour object in the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_arena.html" title="Class defining the Arena for the creatures to combat in.">Arena</a></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">Property Documentation</h2>
 <a id="ac581df6fed9b24db4d44f3f84c059450" name="ac581df6fed9b24db4d44f3f84c059450"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac581df6fed9b24db4d44f3f84c059450">&#9670;&#160;</a></span>ArmourDurability</h2>
@@ -209,21 +262,10 @@ Additional Inherited Members</h2></td></tr>
 <li>C:/Users/magnu/OneDrive/Skrivebord/Datamatiker/4-Sem/Advanced-Software-Construction/ArenaGameLib/ArenaGameLib/GameObjects/<b>Armour.cs</b></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
-<div id="page-nav" class="page-nav-panel">
-<div id="page-nav-resize-handle"></div>
-<div id="page-nav-tree">
-<div id="page-nav-contents">
-</div><!-- page-nav-contents -->
-</div><!-- page-nav-tree -->
-</div><!-- page-nav -->
-</div><!-- container -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a href="namespace_arena_game_lib.html">ArenaGameLib</a></li><li class="navelem"><a href="namespace_arena_game_lib_1_1_game_objects.html">GameObjects</a></li><li class="navelem"><a href="class_arena_game_lib_1_1_game_objects_1_1_armour.html">Armour</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

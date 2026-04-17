@@ -1,5 +1,10 @@
 \doxysection{Arena\+Game\+Lib.\+Game\+Objects.\+Abstract\+Classes.\+Creature\+Template Class Reference}
 \hypertarget{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template}{}\label{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template}\index{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}}
+
+
+Template class for the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} class -\/ Abstract class that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} class inherits from and defines constraints and methods and overloads for the creature subclass.  
+
+
 Inheritance diagram for Arena\+Game\+Lib.\+Game\+Objects.\+Abstract\+Classes.\+Creature\+Template:\+\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,17 +15,21 @@ Inheritance diagram for Arena\+Game\+Lib.\+Game\+Objects.\+Abstract\+Classes.\+C
 \begin{DoxyCompactItemize}
 \item 
 int \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_aa58433136f0bf98ebdd4852986f01286}{Attack}} (int target\+Dist, \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_strategies_1_1_i_attack_strategy}{IAttack\+Strategy}} attack)
-\item 
+\begin{DoxyCompactList}\small\item\em Abstract template method Attack that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} subclass overrides. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_ad7d288e8d5472f9a3a04c2f2a580a064}{Loot}} (\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object}{Arena\+Object}} item)
-\item 
+\begin{DoxyCompactList}\small\item\em Abstract template method Loot that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} subclass overrides. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a0a4afd59e62474a569c271e1962fc519}{Take\+Damage}} (int damage, \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_strategies_1_1_i_absorb_damage_strategy}{IAbsorb\+Damage\+Strategy}} reduced\+Damage)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Abstract template method Take\+Damage that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} subclass overrides. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a3a65c6b00c588ccee7b2144ac56e8715}{Creature\+Template}} \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a361d42d4c5a89e0e28ab496ff9a18023}{operator+}} (\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a3a65c6b00c588ccee7b2144ac56e8715}{Creature\+Template}} creature, \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object}{Arena\+Object}} item)
+\begin{DoxyCompactList}\small\item\em Operator overload for + operation to support the creature looting an item through the + operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a7dc3779d274503e8a420cd7278ad0a3a}\label{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a7dc3779d274503e8a420cd7278ad0a3a} 
-{\bfseries Creature\+Template} (string name, int health, int unarmed\+Dmg, List$<$ \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_arena_object}{IArena\+Object}} $>$ inventory, int inventory\+Capacity, int locX, int locY)
-\end{DoxyCompactItemize}
+\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a3a65c6b00c588ccee7b2144ac56e8715}{Creature\+Template}} (string name, int health, int unarmed\+Dmg, List$<$ \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_arena_object}{IArena\+Object}} $>$ inventory, int inventory\+Capacity, int weapon\+Capacity, int armour\+Capacity, int locX, int locY)
+\begin{DoxyCompactList}\small\item\em Constructor method for the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} template clas that sets the argument constraint for the inventory that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} is capable of carrying -\/ regarding weapons and armour. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
@@ -42,6 +51,50 @@ int \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_clas
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Template class for the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} class -\/ Abstract class that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} class inherits from and defines constraints and methods and overloads for the creature subclass. 
+
+\label{doc-constructors}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a3a65c6b00c588ccee7b2144ac56e8715}\index{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}!CreatureTemplate@{CreatureTemplate}}
+\index{CreatureTemplate@{CreatureTemplate}!ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}}
+\doxysubsubsection{\texorpdfstring{CreatureTemplate()}{CreatureTemplate()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a3a65c6b00c588ccee7b2144ac56e8715} 
+Arena\+Game\+Lib.\+Game\+Objects.\+Abstract\+Classes.\+Creature\+Template.\+Creature\+Template (\begin{DoxyParamCaption}\item[{string}]{name}{, }\item[{int}]{health}{, }\item[{int}]{unarmed\+Dmg}{, }\item[{List$<$ \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_arena_object}{IArena\+Object}} $>$}]{inventory}{, }\item[{int}]{inventory\+Capacity}{, }\item[{int}]{weapon\+Capacity}{, }\item[{int}]{armour\+Capacity}{, }\item[{int}]{locX}{, }\item[{int}]{locY}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Constructor method for the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} template clas that sets the argument constraint for the inventory that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} is capable of carrying -\/ regarding weapons and armour. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Type:\+ string -\/ \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} name\\
+\hline
+{\em health} & Type:\+ int -\/ \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} health\\
+\hline
+{\em unarmed\+Dmg} & Type:\+ int -\/ Unarmed damage dealt by \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature}\\
+\hline
+{\em inventory} & Type:\+ List$<$\+Arena\+Object$>$ -\/ Creatures inventory\\
+\hline
+{\em inventory\+Capacity} & Type:\+ int -\/ Maximum inventory capacity\\
+\hline
+{\em weapon\+Capacity} & Type:\+ int -\/ Maximum weapon collection capacity\\
+\hline
+{\em armour\+Capacity} & Type:\+ int -\/ Maxumum armour collection capacity\\
+\hline
+{\em locX} & Type:\+ int -\/ Positional X coordinate\\
+\hline
+{\em locY} & Type:\+ int -\/ Positional Y coordinate\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Out\+Of\+Range\+Exception} & Exception thrown if weapons and armour capacity exceeds inventory capacity\\
+\hline
+\end{DoxyExceptions}
+
+
 \label{doc-func-members}
 \Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_doc-func-members}
 \doxysubsection{Member Function Documentation}
@@ -51,6 +104,20 @@ int \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_clas
 {\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_aa58433136f0bf98ebdd4852986f01286} 
 int Arena\+Game\+Lib.\+Game\+Objects.\+Abstract\+Classes.\+Creature\+Template.\+Attack (\begin{DoxyParamCaption}\item[{int}]{target\+Dist}{, }\item[{\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_strategies_1_1_i_attack_strategy}{IAttack\+Strategy}}}]{attack}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
 
+
+
+Abstract template method Attack that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} subclass overrides. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Dist} & Type:\+ int -\/ Distance to target\\
+\hline
+{\em attack} & Type:\+ \doxylink{interface_arena_game_lib_1_1_game_interfaces_1_1_strategies_1_1_i_attack_strategy}{IAttack\+Strategy} -\/ Strategy class containing methods returning the damage dealt by individual attacks\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Type:\+ int -\/ Total damage output of a creature
+\end{DoxyReturn}
 
 
 Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Templates.\+ICreature\+Template}}.
@@ -63,14 +130,54 @@ void Arena\+Game\+Lib.\+Game\+Objects.\+Abstract\+Classes.\+Creature\+Template.\
 
 
 
+Abstract template method Loot that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} subclass overrides. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & Type:\+ \doxylink{class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object}{Arena\+Object} -\/ The item looted by the creature\\
+\hline
+\end{DoxyParams}
+
+
 Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Templates.\+ICreature\+Template}}.
 
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a361d42d4c5a89e0e28ab496ff9a18023}\index{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}!operator+@{operator+}}
+\index{operator+@{operator+}!ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a361d42d4c5a89e0e28ab496ff9a18023} 
+\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a3a65c6b00c588ccee7b2144ac56e8715}{Creature\+Template}} Arena\+Game\+Lib.\+Game\+Objects.\+Abstract\+Classes.\+Creature\+Template.\+operator+ (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a3a65c6b00c588ccee7b2144ac56e8715}{Creature\+Template}}}]{creature}{, }\item[{\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object}{Arena\+Object}}}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Operator overload for + operation to support the creature looting an item through the + operation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em creature} & Type:\+ \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} -\/ The creature looting the item\\
+\hline
+{\em item} & Type:\+ \doxylink{class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object}{Arena\+Object} -\/ The item looted by the creature\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a0a4afd59e62474a569c271e1962fc519}\index{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}!TakeDamage@{TakeDamage}}
 \index{TakeDamage@{TakeDamage}!ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}}
 \doxysubsubsection{\texorpdfstring{TakeDamage()}{TakeDamage()}}
 {\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a0a4afd59e62474a569c271e1962fc519} 
 void Arena\+Game\+Lib.\+Game\+Objects.\+Abstract\+Classes.\+Creature\+Template.\+Take\+Damage (\begin{DoxyParamCaption}\item[{int}]{damage}{, }\item[{\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_strategies_1_1_i_absorb_damage_strategy}{IAbsorb\+Damage\+Strategy}}}]{reduced\+Damage}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
 
+
+
+Abstract template method Take\+Damage that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} subclass overrides. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em damage} & Type:\+ int -\/ Damage from an incoming attack at the creature\\
+\hline
+{\em reduced\+Damage} & Type:\+ IAbsorbed\+Damage\+Strategy -\/ Strategy class containing methods returning the reduced damage absorbed from individual incoming attacks\\
+\hline
+\end{DoxyParams}
 
 
 Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Templates.\+ICreature\+Template}}.
