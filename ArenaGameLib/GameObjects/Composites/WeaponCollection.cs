@@ -19,7 +19,7 @@ namespace ArenaGameLib.GameObjects.Composite
 		/// <summary>
 		/// Constructor method for instanciating the weapon collection.
 		/// </summary>
-		/// <param name="capacity"></param>
+		/// <param name="capacity">Type: int - Capacity of the weapon collection</param>
 		public WeaponCollection(int capacity)
 		{
 			Weapons = new List<IWeapon>();

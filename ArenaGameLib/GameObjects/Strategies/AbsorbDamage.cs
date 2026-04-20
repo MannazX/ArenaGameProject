@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace ArenaGameLib.GameObjects.Strategies
 {
+	/// <summary>
+	/// Strategy class for methods that compute the total damage absorbed from an incoming attack on creature.
+	/// </summary>
 	public class AbsorbDamage : IAbsorbDamageStrategy
 	{
 		/// <summary>

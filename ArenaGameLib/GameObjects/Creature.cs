@@ -34,15 +34,15 @@ namespace ArenaGameLib.GameObjects
 		/// <summary>
 		/// Constructor for instanciating Creature object and logging of creature actions.
 		/// </summary>
-		/// <param name="name"></param>
-		/// <param name="health"></param>
-		/// <param name="unarmedDmg"></param>
-		/// <param name="inventory"></param>
-		/// <param name="inventoryCapacity"></param>
-		/// <param name="weaponCapacity"></param>
-		/// <param name="armourCapacity"></param>
-		/// <param name="locX"></param>
-		/// <param name="locY"></param>
+		/// <param name="name">Type: string - Creature's name</param>
+		/// <param name="health">Type: int - Creature's hitpoints</param>
+		/// <param name="unarmedDmg">Type: int - Amount of unarmed damage the creature can deal</param>
+		/// <param name="inventory">Type: CreatureInventory - Composite class representing a creature's inventory</param>
+		/// <param name="inventoryCapacity">Type: int - Creature's inventory capacity</param>
+		/// <param name="weaponCapacity">Type: int - Creature's weapon collection capacity</param>
+		/// <param name="armourCapacity">Type: int - Creature's armour collection capacity</param>
+		/// <param name="locX">Type: int - Positional X coordinate</param>
+		/// <param name="locY">Type: int - Positional Y coordinate</param>
 		public Creature(string name, int health, int unarmedDmg, CreatureInventory inventory, int inventoryCapacity, int weaponCapacity, int armourCapacity, int locX, int locY) : base(name, health, unarmedDmg, inventoryCapacity, weaponCapacity, armourCapacity, locX, locY)
 		{
 			XmlDocument configDoc = new XmlDocument();
@@ -64,8 +64,8 @@ namespace ArenaGameLib.GameObjects
 		/// <summary>
 		/// Method for a creatures attack, that is predicated on the distance that a creature has to its opponent.
 		/// </summary>
-		/// <param name="targetDist"></param>
-		/// <param name="attack"></param>
+		/// <param name="targetDist">Type: int - Attack Range to the target</param>
+		/// <param name="attack">Type: IAttackStrategy - Strategy class object for computing damage output</param>
 		/// <returns>Type: int - Damage output of the attack</returns>
 		public override int Attack(int targetDist, IAttackStrategy attack)
 		{
@@ -85,8 +85,8 @@ namespace ArenaGameLib.GameObjects
 		/// <summary>
 		/// Method for the creature to take damage from an opponent's attack, the armour rating of its ArmourCollection will reduce the amount of health the creature will take, it ensures that if the absorbtion is higher than the damage the damage the creature takes is zero.
 		/// </summary>
-		/// <param name="damage"></param>
-		/// <param name="reducedDamage"></param>
+		/// <param name="damage">Type: int - Incoming damage from another creature</param>
+		/// <param name="reducedDamage">Type: IAbsorbDamageStrategy - Strategy class object for computing damage output</param>
 		public override void TakeDamage(int damage, IAbsorbDamageStrategy reducedDamage)
 		{
 			int absorbed = 0;
@@ -116,9 +116,9 @@ namespace ArenaGameLib.GameObjects
 		}
 
 		/// <summary>
-		/// Method for the creatures action of looting an item and adding it to Armour Collection, Weapon Collection or Inventory. The Method is predicated on the creature being in reaching distance (1 Square) of item.
+		/// Method for the creatures action of looting an item and adding it to Armour Collection or Weapon Collection and the Inventory. The Method is predicated on the creature being in reaching distance (1 Square) of item.
 		/// </summary>
-		/// <param name="item">Type: ArenaObject - The item looted, if Weapon - Added to WeaponCollection, if Armour - Added to ArmourCollection.</param>
+		/// <param name="item">Type: ArenaObject - The item looted, if Weapon - Add to WeaponCollection, if Armour - Add to ArmourCollection.</param>
 		public override void Loot(ArenaObject item)
 		{
 			if ((LocationX - item.LocationX <= 1 || LocationY - item.LocationY <= 1) && Inventory.Items.Sum(x => x.Weight) + item.Weight < Inventory.Capacity)
@@ -144,9 +144,9 @@ namespace ArenaGameLib.GameObjects
 		}
 
 		/// <summary>
-		/// 
+		/// Method for creatures action of dropping an item and removing it from Weapon Collection or Armour Collection and the Inventory. 
 		/// </summary>
-		/// <param name="item"></param>
+		/// <param name="item">Type: ArenaObject - The item in the creature's inventory to drop</param>
 		public override void Drop(ArenaObject item)
 		{
 			try
@@ -160,7 +160,7 @@ namespace ArenaGameLib.GameObjects
 					ArmourCollection.ArmourSet.Remove((Armour)item);
 				}
 				logger.WriteInfo($"Creature {Name} dropped item {item}");
-				Inventory.Add(item);
+				Inventory.Remove(item);
 			}
 			catch (ArgumentException ex)
 			{
@@ -169,10 +169,10 @@ namespace ArenaGameLib.GameObjects
 		}
 
 		/// <summary>
-		/// 
+		/// Method for creature's action to improve damage of one of it's weapons - implementing IWeaponModify decorator class.
 		/// </summary>
-		/// <param name="weapon"></param>
-		/// <param name="modifier"></param>
+		/// <param name="weapon">Type: IWeapon - Weapon that creature improves</param>
+		/// <param name="modifier">Type: int - Factor that the creature's weapon is improved by</param>
 		public override void WeaponImprove(IWeapon weapon, int modifier)
 		{
 			if (WeaponCollection.Weapons.Contains(weapon))
@@ -184,10 +184,10 @@ namespace ArenaGameLib.GameObjects
 		}
 
 		/// <summary>
-		/// 
+		/// Method for creature to have one of its weapon's damage degraded - implementing IWeaponModify decorator class.
 		/// </summary>
-		/// <param name="weapon"></param>
-		/// <param name="modifier"></param>
+		/// <param name="weapon">Type: IWeapon - Weapon in the creature's inventory to be degraded</param>
+		/// <param name="modifier">Type: int - Factor that the creature's weapon is degraded by</param>
 		public override void WeaponDegrade(IWeapon weapon, int modifier)
 		{
 			if (WeaponCollection.Weapons.Contains(weapon))
@@ -199,10 +199,10 @@ namespace ArenaGameLib.GameObjects
 		}
 
 		/// <summary>
-		/// 
+		/// Method for creature to have one of its armour piece's durability improved - implementing IArmourModify decorator class.
 		/// </summary>
-		/// <param name="armour"></param>
-		/// <param name="modifier"></param>
+		/// <param name="armour">Type: IArmour - Armour in the creature's inventory to be improved</param>
+		/// <param name="modifier">Type: int - Factor that the creature's armour durability is improved by</param>
 		public override void ArmourImprove(IArmour armour, int modifier)
 		{
 			if (ArmourCollection.ArmourSet.Contains(armour))
@@ -214,10 +214,10 @@ namespace ArenaGameLib.GameObjects
 		}
 
 		/// <summary>
-		/// 
+		/// Method for creature to have one of its armour piece's durability degraded by - implementing IArmourModify decorator class.
 		/// </summary>
-		/// <param name="armour"></param>
-		/// <param name="modifier"></param>
+		/// <param name="armour">Type: IArmour - Armour in the creature's inventory to be degraded</param>
+		/// <param name="modifier">Type: int - Factor that the creature's armour durability is degraded by</param>
 		public override void ArmourDegrade(IArmour armour, int modifier)
 		{
 			if (ArmourCollection.ArmourSet.Contains(armour))
@@ -229,9 +229,9 @@ namespace ArenaGameLib.GameObjects
 		}
 
 		/// <summary>
-		/// Method for adding a new observer to notify this Creature object.
+		/// Method for adding a new observer class object to notify this creature.
 		/// </summary>
-		/// <param name="notifier"></param>
+		/// <param name="notifier">Type: ICombatNotifier - Combat notifier observer class object</param>
 		public override void AddObserver(ICombatNotifier notifier)
 		{
 			CombatNotifications.Add(notifier);
@@ -239,9 +239,9 @@ namespace ArenaGameLib.GameObjects
 		}
 
 		/// <summary>
-		/// Metod for removing an observer in on this Creature object.
+		/// Metod for removing an observer class object on this creature.
 		/// </summary>
-		/// <param name="notifier"></param>
+		/// <param name="notifier">Type: ICombatNotifier - Combat notifier observer class object</param>
 		public override void RemoveObserver(ICombatNotifier notifier)
 		{
 			CombatNotifications.Remove(notifier);
@@ -251,8 +251,8 @@ namespace ArenaGameLib.GameObjects
 		/// <summary>
 		/// Method for executing Damage Taken notification from all observers.
 		/// </summary>
-		/// <param name="damage"></param>
-		/// <param name="absorbed"></param>
+		/// <param name="damage">Type: int - Damage that the notifiers notify</param>
+		/// <param name="absorbed">Type: int - Damage absorbed that the notifiers notify</param>
 		public override void NotifyAllDamageTaken(int damage, int absorbed)
 		{
 			foreach (ICombatNotifier notifier in CombatNotifications)
@@ -262,7 +262,7 @@ namespace ArenaGameLib.GameObjects
 		}
 
 		/// <summary>
-		/// Method for executing Defeat notification from all observers.
+		/// Method for executing Defeat notification from all notifiers.
 		/// </summary>
 		public override void NotifyAllDefeated()
 		{

@@ -31,15 +31,15 @@ namespace ArenaGameLib.GameObjects.AbstractClasses
 		/// Constructor method for the Creature template class that sets the argument constraint for the inventory that the creature is capable of carrying - regarding weapons and armour.
 		/// </summary>
 		/// <param name="name">Type: string - Creature name</param>
-		/// <param name="health">Type: int - Creature health</param>
-		/// <param name="unarmedDmg">Type: int - Unarmed damage dealt by Creature</param>
-		/// <param name="inventory">Type: List<ArenaObject> - Creatures inventory</param>
-		/// <param name="inventoryCapacity">Type: int - Maximum inventory capacity</param>
+		/// <param name="health">Type: int - Creature hitpoints</param>
+		/// <param name="unarmedDmg">Type: int - Amount of unarmed damage the creature can deal</param>
+		/// <param name="inventory">Type: CreatureInventory - Composite class representing a creature's inventory</param>
+		/// <param name="inventoryCapacity">Type: int - Creature's inventory capacity</param>
 		/// <param name="weaponCapacity">Type: int - Maximum weapon collection capacity</param>
 		/// <param name="armourCapacity">Type: int - Maxumum armour collection capacity</param>
 		/// <param name="locX">Type: int - Positional X coordinate</param>
 		/// <param name="locY">Type: int - Positional Y coordinate</param>
-		/// <exception cref="ArgumentOutOfRangeException">Exception thrown if weapons and armour capacity exceeds inventory capacity</exception>
+		/// <exception cref="ArgumentOutOfRangeException">Argument Out of Range Exception thrown if weapons and armour capacity exceeds inventory capacity</exception>
 		protected CreatureTemplate(string name, int health, int unarmedDmg, int inventoryCapacity, int weaponCapacity, int armourCapacity, int locX, int locY)
 		{
 
@@ -91,54 +91,54 @@ namespace ArenaGameLib.GameObjects.AbstractClasses
 		public abstract void TakeDamage(int damage, IAbsorbDamageStrategy reducedDamage);
 
 		/// <summary>
-		/// 
+		/// Abstract template method WeaponImprove that the Creature subclass overrides.
 		/// </summary>
-		/// <param name="weapon"></param>
-		/// <param name="modifier"></param>
+		/// <param name="weapon">Type: IWeapon - Weapon that is improved</param>
+		/// <param name="modifier">Type: int - Factor that the damage is imrpoved by</param>
 		public abstract void WeaponImprove(IWeapon weapon, int modifier);
 
 		/// <summary>
-		/// 
+		/// Abstract template method WeaponDegrade that the Creature subclass overrides.
 		/// </summary>
-		/// <param name="weapon"></param>
-		/// <param name="modifier"></param>
+		/// <param name="weapon">Type: IWeapon - Weapon that is degraded</param>
+		/// <param name="modifier">Type: int - Factor that the damage is degraded by</param>
 		public abstract void WeaponDegrade(IWeapon weapon, int modifier);
 
 		/// <summary>
-		/// 
+		/// Abstract template method ArmourImprove that the Creature subclass overrides.
 		/// </summary>
-		/// <param name="armour"></param>
-		/// <param name="modifier"></param>
+		/// <param name="armour">Type: IArmour - Armour that is improved</param>
+		/// <param name="modifier">Type: int - Factor that the armour durability is improved by</param>
 		public abstract void ArmourImprove(IArmour armour, int modifier);
 
 		/// <summary>
-		/// 
+		/// Abstract template method ArmourDegrade that the Creature subclass overrides.
 		/// </summary>
-		/// <param name="armour"></param>
-		/// <param name="modifier"></param>
+		/// <param name="armour">Type: IArmour - Armour that is degraded</param>
+		/// <param name="modifier">Type: int - Factor that the armour durability is improved by</param>
 		public abstract void ArmourDegrade(IArmour armour, int modifier);
 
 		/// <summary>
-		/// 
+		/// Abstract template method AddObserver that the Creature subclass overrides.
 		/// </summary>
-		/// <param name="notifier"></param>
+		/// <param name="notifier">Type: ICombatNotifier - Combat notifier observer class object</param>
 		public abstract void AddObserver(ICombatNotifier notifier);
 
 		/// <summary>
-		/// 
+		/// Abstract template method AddObserver that the Creature subclass overrides.
 		/// </summary>
-		/// <param name="notifier"></param>
+		/// <param name="notifier">Type: ICombatNotifier - Combat notifier observer class object</param>
 		public abstract void RemoveObserver(ICombatNotifier notifier);
 
 		/// <summary>
-		/// 
+		/// Abstract template method NotifyAllDamageTaken that the Creature subclass overrides.
 		/// </summary>
-		/// <param name="damage"></param>
-		/// <param name="absorbed"></param>
+		/// <param name="damage">Type: int - Damage that the notifiers notify</param>
+		/// <param name="absorbed">Type: int - Damage absorbed that the notifiers notify</param>
 		public abstract void NotifyAllDamageTaken(int damage, int absorbed);
 
 		/// <summary>
-		/// 
+		/// Abstract template method NotifyAllDefeated that the Creature subclass overrides.
 		/// </summary>
 		public abstract void NotifyAllDefeated();
 	}
