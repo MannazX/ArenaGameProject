@@ -8,11 +8,11 @@ namespace ArenaGameLib.GameInterfaces.Templates
 {
 	public interface IArenaObject
 	{
-		public string Name { get; set; }
-		public bool Lootable { get; set; }
-		public bool Removeable { get; set; }
-		public int? Weight { get; set; }
-		public int? LocationX { get; set; }
-		public int? LocationY { get; set; }
+		string Name { get; set; }
+		bool Lootable { get; set; }
+		bool Removeable { get; set; }
+		int? Weight { get; set; }
+		int? LocationX { get; set; }
+		int? LocationY { get; set; }
 	}
 }

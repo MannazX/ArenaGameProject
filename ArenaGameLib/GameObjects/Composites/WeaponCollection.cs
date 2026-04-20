@@ -35,11 +35,11 @@ namespace ArenaGameLib.GameObjects.Composite
 		{
 			if (item.Weight + TotalWeight() > Capacity)
 			{
-				Weapons.Add(item);
+				throw new ArgumentOutOfRangeException("Weapon Weight Capacity Exceeded!");
 			}
 			else
 			{
-				throw new ArgumentOutOfRangeException("Weapon Weight Capacity Exceeded!");
+				Weapons.Add(item);
 			}
 		}
 

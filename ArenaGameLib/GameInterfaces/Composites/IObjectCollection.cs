@@ -1,4 +1,4 @@
-﻿using ArenaGameLib.GameObjects;
+﻿using ArenaGameLib.GameInterfaces.Templates;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace ArenaGameLib.GameInterfaces.Composites
 {
-	public interface IWeaponCollection
+	public interface IObjectCollection
 	{
-		List<IWeapon> Weapons { get; set; }
+		List<IArenaObject> Inventory { get; set; }
 		int Capacity { get; set; }
 
-		void Add(IWeapon item);
-		void Remove(IWeapon item);
+		void Add(IArenaObject item);
+		void Remove(IArenaObject item);
 		int TotalWeight();
 	}
 }

@@ -35,11 +35,11 @@ namespace ArenaGameLib.GameObjects.Composite
 		{
 			if (item.Weight + TotalWeight() > Capacity)
 			{
-				ArmourSet.Add(item);
+				throw new ArgumentOutOfRangeException("Armour Set Weight Capacity Exceeded!");
 			}
 			else
 			{
-				throw new ArgumentOutOfRangeException("Armour Set Weight Capacity Exceeded!");
+				ArmourSet.Add(item);
 			}
 		}
 

@@ -1,6 +1,11 @@
-﻿using ArenaGameLib.GameInterfaces.Strategies;
+﻿using ArenaGameLib.GameInterfaces;
+using ArenaGameLib.GameInterfaces.Decorators;
+using ArenaGameLib.GameInterfaces.Observers;
+using ArenaGameLib.GameInterfaces.Strategies;
 using ArenaGameLib.GameInterfaces.Templates;
 using ArenaGameLib.GameLogger;
+using ArenaGameLib.GameObjects.Composite;
+using ArenaGameLib.GameObjects.Composites;
 using ArenaGameLib.GameObjects.Templates;
 using System;
 using System.Collections.Generic;
@@ -19,8 +24,6 @@ namespace ArenaGameLib.GameObjects.AbstractClasses
 		public string Name { get; set; }
 		public int Health { get; set; }
 		public int UnarmedDamage { get; set; }
-		public List<IArenaObject> Inventory { get; set; }
-		public int InventoryCapacity { get; set; }
 		public int LocationX { get; set; }
 		public int LocationY { get; set; }
 
@@ -37,8 +40,9 @@ namespace ArenaGameLib.GameObjects.AbstractClasses
 		/// <param name="locX">Type: int - Positional X coordinate</param>
 		/// <param name="locY">Type: int - Positional Y coordinate</param>
 		/// <exception cref="ArgumentOutOfRangeException">Exception thrown if weapons and armour capacity exceeds inventory capacity</exception>
-		protected CreatureTemplate(string name, int health, int unarmedDmg, List<IArenaObject> inventory, int inventoryCapacity, int weaponCapacity, int armourCapacity, int locX, int locY)
+		protected CreatureTemplate(string name, int health, int unarmedDmg, int inventoryCapacity, int weaponCapacity, int armourCapacity, int locX, int locY)
 		{
+
 			if (weaponCapacity + armourCapacity > inventoryCapacity)
 			{
 				throw new ArgumentOutOfRangeException("The weapons and armour capacity exceeds the inventory capacity");
@@ -74,10 +78,68 @@ namespace ArenaGameLib.GameObjects.AbstractClasses
 		public abstract void Loot(ArenaObject item);
 
 		/// <summary>
+		/// Abstract template method Drop that the Creature subclass overrides.
+		/// </summary>
+		/// <param name="item">Type: ArenaObject - The item dropped by the creature</param>
+		public abstract void Drop(ArenaObject item);
+		
+		/// <summary>
 		/// Abstract template method TakeDamage that the Creature subclass overrides.
 		/// </summary>
 		/// <param name="damage">Type: int - Damage from an incoming attack at the creature</param>
 		/// <param name="reducedDamage">Type: IAbsorbedDamageStrategy - Strategy class containing methods returning the reduced damage absorbed from individual incoming attacks</param>
 		public abstract void TakeDamage(int damage, IAbsorbDamageStrategy reducedDamage);
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="weapon"></param>
+		/// <param name="modifier"></param>
+		public abstract void WeaponImprove(IWeapon weapon, int modifier);
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="weapon"></param>
+		/// <param name="modifier"></param>
+		public abstract void WeaponDegrade(IWeapon weapon, int modifier);
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="armour"></param>
+		/// <param name="modifier"></param>
+		public abstract void ArmourImprove(IArmour armour, int modifier);
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="armour"></param>
+		/// <param name="modifier"></param>
+		public abstract void ArmourDegrade(IArmour armour, int modifier);
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="notifier"></param>
+		public abstract void AddObserver(ICombatNotifier notifier);
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="notifier"></param>
+		public abstract void RemoveObserver(ICombatNotifier notifier);
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="damage"></param>
+		/// <param name="absorbed"></param>
+		public abstract void NotifyAllDamageTaken(int damage, int absorbed);
+
+		/// <summary>
+		/// 
+		/// </summary>
+		public abstract void NotifyAllDefeated();
 	}
 }

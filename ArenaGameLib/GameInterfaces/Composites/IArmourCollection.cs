@@ -10,6 +10,7 @@ namespace ArenaGameLib.GameInterfaces.Composites
 	public interface IArmourCollection
 	{
 		List<IArmour> ArmourSet { get; set; }
+		int Capacity { get; set; }
 
 		void Add(IArmour item);
 		void Remove(IArmour item);

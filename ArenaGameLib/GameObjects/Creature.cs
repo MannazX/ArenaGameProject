@@ -12,6 +12,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using ArenaGameLib.GameObjects.Composites;
+using ArenaGameLib.GameInterfaces;
+using ArenaGameLib.GameInterfaces.Decorators;
+using ArenaGameLib.GameObjects.Decorators;
 
 
 namespace ArenaGameLib.GameObjects
@@ -24,6 +28,7 @@ namespace ArenaGameLib.GameObjects
 		private readonly Logger logger;
 		public WeaponCollection WeaponCollection { get; set; }
 		public ArmourCollection ArmourCollection { get; set; }
+		public CreatureInventory Inventory { get; set; }
 		public List<ICombatNotifier> CombatNotifications { get; set; }
 
 		/// <summary>
@@ -34,25 +39,26 @@ namespace ArenaGameLib.GameObjects
 		/// <param name="unarmedDmg"></param>
 		/// <param name="inventory"></param>
 		/// <param name="inventoryCapacity"></param>
+		/// <param name="weaponCapacity"></param>
+		/// <param name="armourCapacity"></param>
 		/// <param name="locX"></param>
 		/// <param name="locY"></param>
-		public Creature(string name, int health, int unarmedDmg, List<IArenaObject> inventory, int inventoryCapacity, int weaponCapacity, int armourCapacity, int locX, int locY) : base(name, health, unarmedDmg, inventory, inventoryCapacity, weaponCapacity, armourCapacity, locX, locY)
+		public Creature(string name, int health, int unarmedDmg, CreatureInventory inventory, int inventoryCapacity, int weaponCapacity, int armourCapacity, int locX, int locY) : base(name, health, unarmedDmg, inventoryCapacity, weaponCapacity, armourCapacity, locX, locY)
 		{
 			XmlDocument configDoc = new XmlDocument();
 			logger = Logger.InitLogger();
 			string config = Environment.GetEnvironmentVariable("ArenaGameConfig");
 			configDoc.Load(config);
-			logger.StartLogger();
 			Name = name;
 			Health = health;
 			UnarmedDamage = unarmedDmg;
-			Inventory = inventory;
-			InventoryCapacity = inventoryCapacity;
+			Inventory = new CreatureInventory(inventoryCapacity);
 			WeaponCollection = new WeaponCollection(weaponCapacity);
 			ArmourCollection = new ArmourCollection(armourCapacity);
 			CombatNotifications = new List<ICombatNotifier>();
 			LocationX = locX;
 			LocationY = locY;
+			logger.StartLogger();
 		}
 
 		/// <summary>
@@ -72,27 +78,8 @@ namespace ArenaGameLib.GameObjects
 			{
 				dmgOutput = attack.UnarmedAttack(targetDist, UnarmedDamage);
 			}
+			logger.WriteInfo($"Creature {Name} dealt {dmgOutput}");
 			return dmgOutput;
-		}
-
-		/// <summary>
-		/// Method for the creatures action of looting an item and adding it to Armour Collection, Weapon Collection or Inventory. The Method is predicated on the creature being in reaching distance (1 Square) of item.
-		/// </summary>
-		/// <param name="item">Type: ArenaObject - The item looted, if Weapon - Added to WeaponCollection, if Armour - Added to ArmourCollection.</param>
-		public override void Loot(ArenaObject item)
-		{
-			if ((LocationX - item.LocationX <= 1 || LocationY - item.LocationY <= 1) && Inventory.Sum(x => x.Weight) + item.Weight < InventoryCapacity)
-			{
-				if (item.GetType() == typeof(Weapon))
-				{
-					WeaponCollection.Weapons.Add((Weapon)item);
-				}
-				else if (item.GetType() == typeof(Armour))
-				{
-					ArmourCollection.ArmourSet.Add((Armour)item);
-				}
-				Inventory.Add(item);
-			}
 		}
 
 		/// <summary>
@@ -111,16 +98,128 @@ namespace ArenaGameLib.GameObjects
 					absorbed = damage;
 				}
 				Health -= damage - absorbed;
+				logger.WriteInfo($"Creature's health reduced to {Health} - absorbing {absorbed} of out {damage} damage points");
 			}
 			else
 			{
 				Health -= damage;
+				logger.WriteInfo($"Creature's health reduced to {Health} - taking {damage} damage points");
 			}
 			NotifyAllDamageTaken(damage, absorbed);
 			if (Health <= 0)
 			{
+				logger.WriteInfo($"Creature has been defeated");
 				NotifyAllDefeated();
 				CombatNotifications.Clear();
+			}
+		}
+
+		/// <summary>
+		/// Method for the creatures action of looting an item and adding it to Armour Collection, Weapon Collection or Inventory. The Method is predicated on the creature being in reaching distance (1 Square) of item.
+		/// </summary>
+		/// <param name="item">Type: ArenaObject - The item looted, if Weapon - Added to WeaponCollection, if Armour - Added to ArmourCollection.</param>
+		public override void Loot(ArenaObject item)
+		{
+			if ((LocationX - item.LocationX <= 1 || LocationY - item.LocationY <= 1) && Inventory.Sum(x => x.Weight) + item.Weight < InventoryCapacity)
+			{
+				try
+				{
+					if (item.GetType() == typeof(Weapon))
+					{
+						WeaponCollection.Weapons.Add((Weapon)item);
+					}
+					else if (item.GetType() == typeof(Armour))
+					{
+						ArmourCollection.ArmourSet.Add((Armour)item);
+					}
+					logger.WriteInfo($"Creature {Name} looted item {item}");
+					Inventory.Add(item);
+				}
+				catch (ArgumentOutOfRangeException ex)
+				{
+					logger.LogError(ex.Message);
+				}
+			}
+		}
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="item"></param>
+		public override void Drop(ArenaObject item)
+		{
+			try
+			{
+				if (item.GetType() == typeof(Weapon))
+				{
+					WeaponCollection.Weapons.Remove((Weapon)item);
+				}
+				else if (item.GetType() == typeof(Armour))
+				{
+					ArmourCollection.ArmourSet.Remove((Armour)item);
+				}
+				logger.WriteInfo($"Creature {Name} dropped item {item}");
+				Inventory.Add(item);
+			}
+			catch (ArgumentException ex)
+			{
+				logger.LogError(ex.Message);
+			}
+		}
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="weapon"></param>
+		/// <param name="modifier"></param>
+		public override void WeaponImprove(IWeapon weapon, int modifier)
+		{
+			if (WeaponCollection.Weapons.Contains(weapon))
+			{
+				IWeaponModify wepDecor = new WeaponModifier(weapon);
+				wepDecor.ImproveWeaponDamage(modifier);
+			}
+		}
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="weapon"></param>
+		/// <param name="modifier"></param>
+		public override void WeaponDegrade(IWeapon weapon, int modifier)
+		{
+			if (WeaponCollection.Weapons.Contains(weapon))
+			{
+				IWeaponModify wepDecor = new WeaponModifier(weapon);
+				wepDecor.DegradeWeaponDamage(modifier);
+			}
+		}
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="armour"></param>
+		/// <param name="modifier"></param>
+		public override void ArmourImprove(IArmour armour, int modifier)
+		{
+			if (ArmourCollection.ArmourSet.Contains(armour))
+			{
+				IArmourModify armDecor = new ArmourModifier(armour);
+				armDecor.ImproveArmourDurability(modifier);
+			}
+		}
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="armour"></param>
+		/// <param name="modifier"></param>
+		public override void ArmourDegrade(IArmour armour, int modifier)
+		{
+			if (ArmourCollection.ArmourSet.Contains(armour))
+			{
+				IArmourModify armDecor = new ArmourModifier(armour);
+				armDecor.DegradeArmourDurability(modifier);
 			}
 		}
 
@@ -131,6 +230,7 @@ namespace ArenaGameLib.GameObjects
 		public void AddObserver(ICombatNotifier notifier)
 		{
 			CombatNotifications.Add(notifier);
+			logger.WriteInfo($"New combat notifier added on {notifier.Creature}");
 		}
 
 		/// <summary>
@@ -140,6 +240,7 @@ namespace ArenaGameLib.GameObjects
 		public void RemoveObserver(ICombatNotifier notifier)
 		{
 			CombatNotifications.Remove(notifier);
+			logger.WriteInfo($"Combat notifier removed from {notifier.Creature}");
 		}
 
 		/// <summary>
