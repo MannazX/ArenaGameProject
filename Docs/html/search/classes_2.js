@@ -9,7 +9,8 @@ var searchData=
   ['iattackstrategy_6',['IAttackStrategy',['../interface_arena_game_lib_1_1_game_interfaces_1_1_strategies_1_1_i_attack_strategy.html',1,'ArenaGameLib::GameInterfaces::Strategies']]],
   ['icombatnotifier_7',['ICombatNotifier',['../interface_arena_game_lib_1_1_game_interfaces_1_1_observers_1_1_i_combat_notifier.html',1,'ArenaGameLib::GameInterfaces::Observers']]],
   ['icreaturetemplate_8',['ICreatureTemplate',['../interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template.html',1,'ArenaGameLib::GameInterfaces::Templates']]],
-  ['iweapon_9',['IWeapon',['../interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon.html',1,'ArenaGameLib::GameInterfaces']]],
-  ['iweaponcollection_10',['IWeaponCollection',['../interface_arena_game_lib_1_1_game_interfaces_1_1_composites_1_1_i_weapon_collection.html',1,'ArenaGameLib::GameInterfaces::Composites']]],
-  ['iweaponmodify_11',['IWeaponModify',['../interface_arena_game_lib_1_1_game_interfaces_1_1_decorators_1_1_i_weapon_modify.html',1,'ArenaGameLib::GameInterfaces::Decorators']]]
+  ['iobjectcollection_9',['IObjectCollection',['../interface_arena_game_lib_1_1_game_interfaces_1_1_composites_1_1_i_object_collection.html',1,'ArenaGameLib::GameInterfaces::Composites']]],
+  ['iweapon_10',['IWeapon',['../interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon.html',1,'ArenaGameLib::GameInterfaces']]],
+  ['iweaponcollection_11',['IWeaponCollection',['../interface_arena_game_lib_1_1_game_interfaces_1_1_composites_1_1_i_weapon_collection.html',1,'ArenaGameLib::GameInterfaces::Composites']]],
+  ['iweaponmodify_12',['IWeaponModify',['../interface_arena_game_lib_1_1_game_interfaces_1_1_decorators_1_1_i_weapon_modify.html',1,'ArenaGameLib::GameInterfaces::Decorators']]]
 ];

@@ -10,6 +10,9 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -42,11 +45,27 @@ $(function() { codefold.init(); });
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('interface_arena_game_lib_1_1_game_interfaces_1_1_composites_1_1_i_weapon_collection.html','','interface_arena_game_lib_1_1_game_interfaces_1_1_composites_1_1_i_weapon_collection-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -68,17 +87,7 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a href="namespace_arena_game_lib.html">ArenaGameLib</a></li><li class="navelem"><a href="namespace_arena_game_lib_1_1_game_interfaces.html">GameInterfaces</a></li><li class="navelem"><a href="namespace_arena_game_lib_1_1_game_interfaces_1_1_composites.html">Composites</a></li><li class="navelem"><a href="interface_arena_game_lib_1_1_game_interfaces_1_1_composites_1_1_i_weapon_collection.html">IWeaponCollection</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
-  <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#properties">Properties</a> &#124;
-<a href="interface_arena_game_lib_1_1_game_interfaces_1_1_composites_1_1_i_weapon_collection-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">ArenaGameLib.GameInterfaces.Composites.IWeaponCollection Interface Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -88,32 +97,100 @@ Inheritance diagram for ArenaGameLib.GameInterfaces.Composites.IWeaponCollection
  <div class="center">
   <img src="interface_arena_game_lib_1_1_game_interfaces_1_1_composites_1_1_i_weapon_collection.png" usemap="#ArenaGameLib_2EGameInterfaces_2EComposites_2EIWeaponCollection_map" alt=""/>
   <map id="ArenaGameLib_2EGameInterfaces_2EComposites_2EIWeaponCollection_map" name="ArenaGameLib_2EGameInterfaces_2EComposites_2EIWeaponCollection_map">
-<area href="class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection.html" alt="ArenaGameLib.GameObjects.Composite.WeaponCollection" shape="rect" coords="0,56,365,80"/>
+<area href="class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection.html" title="Composite class representing a creature&#39;s collection of weapons." alt="ArenaGameLib.GameObjects.Composite.WeaponCollection" shape="rect" coords="0,56,365,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abc522ee2482c10f9f32f52a8984295e8" id="r_abc522ee2482c10f9f32f52a8984295e8"><td class="memItemLeft"><a id="abc522ee2482c10f9f32f52a8984295e8" name="abc522ee2482c10f9f32f52a8984295e8"></a>
-void&#160;</td><td class="memItemRight"><b>Add</b> (<a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon.html">IWeapon</a> item)</td></tr>
-<tr class="memitem:a139b9163176b126ef506d1e03ef3146a" id="r_a139b9163176b126ef506d1e03ef3146a"><td class="memItemLeft"><a id="a139b9163176b126ef506d1e03ef3146a" name="a139b9163176b126ef506d1e03ef3146a"></a>
-void&#160;</td><td class="memItemRight"><b>Remove</b> (<a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon.html">IWeapon</a> item)</td></tr>
-<tr class="memitem:a85b008ddcd7b97448bb630c7b948a60a" id="r_a85b008ddcd7b97448bb630c7b948a60a"><td class="memItemLeft"><a id="a85b008ddcd7b97448bb630c7b948a60a" name="a85b008ddcd7b97448bb630c7b948a60a"></a>
-int&#160;</td><td class="memItemRight"><b>TotalWeight</b> ()</td></tr>
+<tr class="memitem:abc522ee2482c10f9f32f52a8984295e8" id="r_abc522ee2482c10f9f32f52a8984295e8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abc522ee2482c10f9f32f52a8984295e8">Add</a> (<a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon.html">IWeapon</a> item)</td></tr>
+<tr class="memitem:a139b9163176b126ef506d1e03ef3146a" id="r_a139b9163176b126ef506d1e03ef3146a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a139b9163176b126ef506d1e03ef3146a">Remove</a> (<a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon.html">IWeapon</a> item)</td></tr>
+<tr class="memitem:a85b008ddcd7b97448bb630c7b948a60a" id="r_a85b008ddcd7b97448bb630c7b948a60a"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a85b008ddcd7b97448bb630c7b948a60a">TotalWeight</a> ()</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:a1eebd04c0b50b128d80e56b223159ff5" id="r_a1eebd04c0b50b128d80e56b223159ff5"><td class="memItemLeft"><a id="a1eebd04c0b50b128d80e56b223159ff5" name="a1eebd04c0b50b128d80e56b223159ff5"></a>
 List&lt; <a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon.html">IWeapon</a> &gt;&#160;</td><td class="memItemRight"><b>Weapons</b><code> [get, set]</code></td></tr>
+<tr class="memitem:a624c396a68c43a228c2013c63f92a052" id="r_a624c396a68c43a228c2013c63f92a052"><td class="memItemLeft"><a id="a624c396a68c43a228c2013c63f92a052" name="a624c396a68c43a228c2013c63f92a052"></a>
+int&#160;</td><td class="memItemRight"><b>Capacity</b><code> [get, set]</code></td></tr>
 </table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="abc522ee2482c10f9f32f52a8984295e8" name="abc522ee2482c10f9f32f52a8984295e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc522ee2482c10f9f32f52a8984295e8">&#9670;&#160;</a></span>Add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArenaGameLib.GameInterfaces.Composites.IWeaponCollection.Add </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon.html">IWeapon</a></td>          <td class="paramname"><span class="paramname"><em>item</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection.html#a50b4abd893c0de586469ebceb029cbc1">ArenaGameLib.GameObjects.Composite.WeaponCollection</a>.</p>
+
+</div>
+</div>
+<a id="a139b9163176b126ef506d1e03ef3146a" name="a139b9163176b126ef506d1e03ef3146a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a139b9163176b126ef506d1e03ef3146a">&#9670;&#160;</a></span>Remove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArenaGameLib.GameInterfaces.Composites.IWeaponCollection.Remove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon.html">IWeapon</a></td>          <td class="paramname"><span class="paramname"><em>item</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection.html#ac3a977c004062c29422de76e77fdf266">ArenaGameLib.GameObjects.Composite.WeaponCollection</a>.</p>
+
+</div>
+</div>
+<a id="a85b008ddcd7b97448bb630c7b948a60a" name="a85b008ddcd7b97448bb630c7b948a60a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85b008ddcd7b97448bb630c7b948a60a">&#9670;&#160;</a></span>TotalWeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ArenaGameLib.GameInterfaces.Composites.IWeaponCollection.TotalWeight </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection.html#a54ff53e16a9a866d4276659353e9d4b8">ArenaGameLib.GameObjects.Composite.WeaponCollection</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this interface was generated from the following file:<ul>
 <li>C:/Users/magnu/OneDrive/Skrivebord/Datamatiker/4-Sem/Advanced-Software-Construction/ArenaGameLib/ArenaGameLib/GameInterfaces/Composites/<b>IWeaponCollection.cs</b></li>
 </ul>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1
-</small></address>
 </div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_arena_game_lib.html">ArenaGameLib</a></li><li class="navelem"><a href="namespace_arena_game_lib_1_1_game_interfaces.html">GameInterfaces</a></li><li class="navelem"><a href="namespace_arena_game_lib_1_1_game_interfaces_1_1_composites.html">Composites</a></li><li class="navelem"><a href="interface_arena_game_lib_1_1_game_interfaces_1_1_composites_1_1_i_weapon_collection.html">IWeaponCollection</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
 </body>
 </html>

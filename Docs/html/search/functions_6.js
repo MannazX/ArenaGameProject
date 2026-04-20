@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['remove_0',['Remove',['../class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection.html#a0008c9bbb0e35e8a1d395121e0cdc5e7',1,'ArenaGameLib::GameObjects::Composite::ArmourCollection']]],
-  ['removeobserver_1',['RemoveObserver',['../class_arena_game_lib_1_1_game_objects_1_1_creature.html#a3ad64dc91df52422907e44e3d92947dc',1,'ArenaGameLib::GameObjects::Creature']]]
+  ['operator_2b_0',['operator+',['../class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template.html#a361d42d4c5a89e0e28ab496ff9a18023',1,'ArenaGameLib::GameObjects::AbstractClasses::CreatureTemplate']]]
 ];

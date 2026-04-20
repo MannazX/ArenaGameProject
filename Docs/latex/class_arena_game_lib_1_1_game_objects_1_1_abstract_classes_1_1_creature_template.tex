@@ -18,18 +18,36 @@ int \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_clas
 \begin{DoxyCompactList}\small\item\em Abstract template method Attack that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} subclass overrides. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_ad7d288e8d5472f9a3a04c2f2a580a064}{Loot}} (\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object}{Arena\+Object}} item)
 \begin{DoxyCompactList}\small\item\em Abstract template method Loot that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} subclass overrides. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a96728c2152f40cbb3f8111c4186c0a26}{Drop}} (\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object}{Arena\+Object}} item)
+\begin{DoxyCompactList}\small\item\em Abstract template method Drop that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} subclass overrides. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a0a4afd59e62474a569c271e1962fc519}{Take\+Damage}} (int damage, \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_strategies_1_1_i_absorb_damage_strategy}{IAbsorb\+Damage\+Strategy}} reduced\+Damage)
-\begin{DoxyCompactList}\small\item\em Abstract template method Take\+Damage that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} subclass overrides. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Abstract template method Take\+Damage that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} subclass overrides. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a8cbe870a72c782ec6968a81fac4d0e50}{Weapon\+Improve}} (\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon}{IWeapon}} weapon, int modifier)
+\begin{DoxyCompactList}\small\item\em Abstract template method Weapon\+Improve that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} subclass overrides. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_ae5ce9d307d5ac0e7173d6b69b70f80c7}{Weapon\+Degrade}} (\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon}{IWeapon}} weapon, int modifier)
+\begin{DoxyCompactList}\small\item\em Abstract template method Weapon\+Degrade that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} subclass overrides. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a0aa2f876634a9da816ebab193e70c356}{Armour\+Improve}} (\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_armour}{IArmour}} armour, int modifier)
+\begin{DoxyCompactList}\small\item\em Abstract template method Armour\+Improve that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} subclass overrides. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a8b3a35d6dc966a25ced75ea6e2b22c04}{Armour\+Degrade}} (\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_armour}{IArmour}} armour, int modifier)
+\begin{DoxyCompactList}\small\item\em Abstract template method Armour\+Degrade that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} subclass overrides. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a0220348171ecea15f2ceb917eddda81d}{Add\+Observer}} (\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_observers_1_1_i_combat_notifier}{ICombat\+Notifier}} notifier)
+\begin{DoxyCompactList}\small\item\em Abstract template method Add\+Observer that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} subclass overrides. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a804e376d5640b1e0da031456f1e7fb4c}{Remove\+Observer}} (\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_observers_1_1_i_combat_notifier}{ICombat\+Notifier}} notifier)
+\begin{DoxyCompactList}\small\item\em Abstract template method Add\+Observer that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} subclass overrides. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a8bba2560035ca5dc8e1368a12b93ab66}{Notify\+All\+Damage\+Taken}} (int damage, int absorbed)
+\begin{DoxyCompactList}\small\item\em Abstract template method Notify\+All\+Damage\+Taken that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} subclass overrides. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a1202662ab6cbaaf5ba1037d7c11d2bb3}{Notify\+All\+Defeated}} ()
+\begin{DoxyCompactList}\small\item\em Abstract template method Notify\+All\+Defeated that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} subclass overrides. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a3a65c6b00c588ccee7b2144ac56e8715}{Creature\+Template}} \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a361d42d4c5a89e0e28ab496ff9a18023}{operator+}} (\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a3a65c6b00c588ccee7b2144ac56e8715}{Creature\+Template}} creature, \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object}{Arena\+Object}} item)
+static \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a91ef57fad6fb6339447bf42ac8269815}{Creature\+Template}} \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a361d42d4c5a89e0e28ab496ff9a18023}{operator+}} (\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a91ef57fad6fb6339447bf42ac8269815}{Creature\+Template}} creature, \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object}{Arena\+Object}} item)
 \begin{DoxyCompactList}\small\item\em Operator overload for + operation to support the creature looting an item through the + operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a3a65c6b00c588ccee7b2144ac56e8715}{Creature\+Template}} (string name, int health, int unarmed\+Dmg, List$<$ \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_arena_object}{IArena\+Object}} $>$ inventory, int inventory\+Capacity, int weapon\+Capacity, int armour\+Capacity, int locX, int locY)
-\begin{DoxyCompactList}\small\item\em Constructor method for the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} template clas that sets the argument constraint for the inventory that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} is capable of carrying -\/ regarding weapons and armour. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a91ef57fad6fb6339447bf42ac8269815}{Creature\+Template}} (string name, int health, int unarmed\+Dmg, int inventory\+Capacity, int weapon\+Capacity, int armour\+Capacity, int locX, int locY)
+\begin{DoxyCompactList}\small\item\em Constructor method for the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} template class that sets the argument constraint for the inventory that the creature is capable of carrying -\/ regarding weapons and armour. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
@@ -39,11 +57,6 @@ int \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_clas
 \item 
 \Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a7af5a0d401f4b7c45315853f9289dad7}\label{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a7af5a0d401f4b7c45315853f9289dad7} 
 int {\bfseries Unarmed\+Damage}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
-\item 
-List$<$ \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_arena_object}{IArena\+Object}} $>$ \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_ae98146b0b128d0448d5ede5a6486ce8e}{Inventory}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
-\item 
-\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_ae44391bb348b6c895a00131aa0752679}\label{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_ae44391bb348b6c895a00131aa0752679} 
-int {\bfseries Inventory\+Capacity}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
 \item 
 int \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_ab06661c4a27d2aa297ee6e76ab3075b8}{LocationX}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
 \item 
@@ -57,27 +70,27 @@ Template class for the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creat
 \label{doc-constructors}
 \Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_doc-constructors}
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a3a65c6b00c588ccee7b2144ac56e8715}\index{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}!CreatureTemplate@{CreatureTemplate}}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a91ef57fad6fb6339447bf42ac8269815}\index{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}!CreatureTemplate@{CreatureTemplate}}
 \index{CreatureTemplate@{CreatureTemplate}!ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}}
 \doxysubsubsection{\texorpdfstring{CreatureTemplate()}{CreatureTemplate()}}
-{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a3a65c6b00c588ccee7b2144ac56e8715} 
-Arena\+Game\+Lib.\+Game\+Objects.\+Abstract\+Classes.\+Creature\+Template.\+Creature\+Template (\begin{DoxyParamCaption}\item[{string}]{name}{, }\item[{int}]{health}{, }\item[{int}]{unarmed\+Dmg}{, }\item[{List$<$ \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_arena_object}{IArena\+Object}} $>$}]{inventory}{, }\item[{int}]{inventory\+Capacity}{, }\item[{int}]{weapon\+Capacity}{, }\item[{int}]{armour\+Capacity}{, }\item[{int}]{locX}{, }\item[{int}]{locY}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a91ef57fad6fb6339447bf42ac8269815} 
+Arena\+Game\+Lib.\+Game\+Objects.\+Abstract\+Classes.\+Creature\+Template.\+Creature\+Template (\begin{DoxyParamCaption}\item[{string}]{name}{, }\item[{int}]{health}{, }\item[{int}]{unarmed\+Dmg}{, }\item[{int}]{inventory\+Capacity}{, }\item[{int}]{weapon\+Capacity}{, }\item[{int}]{armour\+Capacity}{, }\item[{int}]{locX}{, }\item[{int}]{locY}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
-Constructor method for the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} template clas that sets the argument constraint for the inventory that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} is capable of carrying -\/ regarding weapons and armour. 
+Constructor method for the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} template class that sets the argument constraint for the inventory that the creature is capable of carrying -\/ regarding weapons and armour. 
 
 
 \begin{DoxyParams}{Parameters}
 {\em name} & Type:\+ string -\/ \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} name\\
 \hline
-{\em health} & Type:\+ int -\/ \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} health\\
+{\em health} & Type:\+ int -\/ \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} hitpoints\\
 \hline
-{\em unarmed\+Dmg} & Type:\+ int -\/ Unarmed damage dealt by \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature}\\
+{\em unarmed\+Dmg} & Type:\+ int -\/ Amount of unarmed damage the creature can deal\\
 \hline
-{\em inventory} & Type:\+ List$<$\+Arena\+Object$>$ -\/ Creatures inventory\\
+{\em inventory} & Type:\+ \doxylink{class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory}{Creature\+Inventory} -\/ \doxylink{namespace_arena_game_lib_1_1_game_objects_1_1_composite}{Composite} class representing a creature\textquotesingle{}s inventory\\
 \hline
-{\em inventory\+Capacity} & Type:\+ int -\/ Maximum inventory capacity\\
+{\em inventory\+Capacity} & Type:\+ int -\/ \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature}\textquotesingle{}s inventory capacity\\
 \hline
 {\em weapon\+Capacity} & Type:\+ int -\/ Maximum weapon collection capacity\\
 \hline
@@ -90,7 +103,7 @@ Constructor method for the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_c
 \end{DoxyParams}
 
 \begin{DoxyExceptions}{Exceptions}
-{\em Argument\+Out\+Of\+Range\+Exception} & Exception thrown if weapons and armour capacity exceeds inventory capacity\\
+{\em Argument\+Out\+Of\+Range\+Exception} & Argument Out of Range Exception thrown if weapons and armour capacity exceeds inventory capacity\\
 \hline
 \end{DoxyExceptions}
 
@@ -98,6 +111,67 @@ Constructor method for the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_c
 \label{doc-func-members}
 \Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_doc-func-members}
 \doxysubsection{Member Function Documentation}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a0220348171ecea15f2ceb917eddda81d}\index{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}!AddObserver@{AddObserver}}
+\index{AddObserver@{AddObserver}!ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}}
+\doxysubsubsection{\texorpdfstring{AddObserver()}{AddObserver()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a0220348171ecea15f2ceb917eddda81d} 
+void Arena\+Game\+Lib.\+Game\+Objects.\+Abstract\+Classes.\+Creature\+Template.\+Add\+Observer (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_observers_1_1_i_combat_notifier}{ICombat\+Notifier}}}]{notifier}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Abstract template method Add\+Observer that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} subclass overrides. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em notifier} & Type:\+ \doxylink{interface_arena_game_lib_1_1_game_interfaces_1_1_observers_1_1_i_combat_notifier}{ICombat\+Notifier} -\/ Combat notifier observer class object\\
+\hline
+\end{DoxyParams}
+
+
+Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Templates.\+ICreature\+Template}}.
+
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a8b3a35d6dc966a25ced75ea6e2b22c04}\index{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}!ArmourDegrade@{ArmourDegrade}}
+\index{ArmourDegrade@{ArmourDegrade}!ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}}
+\doxysubsubsection{\texorpdfstring{ArmourDegrade()}{ArmourDegrade()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a8b3a35d6dc966a25ced75ea6e2b22c04} 
+void Arena\+Game\+Lib.\+Game\+Objects.\+Abstract\+Classes.\+Creature\+Template.\+Armour\+Degrade (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_armour}{IArmour}}}]{armour}{, }\item[{int}]{modifier}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Abstract template method Armour\+Degrade that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} subclass overrides. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em armour} & Type:\+ \doxylink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_armour}{IArmour} -\/ \doxylink{class_arena_game_lib_1_1_game_objects_1_1_armour}{Armour} that is degraded\\
+\hline
+{\em modifier} & Type:\+ int -\/ Factor that the armour durability is improved by\\
+\hline
+\end{DoxyParams}
+
+
+Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Templates.\+ICreature\+Template}}.
+
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a0aa2f876634a9da816ebab193e70c356}\index{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}!ArmourImprove@{ArmourImprove}}
+\index{ArmourImprove@{ArmourImprove}!ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}}
+\doxysubsubsection{\texorpdfstring{ArmourImprove()}{ArmourImprove()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a0aa2f876634a9da816ebab193e70c356} 
+void Arena\+Game\+Lib.\+Game\+Objects.\+Abstract\+Classes.\+Creature\+Template.\+Armour\+Improve (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_armour}{IArmour}}}]{armour}{, }\item[{int}]{modifier}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Abstract template method Armour\+Improve that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} subclass overrides. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em armour} & Type:\+ \doxylink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_armour}{IArmour} -\/ \doxylink{class_arena_game_lib_1_1_game_objects_1_1_armour}{Armour} that is improved\\
+\hline
+{\em modifier} & Type:\+ int -\/ Factor that the armour durability is improved by\\
+\hline
+\end{DoxyParams}
+
+
+Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Templates.\+ICreature\+Template}}.
+
 \Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_aa58433136f0bf98ebdd4852986f01286}\index{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}!Attack@{Attack}}
 \index{Attack@{Attack}!ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}}
 \doxysubsubsection{\texorpdfstring{Attack()}{Attack()}}
@@ -122,6 +196,25 @@ Type:\+ int -\/ Total damage output of a creature
 
 Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Templates.\+ICreature\+Template}}.
 
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a96728c2152f40cbb3f8111c4186c0a26}\index{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}!Drop@{Drop}}
+\index{Drop@{Drop}!ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}}
+\doxysubsubsection{\texorpdfstring{Drop()}{Drop()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a96728c2152f40cbb3f8111c4186c0a26} 
+void Arena\+Game\+Lib.\+Game\+Objects.\+Abstract\+Classes.\+Creature\+Template.\+Drop (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object}{Arena\+Object}}}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Abstract template method Drop that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} subclass overrides. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & Type:\+ \doxylink{class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object}{Arena\+Object} -\/ The item dropped by the creature\\
+\hline
+\end{DoxyParams}
+
+
+Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Templates.\+ICreature\+Template}}.
+
 \Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_ad7d288e8d5472f9a3a04c2f2a580a064}\index{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}!Loot@{Loot}}
 \index{Loot@{Loot}!ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}}
 \doxysubsubsection{\texorpdfstring{Loot()}{Loot()}}
@@ -141,11 +234,46 @@ Abstract template method Loot that the \doxylink{class_arena_game_lib_1_1_game_o
 
 Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Templates.\+ICreature\+Template}}.
 
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a8bba2560035ca5dc8e1368a12b93ab66}\index{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}!NotifyAllDamageTaken@{NotifyAllDamageTaken}}
+\index{NotifyAllDamageTaken@{NotifyAllDamageTaken}!ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}}
+\doxysubsubsection{\texorpdfstring{NotifyAllDamageTaken()}{NotifyAllDamageTaken()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a8bba2560035ca5dc8e1368a12b93ab66} 
+void Arena\+Game\+Lib.\+Game\+Objects.\+Abstract\+Classes.\+Creature\+Template.\+Notify\+All\+Damage\+Taken (\begin{DoxyParamCaption}\item[{int}]{damage}{, }\item[{int}]{absorbed}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Abstract template method Notify\+All\+Damage\+Taken that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} subclass overrides. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em damage} & Type:\+ int -\/ Damage that the notifiers notify\\
+\hline
+{\em absorbed} & Type:\+ int -\/ Damage absorbed that the notifiers notify\\
+\hline
+\end{DoxyParams}
+
+
+Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Templates.\+ICreature\+Template}}.
+
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a1202662ab6cbaaf5ba1037d7c11d2bb3}\index{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}!NotifyAllDefeated@{NotifyAllDefeated}}
+\index{NotifyAllDefeated@{NotifyAllDefeated}!ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}}
+\doxysubsubsection{\texorpdfstring{NotifyAllDefeated()}{NotifyAllDefeated()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a1202662ab6cbaaf5ba1037d7c11d2bb3} 
+void Arena\+Game\+Lib.\+Game\+Objects.\+Abstract\+Classes.\+Creature\+Template.\+Notify\+All\+Defeated (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Abstract template method Notify\+All\+Defeated that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} subclass overrides. 
+
+
+
+Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Templates.\+ICreature\+Template}}.
+
 \Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a361d42d4c5a89e0e28ab496ff9a18023}\index{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}!operator+@{operator+}}
 \index{operator+@{operator+}!ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}}
 \doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
 {\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a361d42d4c5a89e0e28ab496ff9a18023} 
-\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a3a65c6b00c588ccee7b2144ac56e8715}{Creature\+Template}} Arena\+Game\+Lib.\+Game\+Objects.\+Abstract\+Classes.\+Creature\+Template.\+operator+ (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a3a65c6b00c588ccee7b2144ac56e8715}{Creature\+Template}}}]{creature}{, }\item[{\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object}{Arena\+Object}}}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a91ef57fad6fb6339447bf42ac8269815}{Creature\+Template}} Arena\+Game\+Lib.\+Game\+Objects.\+Abstract\+Classes.\+Creature\+Template.\+operator+ (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a91ef57fad6fb6339447bf42ac8269815}{Creature\+Template}}}]{creature}{, }\item[{\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object}{Arena\+Object}}}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -159,8 +287,27 @@ Operator overload for + operation to support the creature looting an item throug
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-
+Type:\+ \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} -\/ \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} that looted the item
 \end{DoxyReturn}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a804e376d5640b1e0da031456f1e7fb4c}\index{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}!RemoveObserver@{RemoveObserver}}
+\index{RemoveObserver@{RemoveObserver}!ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}}
+\doxysubsubsection{\texorpdfstring{RemoveObserver()}{RemoveObserver()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a804e376d5640b1e0da031456f1e7fb4c} 
+void Arena\+Game\+Lib.\+Game\+Objects.\+Abstract\+Classes.\+Creature\+Template.\+Remove\+Observer (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_observers_1_1_i_combat_notifier}{ICombat\+Notifier}}}]{notifier}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Abstract template method Add\+Observer that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} subclass overrides. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em notifier} & Type:\+ \doxylink{interface_arena_game_lib_1_1_game_interfaces_1_1_observers_1_1_i_combat_notifier}{ICombat\+Notifier} -\/ Combat notifier observer class object\\
+\hline
+\end{DoxyParams}
+
+
+Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Templates.\+ICreature\+Template}}.
+
 \Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a0a4afd59e62474a569c271e1962fc519}\index{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}!TakeDamage@{TakeDamage}}
 \index{TakeDamage@{TakeDamage}!ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}}
 \doxysubsubsection{\texorpdfstring{TakeDamage()}{TakeDamage()}}
@@ -182,6 +329,48 @@ Abstract template method Take\+Damage that the \doxylink{class_arena_game_lib_1_
 
 Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Templates.\+ICreature\+Template}}.
 
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_ae5ce9d307d5ac0e7173d6b69b70f80c7}\index{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}!WeaponDegrade@{WeaponDegrade}}
+\index{WeaponDegrade@{WeaponDegrade}!ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}}
+\doxysubsubsection{\texorpdfstring{WeaponDegrade()}{WeaponDegrade()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_ae5ce9d307d5ac0e7173d6b69b70f80c7} 
+void Arena\+Game\+Lib.\+Game\+Objects.\+Abstract\+Classes.\+Creature\+Template.\+Weapon\+Degrade (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon}{IWeapon}}}]{weapon}{, }\item[{int}]{modifier}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Abstract template method Weapon\+Degrade that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} subclass overrides. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em weapon} & Type:\+ \doxylink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon}{IWeapon} -\/ \doxylink{class_arena_game_lib_1_1_game_objects_1_1_weapon}{Weapon} that is degraded\\
+\hline
+{\em modifier} & Type:\+ int -\/ Factor that the damage is degraded by\\
+\hline
+\end{DoxyParams}
+
+
+Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Templates.\+ICreature\+Template}}.
+
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a8cbe870a72c782ec6968a81fac4d0e50}\index{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}!WeaponImprove@{WeaponImprove}}
+\index{WeaponImprove@{WeaponImprove}!ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}}
+\doxysubsubsection{\texorpdfstring{WeaponImprove()}{WeaponImprove()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a8cbe870a72c782ec6968a81fac4d0e50} 
+void Arena\+Game\+Lib.\+Game\+Objects.\+Abstract\+Classes.\+Creature\+Template.\+Weapon\+Improve (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon}{IWeapon}}}]{weapon}{, }\item[{int}]{modifier}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Abstract template method Weapon\+Improve that the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} subclass overrides. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em weapon} & Type:\+ \doxylink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon}{IWeapon} -\/ \doxylink{class_arena_game_lib_1_1_game_objects_1_1_weapon}{Weapon} that is improved\\
+\hline
+{\em modifier} & Type:\+ int -\/ Factor that the damage is imrpoved by\\
+\hline
+\end{DoxyParams}
+
+
+Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Templates.\+ICreature\+Template}}.
+
 
 
 \label{doc-property-members}
@@ -192,16 +381,6 @@ Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1
 \doxysubsubsection{\texorpdfstring{Health}{Health}}
 {\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_a892c10dc9433a6137bbbcd1b07d81652} 
 int Arena\+Game\+Lib.\+Game\+Objects.\+Abstract\+Classes.\+Creature\+Template.\+Health\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
-
-
-
-Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Templates.\+ICreature\+Template}}.
-
-\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_ae98146b0b128d0448d5ede5a6486ce8e}\index{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}!Inventory@{Inventory}}
-\index{Inventory@{Inventory}!ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate@{ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate}}
-\doxysubsubsection{\texorpdfstring{Inventory}{Inventory}}
-{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template_ae98146b0b128d0448d5ede5a6486ce8e} 
-List$<$\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_arena_object}{IArena\+Object}}$>$ Arena\+Game\+Lib.\+Game\+Objects.\+Abstract\+Classes.\+Creature\+Template.\+Inventory\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
 
 
 

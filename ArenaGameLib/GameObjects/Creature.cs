@@ -116,25 +116,34 @@ namespace ArenaGameLib.GameObjects
 		}
 
 		/// <summary>
-		/// Method for the creatures action of looting an item and adding it to Armour Collection or Weapon Collection and the Inventory. The Method is predicated on the creature being in reaching distance (1 Square) of item.
+		/// Method for the creatures action of looting an item and adding it to Armour Collection or Weapon Collection and the Inventory making it unclaimable. The Method is predicated on the creature being in reaching distance (1 Square) of item and on the item itself being lootable.
 		/// </summary>
 		/// <param name="item">Type: ArenaObject - The item looted, if Weapon - Add to WeaponCollection, if Armour - Add to ArmourCollection.</param>
 		public override void Loot(ArenaObject item)
 		{
-			if ((LocationX - item.LocationX <= 1 || LocationY - item.LocationY <= 1) && Inventory.Items.Sum(x => x.Weight) + item.Weight < Inventory.Capacity)
+			if ((LocationX - item.LocationX <= 1 || LocationY - item.LocationY <= 1) && item.Lootable)
 			{
 				try
 				{
-					if (item.GetType() == typeof(Weapon))
+					if (Inventory.TotalWeight() + item.Weight < Inventory.Capacity)
 					{
-						WeaponCollection.Weapons.Add((Weapon)item);
+						if (item.GetType() == typeof(Weapon))
+						{
+							Weapon weapon = (Weapon)item;
+							WeaponCollection.Weapons.Add(weapon);
+							weapon.SetClaim();
+							weapon.SetLocation(LocationX, LocationY);
+						}
+						else if (item.GetType() == typeof(Armour))
+						{
+							Armour armour = (Armour)item;
+							ArmourCollection.ArmourSet.Add((armour));
+							armour.SetClaim();
+							armour.SetLocation(LocationX, LocationY);
+						}
+						logger.WriteInfo($"Creature {Name} looted item {item}");
+						Inventory.Items.Add(item);
 					}
-					else if (item.GetType() == typeof(Armour))
-					{
-						ArmourCollection.ArmourSet.Add((Armour)item);
-					}
-					logger.WriteInfo($"Creature {Name} looted item {item}");
-					Inventory.Items.Add(item);
 				}
 				catch (ArgumentOutOfRangeException ex)
 				{
@@ -144,7 +153,7 @@ namespace ArenaGameLib.GameObjects
 		}
 
 		/// <summary>
-		/// Method for creatures action of dropping an item and removing it from Weapon Collection or Armour Collection and the Inventory. 
+		/// Method for creatures action of dropping an item and removing it from Weapon Collection or Armour Collection and the Inventory making it claimable. 
 		/// </summary>
 		/// <param name="item">Type: ArenaObject - The item in the creature's inventory to drop</param>
 		public override void Drop(ArenaObject item)
@@ -153,11 +162,17 @@ namespace ArenaGameLib.GameObjects
 			{
 				if (item.GetType() == typeof(Weapon))
 				{
+					Weapon weapon = (Weapon)item;
 					WeaponCollection.Weapons.Remove((Weapon)item);
+					weapon.SetClaim();
+					weapon.SetLocation(LocationX, LocationY);
 				}
 				else if (item.GetType() == typeof(Armour))
 				{
+					Armour armour = (Armour)item;
 					ArmourCollection.ArmourSet.Remove((Armour)item);
+					armour.SetClaim();
+					armour.SetLocation(LocationX, LocationY);
 				}
 				logger.WriteInfo($"Creature {Name} dropped item {item}");
 				Inventory.Remove(item);
@@ -169,7 +184,7 @@ namespace ArenaGameLib.GameObjects
 		}
 
 		/// <summary>
-		/// Method for creature's action to improve damage of one of it's weapons - implementing IWeaponModify decorator class.
+		/// Method for creature's action to improve damage of one of it's weapons - using instance of IWeaponModify decorator class.
 		/// </summary>
 		/// <param name="weapon">Type: IWeapon - Weapon that creature improves</param>
 		/// <param name="modifier">Type: int - Factor that the creature's weapon is improved by</param>
@@ -184,7 +199,7 @@ namespace ArenaGameLib.GameObjects
 		}
 
 		/// <summary>
-		/// Method for creature to have one of its weapon's damage degraded - implementing IWeaponModify decorator class.
+		/// Method for creature to have one of its weapon's damage degraded - using instance of IWeaponModify decorator class.
 		/// </summary>
 		/// <param name="weapon">Type: IWeapon - Weapon in the creature's inventory to be degraded</param>
 		/// <param name="modifier">Type: int - Factor that the creature's weapon is degraded by</param>
@@ -199,7 +214,7 @@ namespace ArenaGameLib.GameObjects
 		}
 
 		/// <summary>
-		/// Method for creature to have one of its armour piece's durability improved - implementing IArmourModify decorator class.
+		/// Method for creature to have one of its armour piece's durability improved - using instance of IArmourModify decorator class.
 		/// </summary>
 		/// <param name="armour">Type: IArmour - Armour in the creature's inventory to be improved</param>
 		/// <param name="modifier">Type: int - Factor that the creature's armour durability is improved by</param>
@@ -214,7 +229,7 @@ namespace ArenaGameLib.GameObjects
 		}
 
 		/// <summary>
-		/// Method for creature to have one of its armour piece's durability degraded by - implementing IArmourModify decorator class.
+		/// Method for creature to have one of its armour piece's durability degraded by - using instance of IArmourModify decorator class.
 		/// </summary>
 		/// <param name="armour">Type: IArmour - Armour in the creature's inventory to be degraded</param>
 		/// <param name="modifier">Type: int - Factor that the creature's armour durability is degraded by</param>

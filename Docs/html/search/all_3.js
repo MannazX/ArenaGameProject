@@ -9,8 +9,11 @@ var searchData=
   ['iattackstrategy_6',['IAttackStrategy',['../interface_arena_game_lib_1_1_game_interfaces_1_1_strategies_1_1_i_attack_strategy.html',1,'ArenaGameLib::GameInterfaces::Strategies']]],
   ['icombatnotifier_7',['ICombatNotifier',['../interface_arena_game_lib_1_1_game_interfaces_1_1_observers_1_1_i_combat_notifier.html',1,'ArenaGameLib::GameInterfaces::Observers']]],
   ['icreaturetemplate_8',['ICreatureTemplate',['../interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template.html',1,'ArenaGameLib::GameInterfaces::Templates']]],
-  ['initlogger_9',['InitLogger',['../class_arena_game_lib_1_1_game_logger_1_1_logger.html#a338a5f21c43756446a6d62a33818e10a',1,'ArenaGameLib::GameLogger::Logger']]],
-  ['iweapon_10',['IWeapon',['../interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon.html',1,'ArenaGameLib::GameInterfaces']]],
-  ['iweaponcollection_11',['IWeaponCollection',['../interface_arena_game_lib_1_1_game_interfaces_1_1_composites_1_1_i_weapon_collection.html',1,'ArenaGameLib::GameInterfaces::Composites']]],
-  ['iweaponmodify_12',['IWeaponModify',['../interface_arena_game_lib_1_1_game_interfaces_1_1_decorators_1_1_i_weapon_modify.html',1,'ArenaGameLib::GameInterfaces::Decorators']]]
+  ['improvearmourdurability_9',['ImproveArmourDurability',['../class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_armour_modifier.html#a2daf86e28760c69219bb5562681106f3',1,'ArenaGameLib::GameObjects::Decorators::ArmourModifier']]],
+  ['improveweapondamage_10',['ImproveWeaponDamage',['../class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_weapon_modifier.html#a1607f24182b3e4c78cdcfab7efd71cf1',1,'ArenaGameLib::GameObjects::Decorators::WeaponModifier']]],
+  ['initlogger_11',['InitLogger',['../class_arena_game_lib_1_1_game_logger_1_1_logger.html#a338a5f21c43756446a6d62a33818e10a',1,'ArenaGameLib::GameLogger::Logger']]],
+  ['iobjectcollection_12',['IObjectCollection',['../interface_arena_game_lib_1_1_game_interfaces_1_1_composites_1_1_i_object_collection.html',1,'ArenaGameLib::GameInterfaces::Composites']]],
+  ['iweapon_13',['IWeapon',['../interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon.html',1,'ArenaGameLib::GameInterfaces']]],
+  ['iweaponcollection_14',['IWeaponCollection',['../interface_arena_game_lib_1_1_game_interfaces_1_1_composites_1_1_i_weapon_collection.html',1,'ArenaGameLib::GameInterfaces::Composites']]],
+  ['iweaponmodify_15',['IWeaponModify',['../interface_arena_game_lib_1_1_game_interfaces_1_1_decorators_1_1_i_weapon_modify.html',1,'ArenaGameLib::GameInterfaces::Decorators']]]
 ];

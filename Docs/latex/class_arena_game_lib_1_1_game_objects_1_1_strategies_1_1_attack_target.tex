@@ -1,5 +1,10 @@
 \doxysection{Arena\+Game\+Lib.\+Game\+Objects.\+Strategies.\+Attack\+Target Class Reference}
 \hypertarget{class_arena_game_lib_1_1_game_objects_1_1_strategies_1_1_attack_target}{}\label{class_arena_game_lib_1_1_game_objects_1_1_strategies_1_1_attack_target}\index{ArenaGameLib.GameObjects.Strategies.AttackTarget@{ArenaGameLib.GameObjects.Strategies.AttackTarget}}
+
+
+Strategy class for methods that compute the total damage output of a creature\textquotesingle{}s attack.  
+
+
 Inheritance diagram for Arena\+Game\+Lib.\+Game\+Objects.\+Strategies.\+Attack\+Target:\+\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,10 +15,13 @@ Inheritance diagram for Arena\+Game\+Lib.\+Game\+Objects.\+Strategies.\+Attack\+
 \begin{DoxyCompactItemize}
 \item 
 int \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_strategies_1_1_attack_target_a1b9beca6f951ab15100991df7d94420a}{Armed\+Attack}} (int target\+Dist, \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection}{Weapon\+Collection}} weapons)
-\item 
+\begin{DoxyCompactList}\small\item\em Method for computing damage from armed attacks with all the weapons that a creature possesses. \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_strategies_1_1_attack_target_aaa3794722b4e5d0803447a415821b8da}{Unarmed\+Attack}} (int target\+Dist, int unarmed\+Attack)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Method for determining damage for unarmed attacks dependant on the target being within range. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Strategy class for methods that compute the total damage output of a creature\textquotesingle{}s attack. 
 
 \label{doc-func-members}
 \Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_strategies_1_1_attack_target_doc-func-members}
@@ -26,6 +34,20 @@ int Arena\+Game\+Lib.\+Game\+Objects.\+Strategies.\+Attack\+Target.\+Armed\+Atta
 
 
 
+Method for computing damage from armed attacks with all the weapons that a creature possesses. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Dist} & Type:\+ int -\/ Distance to target creature\\
+\hline
+{\em weapons} & Type:\+ \doxylink{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection}{Weapon\+Collection} -\/ All the weapons a creature possesses\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Type:\+ int -\/ Total Damage
+\end{DoxyReturn}
+
+
 Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_strategies_1_1_i_attack_strategy}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Strategies.\+IAttack\+Strategy}}.
 
 \Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_strategies_1_1_attack_target_aaa3794722b4e5d0803447a415821b8da}\index{ArenaGameLib.GameObjects.Strategies.AttackTarget@{ArenaGameLib.GameObjects.Strategies.AttackTarget}!UnarmedAttack@{UnarmedAttack}}
@@ -34,6 +56,20 @@ Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1
 {\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_strategies_1_1_attack_target_aaa3794722b4e5d0803447a415821b8da} 
 int Arena\+Game\+Lib.\+Game\+Objects.\+Strategies.\+Attack\+Target.\+Unarmed\+Attack (\begin{DoxyParamCaption}\item[{int}]{target\+Dist}{, }\item[{int}]{unarmed\+Attack}{}\end{DoxyParamCaption})}
 
+
+
+Method for determining damage for unarmed attacks dependant on the target being within range. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Dist} & Type:\+ int -\/ Distance to target\\
+\hline
+{\em unarmed\+Attack} & Type:\+ int -\/ Damage dealt by unarmed attack\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Type:\+ int -\/ Unarmed Damage (0 if out of target range)
+\end{DoxyReturn}
 
 
 Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_strategies_1_1_i_attack_strategy}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Strategies.\+IAttack\+Strategy}}.

@@ -10,6 +10,9 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -42,11 +45,27 @@ $(function() { codefold.init(); });
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('interface_arena_game_lib_1_1_game_interfaces_1_1_decorators_1_1_i_armour_modify.html','','interface_arena_game_lib_1_1_game_interfaces_1_1_decorators_1_1_i_armour_modify-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -68,16 +87,7 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a href="namespace_arena_game_lib.html">ArenaGameLib</a></li><li class="navelem"><a href="namespace_arena_game_lib_1_1_game_interfaces.html">GameInterfaces</a></li><li class="navelem"><a href="namespace_arena_game_lib_1_1_game_interfaces_1_1_decorators.html">Decorators</a></li><li class="navelem"><a href="interface_arena_game_lib_1_1_game_interfaces_1_1_decorators_1_1_i_armour_modify.html">IArmourModify</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
-  <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="interface_arena_game_lib_1_1_game_interfaces_1_1_decorators_1_1_i_armour_modify-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">ArenaGameLib.GameInterfaces.Decorators.IArmourModify Interface Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -87,25 +97,73 @@ Inheritance diagram for ArenaGameLib.GameInterfaces.Decorators.IArmourModify:</d
  <div class="center">
   <img src="interface_arena_game_lib_1_1_game_interfaces_1_1_decorators_1_1_i_armour_modify.png" usemap="#ArenaGameLib_2EGameInterfaces_2EDecorators_2EIArmourModify_map" alt=""/>
   <map id="ArenaGameLib_2EGameInterfaces_2EDecorators_2EIArmourModify_map" name="ArenaGameLib_2EGameInterfaces_2EDecorators_2EIArmourModify_map">
-<area href="class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_armour_modifier.html" alt="ArenaGameLib.GameObjects.Decorators.ArmourModifier" shape="rect" coords="0,56,343,80"/>
+<area href="class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_armour_modifier.html" title="Decorator class for improving or degrading the creature&#39;s armour." alt="ArenaGameLib.GameObjects.Decorators.ArmourModifier" shape="rect" coords="0,56,343,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a74dd4bc65d787aa98c8a3b950472ec02" id="r_a74dd4bc65d787aa98c8a3b950472ec02"><td class="memItemLeft"><a id="a74dd4bc65d787aa98c8a3b950472ec02" name="a74dd4bc65d787aa98c8a3b950472ec02"></a>
-<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html">Armour</a>&#160;</td><td class="memItemRight"><b>ImproveArmourDurability</b> (int modifier)</td></tr>
-<tr class="memitem:af3e579ed7387f183f7fc78936abb2cfe" id="r_af3e579ed7387f183f7fc78936abb2cfe"><td class="memItemLeft"><a id="af3e579ed7387f183f7fc78936abb2cfe" name="af3e579ed7387f183f7fc78936abb2cfe"></a>
-<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html">Armour</a>&#160;</td><td class="memItemRight"><b>DegradeArmourDurability</b> (int modifier)</td></tr>
+<tr class="memitem:a74dd4bc65d787aa98c8a3b950472ec02" id="r_a74dd4bc65d787aa98c8a3b950472ec02"><td class="memItemLeft"><a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html">Armour</a>&#160;</td><td class="memItemRight"><a class="el" href="#a74dd4bc65d787aa98c8a3b950472ec02">ImproveArmourDurability</a> (int modifier)</td></tr>
+<tr class="memitem:af3e579ed7387f183f7fc78936abb2cfe" id="r_af3e579ed7387f183f7fc78936abb2cfe"><td class="memItemLeft"><a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html">Armour</a>&#160;</td><td class="memItemRight"><a class="el" href="#af3e579ed7387f183f7fc78936abb2cfe">DegradeArmourDurability</a> (int modifier)</td></tr>
 </table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="af3e579ed7387f183f7fc78936abb2cfe" name="af3e579ed7387f183f7fc78936abb2cfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3e579ed7387f183f7fc78936abb2cfe">&#9670;&#160;</a></span>DegradeArmourDurability()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html">Armour</a> ArenaGameLib.GameInterfaces.Decorators.IArmourModify.DegradeArmourDurability </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>modifier</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_armour_modifier.html#a1c338a16d04d0d22537834b36b1a80cb">ArenaGameLib.GameObjects.Decorators.ArmourModifier</a>.</p>
+
+</div>
+</div>
+<a id="a74dd4bc65d787aa98c8a3b950472ec02" name="a74dd4bc65d787aa98c8a3b950472ec02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74dd4bc65d787aa98c8a3b950472ec02">&#9670;&#160;</a></span>ImproveArmourDurability()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html">Armour</a> ArenaGameLib.GameInterfaces.Decorators.IArmourModify.ImproveArmourDurability </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>modifier</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_armour_modifier.html#a2daf86e28760c69219bb5562681106f3">ArenaGameLib.GameObjects.Decorators.ArmourModifier</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this interface was generated from the following file:<ul>
 <li>C:/Users/magnu/OneDrive/Skrivebord/Datamatiker/4-Sem/Advanced-Software-Construction/ArenaGameLib/ArenaGameLib/GameInterfaces/Decorators/<b>IArmourModify.cs</b></li>
 </ul>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1
-</small></address>
 </div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_arena_game_lib.html">ArenaGameLib</a></li><li class="navelem"><a href="namespace_arena_game_lib_1_1_game_interfaces.html">GameInterfaces</a></li><li class="navelem"><a href="namespace_arena_game_lib_1_1_game_interfaces_1_1_decorators.html">Decorators</a></li><li class="navelem"><a href="interface_arena_game_lib_1_1_game_interfaces_1_1_decorators_1_1_i_armour_modify.html">IArmourModify</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
 </body>
 </html>

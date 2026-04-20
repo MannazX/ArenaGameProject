@@ -33,8 +33,11 @@ namespace ArenaGameLib.GameObjects
 			Name = name;
 			ReduceDamage = reduceDmg;
 			ArmourDurability = armourDur;
+			Lootable = true;
+			Removeable = true;
 			LocationX = locX;
 			LocationY = locY;
+			Claimed = false;
 		}
 
 		/// <summary>
@@ -53,15 +56,22 @@ namespace ArenaGameLib.GameObjects
 		}
 
 		/// <summary>
-		/// Method for setting the X and Y locations to null, if the armour has been looted by a creature.
+		/// Sets the location X and Y coordinates based on the armour piece being claimed or not.
 		/// </summary>
-		public void SetLocation()
+		/// <param name="locX">Type: int - X location</param>
+		/// <param name="locY">Type: int - Y location</param>
+		public void SetLocation(int locX, int locY)
 		{
 			if (Claimed)
 			{
 				LocationX = null;
 				LocationY = null;
 			}
-		} 
+			else if (!Claimed)
+			{
+				LocationX = locX;
+				LocationY = locY;
+			}
+		}
 	}
 }

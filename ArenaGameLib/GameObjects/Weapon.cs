@@ -3,6 +3,7 @@ using ArenaGameLib.GameObjects.Templates;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -54,14 +55,21 @@ namespace ArenaGameLib.GameObjects
 		}
 
 		/// <summary>
-		/// Method for setting the X and Y locations to null, if the weapon has been looted by a creature.
+		/// Sets the location X and Y coordinates based on the weapon being claimed or not.
 		/// </summary>
-		public void SetLocation()
+		/// <param name="locX">Type: int - X location</param>
+		/// <param name="locY">Type: int - Y location</param>
+		public void SetLocation(int locX, int locY)
 		{
 			if (Claimed)
 			{
 				LocationX = null;
 				LocationY = null;
+			}
+			else if (!Claimed)
+			{
+				LocationX = locX;
+				LocationY = locY;
 			}
 		}
 	}

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['weapon_0',['Weapon',['../class_arena_game_lib_1_1_game_objects_1_1_weapon.html#a160c5c7f6e77b0aaf40d3e44366cc937',1,'ArenaGameLib::GameObjects::Weapon']]],
-  ['writeinfo_1',['WriteInfo',['../class_arena_game_lib_1_1_game_logger_1_1_logger.html#a4bce697c7b7dd8259bd82816f169e3ae',1,'ArenaGameLib::GameLogger::Logger']]]
+  ['takedamage_0',['TakeDamage',['../class_arena_game_lib_1_1_game_objects_1_1_creature.html#a6696e46549278a20025b09dfa9973c70',1,'ArenaGameLib.GameObjects.Creature.TakeDamage()'],['../class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template.html#a0a4afd59e62474a569c271e1962fc519',1,'ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate.TakeDamage()']]],
+  ['totalweight_1',['TotalWeight',['../class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection.html#aeaea6dfb5e42c10ff4f1c443cc2f1085',1,'ArenaGameLib.GameObjects.Composite.ArmourCollection.TotalWeight()'],['../class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory.html#afb739441a910b2fb4627febe03fc6e9b',1,'ArenaGameLib.GameObjects.Composites.CreatureInventory.TotalWeight()'],['../class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection.html#a54ff53e16a9a866d4276659353e9d4b8',1,'ArenaGameLib.GameObjects.Composite.WeaponCollection.TotalWeight()']]]
 ];

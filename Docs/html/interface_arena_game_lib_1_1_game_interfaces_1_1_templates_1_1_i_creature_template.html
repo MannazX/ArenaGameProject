@@ -10,6 +10,9 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -42,11 +45,27 @@ $(function() { codefold.init(); });
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template.html','','interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -68,17 +87,7 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a href="namespace_arena_game_lib.html">ArenaGameLib</a></li><li class="navelem"><a href="namespace_arena_game_lib_1_1_game_interfaces.html">GameInterfaces</a></li><li class="navelem"><a href="namespace_arena_game_lib_1_1_game_interfaces_1_1_templates.html">Templates</a></li><li class="navelem"><a href="interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template.html">ICreatureTemplate</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
-  <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#properties">Properties</a> &#124;
-<a href="interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate Interface Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -98,6 +107,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7a086b940af29c4666ae2d1fedb5e0ad" id="r_a7a086b940af29c4666ae2d1fedb5e0ad"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a7a086b940af29c4666ae2d1fedb5e0ad">Attack</a> (int targetDist, <a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_strategies_1_1_i_attack_strategy.html">IAttackStrategy</a> attack)</td></tr>
 <tr class="memitem:ad051e0623d0acd73d6ab165f9f1eeb66" id="r_ad051e0623d0acd73d6ab165f9f1eeb66"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad051e0623d0acd73d6ab165f9f1eeb66">TakeDamage</a> (int damage, <a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_strategies_1_1_i_absorb_damage_strategy.html">IAbsorbDamageStrategy</a> reducedDamage)</td></tr>
 <tr class="memitem:a8c11de7ca0e2b295cb95f5855914995c" id="r_a8c11de7ca0e2b295cb95f5855914995c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8c11de7ca0e2b295cb95f5855914995c">Loot</a> (<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object.html">ArenaObject</a> item)</td></tr>
+<tr class="memitem:a5c74030ee525d1a80c1e4b00c6222946" id="r_a5c74030ee525d1a80c1e4b00c6222946"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5c74030ee525d1a80c1e4b00c6222946">Drop</a> (<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object.html">ArenaObject</a> item)</td></tr>
+<tr class="memitem:a44d54ddc5a4b6c7998ea94e9f6f61594" id="r_a44d54ddc5a4b6c7998ea94e9f6f61594"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a44d54ddc5a4b6c7998ea94e9f6f61594">WeaponImprove</a> (<a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon.html">IWeapon</a> weapon, int modifier)</td></tr>
+<tr class="memitem:acfd35b3aa52783984361879b8bcbfb8b" id="r_acfd35b3aa52783984361879b8bcbfb8b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acfd35b3aa52783984361879b8bcbfb8b">WeaponDegrade</a> (<a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon.html">IWeapon</a> weapon, int modifier)</td></tr>
+<tr class="memitem:aa4ece66111f3d9e1c5718f2560be8114" id="r_aa4ece66111f3d9e1c5718f2560be8114"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa4ece66111f3d9e1c5718f2560be8114">ArmourImprove</a> (<a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_i_armour.html">IArmour</a> armour, int modifier)</td></tr>
+<tr class="memitem:a075bbd25cd0338eb8ea94c37c9e8f324" id="r_a075bbd25cd0338eb8ea94c37c9e8f324"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a075bbd25cd0338eb8ea94c37c9e8f324">ArmourDegrade</a> (<a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_i_armour.html">IArmour</a> armour, int modifier)</td></tr>
+<tr class="memitem:a8d6e1435aad7e0d75f47bbab02db0c81" id="r_a8d6e1435aad7e0d75f47bbab02db0c81"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8d6e1435aad7e0d75f47bbab02db0c81">AddObserver</a> (<a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_observers_1_1_i_combat_notifier.html">ICombatNotifier</a> notifier)</td></tr>
+<tr class="memitem:a1dc63450655ec93589e33b9f0d21a101" id="r_a1dc63450655ec93589e33b9f0d21a101"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1dc63450655ec93589e33b9f0d21a101">RemoveObserver</a> (<a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_observers_1_1_i_combat_notifier.html">ICombatNotifier</a> notifier)</td></tr>
+<tr class="memitem:a19978360d0d35b06ec1887eba39b1bdf" id="r_a19978360d0d35b06ec1887eba39b1bdf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a19978360d0d35b06ec1887eba39b1bdf">NotifyAllDamageTaken</a> (int damage, int absorbed)</td></tr>
+<tr class="memitem:a0f1d73b4d62871b0b42baa3e13eb8822" id="r_a0f1d73b4d62871b0b42baa3e13eb8822"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0f1d73b4d62871b0b42baa3e13eb8822">NotifyAllDefeated</a> ()</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
@@ -105,14 +123,77 @@ Properties</h2></td></tr>
 string&#160;</td><td class="memItemRight"><b>Name</b><code> [get, set]</code></td></tr>
 <tr class="memitem:a52fab32371f273b54c67c7cbebc25f09" id="r_a52fab32371f273b54c67c7cbebc25f09"><td class="memItemLeft"><a id="a52fab32371f273b54c67c7cbebc25f09" name="a52fab32371f273b54c67c7cbebc25f09"></a>
 int&#160;</td><td class="memItemRight"><b>Health</b><code> [get, set]</code></td></tr>
-<tr class="memitem:a83588aae919ac5a1eaa4fdf5d47285a8" id="r_a83588aae919ac5a1eaa4fdf5d47285a8"><td class="memItemLeft"><a id="a83588aae919ac5a1eaa4fdf5d47285a8" name="a83588aae919ac5a1eaa4fdf5d47285a8"></a>
-List&lt; <a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_arena_object.html">IArenaObject</a> &gt;&#160;</td><td class="memItemRight"><b>Inventory</b><code> [get, set]</code></td></tr>
 <tr class="memitem:afae87a7be62ac2e9f42de69cec61472d" id="r_afae87a7be62ac2e9f42de69cec61472d"><td class="memItemLeft"><a id="afae87a7be62ac2e9f42de69cec61472d" name="afae87a7be62ac2e9f42de69cec61472d"></a>
 int&#160;</td><td class="memItemRight"><b>LocationX</b><code> [get, set]</code></td></tr>
 <tr class="memitem:a0401f3b2d627ed1d419c39fa46d400e9" id="r_a0401f3b2d627ed1d419c39fa46d400e9"><td class="memItemLeft"><a id="a0401f3b2d627ed1d419c39fa46d400e9" name="a0401f3b2d627ed1d419c39fa46d400e9"></a>
 int&#160;</td><td class="memItemRight"><b>LocationY</b><code> [get, set]</code></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a8d6e1435aad7e0d75f47bbab02db0c81" name="a8d6e1435aad7e0d75f47bbab02db0c81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d6e1435aad7e0d75f47bbab02db0c81">&#9670;&#160;</a></span>AddObserver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate.AddObserver </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_observers_1_1_i_combat_notifier.html">ICombatNotifier</a></td>          <td class="paramname"><span class="paramname"><em>notifier</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template.html#a0220348171ecea15f2ceb917eddda81d">ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate</a>, and <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html#ade0b85b4186fea4cfdb4b77a5768a5b2">ArenaGameLib.GameObjects.Creature</a>.</p>
+
+</div>
+</div>
+<a id="a075bbd25cd0338eb8ea94c37c9e8f324" name="a075bbd25cd0338eb8ea94c37c9e8f324"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a075bbd25cd0338eb8ea94c37c9e8f324">&#9670;&#160;</a></span>ArmourDegrade()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate.ArmourDegrade </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_i_armour.html">IArmour</a></td>          <td class="paramname"><span class="paramname"><em>armour</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>modifier</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template.html#a8b3a35d6dc966a25ced75ea6e2b22c04">ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate</a>, and <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html#ae48c4b741a8d1691c76773d256a22620">ArenaGameLib.GameObjects.Creature</a>.</p>
+
+</div>
+</div>
+<a id="aa4ece66111f3d9e1c5718f2560be8114" name="aa4ece66111f3d9e1c5718f2560be8114"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4ece66111f3d9e1c5718f2560be8114">&#9670;&#160;</a></span>ArmourImprove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate.ArmourImprove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_i_armour.html">IArmour</a></td>          <td class="paramname"><span class="paramname"><em>armour</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>modifier</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template.html#a0aa2f876634a9da816ebab193e70c356">ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate</a>, and <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html#a9fa571689a514345b83b080d730224de">ArenaGameLib.GameObjects.Creature</a>.</p>
+
+</div>
+</div>
 <a id="a7a086b940af29c4666ae2d1fedb5e0ad" name="a7a086b940af29c4666ae2d1fedb5e0ad"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7a086b940af29c4666ae2d1fedb5e0ad">&#9670;&#160;</a></span>Attack()</h2>
 
@@ -136,6 +217,25 @@ int&#160;</td><td class="memItemRight"><b>LocationY</b><code> [get, set]</code><
 
 </div>
 </div>
+<a id="a5c74030ee525d1a80c1e4b00c6222946" name="a5c74030ee525d1a80c1e4b00c6222946"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c74030ee525d1a80c1e4b00c6222946">&#9670;&#160;</a></span>Drop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate.Drop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object.html">ArenaObject</a></td>          <td class="paramname"><span class="paramname"><em>item</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template.html#a96728c2152f40cbb3f8111c4186c0a26">ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate</a>, and <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html#a736731e142dad59b677140db8772e6db">ArenaGameLib.GameObjects.Creature</a>.</p>
+
+</div>
+</div>
 <a id="a8c11de7ca0e2b295cb95f5855914995c" name="a8c11de7ca0e2b295cb95f5855914995c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8c11de7ca0e2b295cb95f5855914995c">&#9670;&#160;</a></span>Loot()</h2>
 
@@ -152,6 +252,67 @@ int&#160;</td><td class="memItemRight"><b>LocationY</b><code> [get, set]</code><
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template.html#ad7d288e8d5472f9a3a04c2f2a580a064">ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate</a>, and <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html#abbe4e376ed26017fdc337b79b307b457">ArenaGameLib.GameObjects.Creature</a>.</p>
+
+</div>
+</div>
+<a id="a19978360d0d35b06ec1887eba39b1bdf" name="a19978360d0d35b06ec1887eba39b1bdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19978360d0d35b06ec1887eba39b1bdf">&#9670;&#160;</a></span>NotifyAllDamageTaken()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate.NotifyAllDamageTaken </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>damage</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>absorbed</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template.html#a8bba2560035ca5dc8e1368a12b93ab66">ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate</a>, and <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html#a68b02f3c0fee6ebe4ebaa3cfa4afff9a">ArenaGameLib.GameObjects.Creature</a>.</p>
+
+</div>
+</div>
+<a id="a0f1d73b4d62871b0b42baa3e13eb8822" name="a0f1d73b4d62871b0b42baa3e13eb8822"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f1d73b4d62871b0b42baa3e13eb8822">&#9670;&#160;</a></span>NotifyAllDefeated()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate.NotifyAllDefeated </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template.html#a1202662ab6cbaaf5ba1037d7c11d2bb3">ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate</a>, and <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html#a98bb036072bc7f96325fb3d6029b9b40">ArenaGameLib.GameObjects.Creature</a>.</p>
+
+</div>
+</div>
+<a id="a1dc63450655ec93589e33b9f0d21a101" name="a1dc63450655ec93589e33b9f0d21a101"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dc63450655ec93589e33b9f0d21a101">&#9670;&#160;</a></span>RemoveObserver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate.RemoveObserver </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_observers_1_1_i_combat_notifier.html">ICombatNotifier</a></td>          <td class="paramname"><span class="paramname"><em>notifier</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template.html#a804e376d5640b1e0da031456f1e7fb4c">ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate</a>, and <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html#ae1717c990df53fc1e7febf37361448de">ArenaGameLib.GameObjects.Creature</a>.</p>
 
 </div>
 </div>
@@ -178,14 +339,71 @@ int&#160;</td><td class="memItemRight"><b>LocationY</b><code> [get, set]</code><
 
 </div>
 </div>
+<a id="acfd35b3aa52783984361879b8bcbfb8b" name="acfd35b3aa52783984361879b8bcbfb8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfd35b3aa52783984361879b8bcbfb8b">&#9670;&#160;</a></span>WeaponDegrade()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate.WeaponDegrade </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon.html">IWeapon</a></td>          <td class="paramname"><span class="paramname"><em>weapon</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>modifier</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template.html#ae5ce9d307d5ac0e7173d6b69b70f80c7">ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate</a>, and <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html#a14485547510a4e1964263e507e20b20d">ArenaGameLib.GameObjects.Creature</a>.</p>
+
+</div>
+</div>
+<a id="a44d54ddc5a4b6c7998ea94e9f6f61594" name="a44d54ddc5a4b6c7998ea94e9f6f61594"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44d54ddc5a4b6c7998ea94e9f6f61594">&#9670;&#160;</a></span>WeaponImprove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate.WeaponImprove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon.html">IWeapon</a></td>          <td class="paramname"><span class="paramname"><em>weapon</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>modifier</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template.html#a8cbe870a72c782ec6968a81fac4d0e50">ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate</a>, and <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html#a49db6619824aeb2a055cbcf453959d86">ArenaGameLib.GameObjects.Creature</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this interface was generated from the following file:<ul>
 <li>C:/Users/magnu/OneDrive/Skrivebord/Datamatiker/4-Sem/Advanced-Software-Construction/ArenaGameLib/ArenaGameLib/GameInterfaces/Templates/<b>ICreatureTemplate.cs</b></li>
 </ul>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1
-</small></address>
 </div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_arena_game_lib.html">ArenaGameLib</a></li><li class="navelem"><a href="namespace_arena_game_lib_1_1_game_interfaces.html">GameInterfaces</a></li><li class="navelem"><a href="namespace_arena_game_lib_1_1_game_interfaces_1_1_templates.html">Templates</a></li><li class="navelem"><a href="interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template.html">ICreatureTemplate</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
 </body>
 </html>

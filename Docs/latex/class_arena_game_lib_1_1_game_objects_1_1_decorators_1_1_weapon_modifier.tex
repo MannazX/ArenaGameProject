@@ -1,5 +1,10 @@
 \doxysection{Arena\+Game\+Lib.\+Game\+Objects.\+Decorators.\+Weapon\+Modifier Class Reference}
 \hypertarget{class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_weapon_modifier}{}\label{class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_weapon_modifier}\index{ArenaGameLib.GameObjects.Decorators.WeaponModifier@{ArenaGameLib.GameObjects.Decorators.WeaponModifier}}
+
+
+Decorator class for improving or degrading the creature\textquotesingle{}s weapons.  
+
+
 Inheritance diagram for Arena\+Game\+Lib.\+Game\+Objects.\+Decorators.\+Weapon\+Modifier:\+\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,13 +14,35 @@ Inheritance diagram for Arena\+Game\+Lib.\+Game\+Objects.\+Decorators.\+Weapon\+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_weapon_modifier_ab50d869e34268e7e9761a31a2822933d}\label{class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_weapon_modifier_ab50d869e34268e7e9761a31a2822933d} 
-{\bfseries Weapon\+Modifier} (\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon}{IWeapon}} weapon)
-\item 
+\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_weapon_modifier_ab50d869e34268e7e9761a31a2822933d}{Weapon\+Modifier}} (\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon}{IWeapon}} weapon)
+\begin{DoxyCompactList}\small\item\em Constructor method for instanciating the weapon modifier. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_weapon}{Weapon}} \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_weapon_modifier_ac37804508ba3a2a8bb05408c9cac2e1b}{Degrade\+Weapon\+Damage}} (int modifier)
-\item 
+\begin{DoxyCompactList}\small\item\em Method for degrading a creatures weapon -\/ Debuff from opponent creature. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_weapon}{Weapon}} \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_weapon_modifier_a1607f24182b3e4c78cdcfab7efd71cf1}{Improve\+Weapon\+Damage}} (int modifier)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Method for improving a creatures weapon -\/ Buff from creature itself. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Decorator class for improving or degrading the creature\textquotesingle{}s weapons. 
+
+\label{doc-constructors}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_weapon_modifier_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_weapon_modifier_ab50d869e34268e7e9761a31a2822933d}\index{ArenaGameLib.GameObjects.Decorators.WeaponModifier@{ArenaGameLib.GameObjects.Decorators.WeaponModifier}!WeaponModifier@{WeaponModifier}}
+\index{WeaponModifier@{WeaponModifier}!ArenaGameLib.GameObjects.Decorators.WeaponModifier@{ArenaGameLib.GameObjects.Decorators.WeaponModifier}}
+\doxysubsubsection{\texorpdfstring{WeaponModifier()}{WeaponModifier()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_weapon_modifier_ab50d869e34268e7e9761a31a2822933d} 
+Arena\+Game\+Lib.\+Game\+Objects.\+Decorators.\+Weapon\+Modifier.\+Weapon\+Modifier (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon}{IWeapon}}}]{weapon}{}\end{DoxyParamCaption})}
+
+
+
+Constructor method for instanciating the weapon modifier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em weapon} & Type:\+ \doxylink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon}{IWeapon} -\/ \doxylink{class_arena_game_lib_1_1_game_objects_1_1_weapon}{Weapon} that is modified\\
+\hline
+\end{DoxyParams}
 
 
 \label{doc-func-members}
@@ -29,6 +56,18 @@ Inheritance diagram for Arena\+Game\+Lib.\+Game\+Objects.\+Decorators.\+Weapon\+
 
 
 
+Method for degrading a creatures weapon -\/ Debuff from opponent creature. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em modifier} & Type:\+ int -\/ Modifying factor for the weapon degrading\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Type:\+ \doxylink{class_arena_game_lib_1_1_game_objects_1_1_weapon}{Weapon} -\/ Returns the degraded weapon
+\end{DoxyReturn}
+
+
 Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_decorators_1_1_i_weapon_modify}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Decorators.\+IWeapon\+Modify}}.
 
 \Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_weapon_modifier_a1607f24182b3e4c78cdcfab7efd71cf1}\index{ArenaGameLib.GameObjects.Decorators.WeaponModifier@{ArenaGameLib.GameObjects.Decorators.WeaponModifier}!ImproveWeaponDamage@{ImproveWeaponDamage}}
@@ -37,6 +76,18 @@ Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1
 {\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_weapon_modifier_a1607f24182b3e4c78cdcfab7efd71cf1} 
 \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_weapon}{Weapon}} Arena\+Game\+Lib.\+Game\+Objects.\+Decorators.\+Weapon\+Modifier.\+Improve\+Weapon\+Damage (\begin{DoxyParamCaption}\item[{int}]{modifier}{}\end{DoxyParamCaption})}
 
+
+
+Method for improving a creatures weapon -\/ Buff from creature itself. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em modifier} & Type:\+ int -\/ Modifying factor for the weapon improvement\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Type:\+ \doxylink{class_arena_game_lib_1_1_game_objects_1_1_weapon}{Weapon} -\/ Returning the improved weapon
+\end{DoxyReturn}
 
 
 Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_decorators_1_1_i_weapon_modify}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Decorators.\+IWeapon\+Modify}}.

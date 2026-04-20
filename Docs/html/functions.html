@@ -10,6 +10,9 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -42,12 +45,26 @@ $(function() { codefold.init(); });
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('functions.html','',''); });
+</script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -74,30 +91,42 @@ $(function() {
 <div class="textblock">Here is a list of all documented class members with links to the class documentation for each member:</div>
 
 <h3 class="doxsection"><a id="index_a" name="index_a"></a>- a -</h3><ul>
-<li>Add()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection.html#afdce106200f591bec2dd31a5a5fd988a">ArenaGameLib.GameObjects.Composite.ArmourCollection</a></li>
+<li>AbsorbedDamage()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_strategies_1_1_absorb_damage.html#aa721099d301e189fcf2dd3d4b93c63ea">ArenaGameLib.GameObjects.Strategies.AbsorbDamage</a></li>
+<li>Add()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection.html#afdce106200f591bec2dd31a5a5fd988a">ArenaGameLib.GameObjects.Composite.ArmourCollection</a>, <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection.html#a50b4abd893c0de586469ebceb029cbc1">ArenaGameLib.GameObjects.Composite.WeaponCollection</a>, <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory.html#a1706a9948a7de001561e41920c996354">ArenaGameLib.GameObjects.Composites.CreatureInventory</a></li>
 <li>AddNewListener()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_logger_1_1_logger.html#ac8c44ef0b51bd03ea8e373869efdc156">ArenaGameLib.GameLogger.Logger</a></li>
-<li>AddObserver()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html#ab22845d1ab61b27efc40606004a9a517">ArenaGameLib.GameObjects.Creature</a></li>
+<li>AddObserver()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template.html#a0220348171ecea15f2ceb917eddda81d">ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate</a>, <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html#ade0b85b4186fea4cfdb4b77a5768a5b2">ArenaGameLib.GameObjects.Creature</a></li>
 <li>Arena()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_arena.html#af2bc6427b5f39b7c914a6c12dea1d01c">ArenaGameLib.GameObjects.Arena</a></li>
-<li>ArenaObject()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object.html#a6adcbadca4e7f7d052db7fed7522bc36">ArenaGameLib.GameObjects.Templates.ArenaObject</a></li>
+<li>ArenaObject()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object.html#a7b7637bb2b86c4408f7190c8b208600b">ArenaGameLib.GameObjects.Templates.ArenaObject</a></li>
+<li>ArmedAttack()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_strategies_1_1_attack_target.html#a1b9beca6f951ab15100991df7d94420a">ArenaGameLib.GameObjects.Strategies.AttackTarget</a></li>
 <li>Armour()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html#a156b462ad7fb6b34f902e950ab808d42">ArenaGameLib.GameObjects.Armour</a></li>
 <li>ArmourCollection()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection.html#aa969781f623bb596299340d94b5ee376">ArenaGameLib.GameObjects.Composite.ArmourCollection</a></li>
+<li>ArmourDegrade()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template.html#a8b3a35d6dc966a25ced75ea6e2b22c04">ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate</a>, <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html#ae48c4b741a8d1691c76773d256a22620">ArenaGameLib.GameObjects.Creature</a></li>
+<li>ArmourImprove()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template.html#a0aa2f876634a9da816ebab193e70c356">ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate</a>, <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html#a9fa571689a514345b83b080d730224de">ArenaGameLib.GameObjects.Creature</a></li>
+<li>ArmourModifier()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_armour_modifier.html#a7d2c289b4c4205106563a9936937d3e3">ArenaGameLib.GameObjects.Decorators.ArmourModifier</a></li>
 <li>Attack()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template.html#aa58433136f0bf98ebdd4852986f01286">ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate</a>, <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html#a892cd360344668af1fb6f63e4c8dd892">ArenaGameLib.GameObjects.Creature</a></li>
 </ul>
 
 
 <h3 class="doxsection"><a id="index_c" name="index_c"></a>- c -</h3><ul>
 <li>CloseLogger()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_logger_1_1_logger.html#a6603eaca4b32383a75531ced0e1f1c05">ArenaGameLib.GameLogger.Logger</a></li>
-<li>Creature()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html#accdc26308da6cfeef5434dd30842281a">ArenaGameLib.GameObjects.Creature</a></li>
-<li>CreatureTemplate()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template.html#a3a65c6b00c588ccee7b2144ac56e8715">ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate</a></li>
+<li>CombatNotifier()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_observers_1_1_combat_notifier.html#a618cdc8e52c9a03cf36ece86f3deb949">ArenaGameLib.GameObjects.Observers.CombatNotifier</a></li>
+<li>Creature()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html#a2aa22124f486041967ef5992befedf59">ArenaGameLib.GameObjects.Creature</a></li>
+<li>CreatureInventory()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory.html#a2bd4ff6492090ec55ddad9e97a6af3e4">ArenaGameLib.GameObjects.Composites.CreatureInventory</a></li>
+<li>CreatureTemplate()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template.html#a91ef57fad6fb6339447bf42ac8269815">ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate</a></li>
 </ul>
 
 
 <h3 class="doxsection"><a id="index_d" name="index_d"></a>- d -</h3><ul>
 <li>Damage&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_weapon.html#a0a1fb2632c6fc0fce3b6bc84e5740307">ArenaGameLib.GameObjects.Weapon</a></li>
+<li>DegradeArmourDurability()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_armour_modifier.html#a1c338a16d04d0d22537834b36b1a80cb">ArenaGameLib.GameObjects.Decorators.ArmourModifier</a></li>
+<li>DegradeWeaponDamage()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_weapon_modifier.html#ac37804508ba3a2a8bb05408c9cac2e1b">ArenaGameLib.GameObjects.Decorators.WeaponModifier</a></li>
+<li>Drop()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template.html#a96728c2152f40cbb3f8111c4186c0a26">ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate</a>, <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html#a736731e142dad59b677140db8772e6db">ArenaGameLib.GameObjects.Creature</a></li>
 </ul>
 
 
 <h3 class="doxsection"><a id="index_i" name="index_i"></a>- i -</h3><ul>
+<li>ImproveArmourDurability()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_armour_modifier.html#a2daf86e28760c69219bb5562681106f3">ArenaGameLib.GameObjects.Decorators.ArmourModifier</a></li>
+<li>ImproveWeaponDamage()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_weapon_modifier.html#a1607f24182b3e4c78cdcfab7efd71cf1">ArenaGameLib.GameObjects.Decorators.WeaponModifier</a></li>
 <li>InitLogger()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_logger_1_1_logger.html#a338a5f21c43756446a6d62a33818e10a">ArenaGameLib.GameLogger.Logger</a></li>
 </ul>
 
@@ -111,8 +140,10 @@ $(function() {
 
 
 <h3 class="doxsection"><a id="index_n" name="index_n"></a>- n -</h3><ul>
-<li>NotifyAllDamageTaken()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html#a81d94f60a2b122ab2a2beff690fb7f72">ArenaGameLib.GameObjects.Creature</a></li>
-<li>NotifyAllDefeated()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html#a01bb106f9dd8f4312358253e400dfbcd">ArenaGameLib.GameObjects.Creature</a></li>
+<li>NotifyAllDamageTaken()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template.html#a8bba2560035ca5dc8e1368a12b93ab66">ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate</a>, <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html#a68b02f3c0fee6ebe4ebaa3cfa4afff9a">ArenaGameLib.GameObjects.Creature</a></li>
+<li>NotifyAllDefeated()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template.html#a1202662ab6cbaaf5ba1037d7c11d2bb3">ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate</a>, <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html#a98bb036072bc7f96325fb3d6029b9b40">ArenaGameLib.GameObjects.Creature</a></li>
+<li>NotifyDamageTaken()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_observers_1_1_combat_notifier.html#a2d2e84b3b96fc8a9032dba75ab4aa3ca">ArenaGameLib.GameObjects.Observers.CombatNotifier</a></li>
+<li>NotifyDefeated()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_observers_1_1_combat_notifier.html#a017fac68c933460b73a34910a0048b23">ArenaGameLib.GameObjects.Observers.CombatNotifier</a></li>
 </ul>
 
 
@@ -122,8 +153,8 @@ $(function() {
 
 
 <h3 class="doxsection"><a id="index_r" name="index_r"></a>- r -</h3><ul>
-<li>Remove()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection.html#a0008c9bbb0e35e8a1d395121e0cdc5e7">ArenaGameLib.GameObjects.Composite.ArmourCollection</a></li>
-<li>RemoveObserver()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html#a3ad64dc91df52422907e44e3d92947dc">ArenaGameLib.GameObjects.Creature</a></li>
+<li>Remove()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection.html#a0008c9bbb0e35e8a1d395121e0cdc5e7">ArenaGameLib.GameObjects.Composite.ArmourCollection</a>, <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection.html#ac3a977c004062c29422de76e77fdf266">ArenaGameLib.GameObjects.Composite.WeaponCollection</a>, <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory.html#ad8e330851f8331232a6f16bfdcb3bed7">ArenaGameLib.GameObjects.Composites.CreatureInventory</a></li>
+<li>RemoveObserver()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template.html#a804e376d5640b1e0da031456f1e7fb4c">ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate</a>, <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html#ae1717c990df53fc1e7febf37361448de">ArenaGameLib.GameObjects.Creature</a></li>
 </ul>
 
 
@@ -136,19 +167,31 @@ $(function() {
 
 <h3 class="doxsection"><a id="index_t" name="index_t"></a>- t -</h3><ul>
 <li>TakeDamage()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template.html#a0a4afd59e62474a569c271e1962fc519">ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate</a>, <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html#a6696e46549278a20025b09dfa9973c70">ArenaGameLib.GameObjects.Creature</a></li>
-<li>TotalWeight()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection.html#aeaea6dfb5e42c10ff4f1c443cc2f1085">ArenaGameLib.GameObjects.Composite.ArmourCollection</a></li>
+<li>TotalWeight()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection.html#aeaea6dfb5e42c10ff4f1c443cc2f1085">ArenaGameLib.GameObjects.Composite.ArmourCollection</a>, <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection.html#a54ff53e16a9a866d4276659353e9d4b8">ArenaGameLib.GameObjects.Composite.WeaponCollection</a>, <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory.html#afb739441a910b2fb4627febe03fc6e9b">ArenaGameLib.GameObjects.Composites.CreatureInventory</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_u" name="index_u"></a>- u -</h3><ul>
+<li>UnarmedAttack()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_strategies_1_1_attack_target.html#aaa3794722b4e5d0803447a415821b8da">ArenaGameLib.GameObjects.Strategies.AttackTarget</a></li>
 </ul>
 
 
 <h3 class="doxsection"><a id="index_w" name="index_w"></a>- w -</h3><ul>
 <li>Weapon()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_weapon.html#a160c5c7f6e77b0aaf40d3e44366cc937">ArenaGameLib.GameObjects.Weapon</a></li>
+<li>WeaponCollection()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection.html#a22d46d79bab899887935f64b4bfada4f">ArenaGameLib.GameObjects.Composite.WeaponCollection</a></li>
+<li>WeaponDegrade()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template.html#ae5ce9d307d5ac0e7173d6b69b70f80c7">ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate</a>, <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html#a14485547510a4e1964263e507e20b20d">ArenaGameLib.GameObjects.Creature</a></li>
+<li>WeaponImprove()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template.html#a8cbe870a72c782ec6968a81fac4d0e50">ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate</a>, <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html#a49db6619824aeb2a055cbcf453959d86">ArenaGameLib.GameObjects.Creature</a></li>
+<li>WeaponModifier()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_weapon_modifier.html#ab50d869e34268e7e9761a31a2822933d">ArenaGameLib.GameObjects.Decorators.WeaponModifier</a></li>
 <li>WriteInfo()&#160;:&#160;<a class="el" href="class_arena_game_lib_1_1_game_logger_1_1_logger.html#a4bce697c7b7dd8259bd82816f169e3ae">ArenaGameLib.GameLogger.Logger</a></li>
 </ul>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1
-</small></address>
 </div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
 </body>
 </html>

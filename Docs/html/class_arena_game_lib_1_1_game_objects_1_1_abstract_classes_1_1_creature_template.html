@@ -10,6 +10,9 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -42,11 +45,27 @@ $(function() { codefold.init(); });
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template.html','','class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -68,19 +87,7 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a href="namespace_arena_game_lib.html">ArenaGameLib</a></li><li class="navelem"><a href="namespace_arena_game_lib_1_1_game_objects.html">GameObjects</a></li><li class="navelem"><a href="namespace_arena_game_lib_1_1_game_objects_1_1_abstract_classes.html">AbstractClasses</a></li><li class="navelem"><a href="class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template.html">CreatureTemplate</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
-  <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#properties">Properties</a> &#124;
-<a href="class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate Class Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
@@ -104,18 +111,36 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aa58433136f0bf98ebdd4852986f01286"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract template method Attack that the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> subclass overrides.  <br /></td></tr>
 <tr class="memitem:ad7d288e8d5472f9a3a04c2f2a580a064" id="r_ad7d288e8d5472f9a3a04c2f2a580a064"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad7d288e8d5472f9a3a04c2f2a580a064">Loot</a> (<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object.html">ArenaObject</a> item)</td></tr>
 <tr class="memdesc:ad7d288e8d5472f9a3a04c2f2a580a064"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract template method Loot that the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> subclass overrides.  <br /></td></tr>
+<tr class="memitem:a96728c2152f40cbb3f8111c4186c0a26" id="r_a96728c2152f40cbb3f8111c4186c0a26"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a96728c2152f40cbb3f8111c4186c0a26">Drop</a> (<a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object.html">ArenaObject</a> item)</td></tr>
+<tr class="memdesc:a96728c2152f40cbb3f8111c4186c0a26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract template method Drop that the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> subclass overrides.  <br /></td></tr>
 <tr class="memitem:a0a4afd59e62474a569c271e1962fc519" id="r_a0a4afd59e62474a569c271e1962fc519"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0a4afd59e62474a569c271e1962fc519">TakeDamage</a> (int damage, <a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_strategies_1_1_i_absorb_damage_strategy.html">IAbsorbDamageStrategy</a> reducedDamage)</td></tr>
 <tr class="memdesc:a0a4afd59e62474a569c271e1962fc519"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract template method TakeDamage that the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> subclass overrides.  <br /></td></tr>
+<tr class="memitem:a8cbe870a72c782ec6968a81fac4d0e50" id="r_a8cbe870a72c782ec6968a81fac4d0e50"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8cbe870a72c782ec6968a81fac4d0e50">WeaponImprove</a> (<a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon.html">IWeapon</a> weapon, int modifier)</td></tr>
+<tr class="memdesc:a8cbe870a72c782ec6968a81fac4d0e50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract template method WeaponImprove that the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> subclass overrides.  <br /></td></tr>
+<tr class="memitem:ae5ce9d307d5ac0e7173d6b69b70f80c7" id="r_ae5ce9d307d5ac0e7173d6b69b70f80c7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae5ce9d307d5ac0e7173d6b69b70f80c7">WeaponDegrade</a> (<a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon.html">IWeapon</a> weapon, int modifier)</td></tr>
+<tr class="memdesc:ae5ce9d307d5ac0e7173d6b69b70f80c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract template method WeaponDegrade that the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> subclass overrides.  <br /></td></tr>
+<tr class="memitem:a0aa2f876634a9da816ebab193e70c356" id="r_a0aa2f876634a9da816ebab193e70c356"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0aa2f876634a9da816ebab193e70c356">ArmourImprove</a> (<a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_i_armour.html">IArmour</a> armour, int modifier)</td></tr>
+<tr class="memdesc:a0aa2f876634a9da816ebab193e70c356"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract template method ArmourImprove that the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> subclass overrides.  <br /></td></tr>
+<tr class="memitem:a8b3a35d6dc966a25ced75ea6e2b22c04" id="r_a8b3a35d6dc966a25ced75ea6e2b22c04"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8b3a35d6dc966a25ced75ea6e2b22c04">ArmourDegrade</a> (<a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_i_armour.html">IArmour</a> armour, int modifier)</td></tr>
+<tr class="memdesc:a8b3a35d6dc966a25ced75ea6e2b22c04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract template method ArmourDegrade that the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> subclass overrides.  <br /></td></tr>
+<tr class="memitem:a0220348171ecea15f2ceb917eddda81d" id="r_a0220348171ecea15f2ceb917eddda81d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0220348171ecea15f2ceb917eddda81d">AddObserver</a> (<a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_observers_1_1_i_combat_notifier.html">ICombatNotifier</a> notifier)</td></tr>
+<tr class="memdesc:a0220348171ecea15f2ceb917eddda81d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract template method AddObserver that the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> subclass overrides.  <br /></td></tr>
+<tr class="memitem:a804e376d5640b1e0da031456f1e7fb4c" id="r_a804e376d5640b1e0da031456f1e7fb4c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a804e376d5640b1e0da031456f1e7fb4c">RemoveObserver</a> (<a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_observers_1_1_i_combat_notifier.html">ICombatNotifier</a> notifier)</td></tr>
+<tr class="memdesc:a804e376d5640b1e0da031456f1e7fb4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract template method AddObserver that the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> subclass overrides.  <br /></td></tr>
+<tr class="memitem:a8bba2560035ca5dc8e1368a12b93ab66" id="r_a8bba2560035ca5dc8e1368a12b93ab66"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8bba2560035ca5dc8e1368a12b93ab66">NotifyAllDamageTaken</a> (int damage, int absorbed)</td></tr>
+<tr class="memdesc:a8bba2560035ca5dc8e1368a12b93ab66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract template method NotifyAllDamageTaken that the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> subclass overrides.  <br /></td></tr>
+<tr class="memitem:a1202662ab6cbaaf5ba1037d7c11d2bb3" id="r_a1202662ab6cbaaf5ba1037d7c11d2bb3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1202662ab6cbaaf5ba1037d7c11d2bb3">NotifyAllDefeated</a> ()</td></tr>
+<tr class="memdesc:a1202662ab6cbaaf5ba1037d7c11d2bb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract template method NotifyAllDefeated that the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> subclass overrides.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a361d42d4c5a89e0e28ab496ff9a18023" id="r_a361d42d4c5a89e0e28ab496ff9a18023"><td class="memItemLeft">static <a class="el" href="#a3a65c6b00c588ccee7b2144ac56e8715">CreatureTemplate</a>&#160;</td><td class="memItemRight"><a class="el" href="#a361d42d4c5a89e0e28ab496ff9a18023">operator+</a> (<a class="el" href="#a3a65c6b00c588ccee7b2144ac56e8715">CreatureTemplate</a> creature, <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object.html">ArenaObject</a> item)</td></tr>
+<tr class="memitem:a361d42d4c5a89e0e28ab496ff9a18023" id="r_a361d42d4c5a89e0e28ab496ff9a18023"><td class="memItemLeft">static <a class="el" href="#a91ef57fad6fb6339447bf42ac8269815">CreatureTemplate</a>&#160;</td><td class="memItemRight"><a class="el" href="#a361d42d4c5a89e0e28ab496ff9a18023">operator+</a> (<a class="el" href="#a91ef57fad6fb6339447bf42ac8269815">CreatureTemplate</a> creature, <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object.html">ArenaObject</a> item)</td></tr>
 <tr class="memdesc:a361d42d4c5a89e0e28ab496ff9a18023"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator overload for + operation to support the creature looting an item through the + operation.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a3a65c6b00c588ccee7b2144ac56e8715" id="r_a3a65c6b00c588ccee7b2144ac56e8715"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a3a65c6b00c588ccee7b2144ac56e8715">CreatureTemplate</a> (string name, int health, int unarmedDmg, List&lt; <a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_arena_object.html">IArenaObject</a> &gt; inventory, int inventoryCapacity, int weaponCapacity, int armourCapacity, int locX, int locY)</td></tr>
-<tr class="memdesc:a3a65c6b00c588ccee7b2144ac56e8715"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor method for the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> template clas that sets the argument constraint for the inventory that the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> is capable of carrying - regarding weapons and armour.  <br /></td></tr>
+<tr class="memitem:a91ef57fad6fb6339447bf42ac8269815" id="r_a91ef57fad6fb6339447bf42ac8269815"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a91ef57fad6fb6339447bf42ac8269815">CreatureTemplate</a> (string name, int health, int unarmedDmg, int inventoryCapacity, int weaponCapacity, int armourCapacity, int locX, int locY)</td></tr>
+<tr class="memdesc:a91ef57fad6fb6339447bf42ac8269815"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor method for the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> template class that sets the argument constraint for the inventory that the creature is capable of carrying - regarding weapons and armour.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
@@ -123,17 +148,14 @@ Properties</h2></td></tr>
 <tr class="memitem:a892c10dc9433a6137bbbcd1b07d81652" id="r_a892c10dc9433a6137bbbcd1b07d81652"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a892c10dc9433a6137bbbcd1b07d81652">Health</a><code> [get, set]</code></td></tr>
 <tr class="memitem:a7af5a0d401f4b7c45315853f9289dad7" id="r_a7af5a0d401f4b7c45315853f9289dad7"><td class="memItemLeft"><a id="a7af5a0d401f4b7c45315853f9289dad7" name="a7af5a0d401f4b7c45315853f9289dad7"></a>
 int&#160;</td><td class="memItemRight"><b>UnarmedDamage</b><code> [get, set]</code></td></tr>
-<tr class="memitem:ae98146b0b128d0448d5ede5a6486ce8e" id="r_ae98146b0b128d0448d5ede5a6486ce8e"><td class="memItemLeft">List&lt; <a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_arena_object.html">IArenaObject</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae98146b0b128d0448d5ede5a6486ce8e">Inventory</a><code> [get, set]</code></td></tr>
-<tr class="memitem:ae44391bb348b6c895a00131aa0752679" id="r_ae44391bb348b6c895a00131aa0752679"><td class="memItemLeft"><a id="ae44391bb348b6c895a00131aa0752679" name="ae44391bb348b6c895a00131aa0752679"></a>
-int&#160;</td><td class="memItemRight"><b>InventoryCapacity</b><code> [get, set]</code></td></tr>
 <tr class="memitem:ab06661c4a27d2aa297ee6e76ab3075b8" id="r_ab06661c4a27d2aa297ee6e76ab3075b8"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ab06661c4a27d2aa297ee6e76ab3075b8">LocationX</a><code> [get, set]</code></td></tr>
 <tr class="memitem:afd9f1a4d2521c4eed4423d3aad25e7ce" id="r_afd9f1a4d2521c4eed4423d3aad25e7ce"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#afd9f1a4d2521c4eed4423d3aad25e7ce">LocationY</a><code> [get, set]</code></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Template class for the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> class - Abstract class that the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> class inherits from and defines constraints and methods and overloads for the creature subclass. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a3a65c6b00c588ccee7b2144ac56e8715" name="a3a65c6b00c588ccee7b2144ac56e8715"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a65c6b00c588ccee7b2144ac56e8715">&#9670;&#160;</a></span>CreatureTemplate()</h2>
+<a id="a91ef57fad6fb6339447bf42ac8269815" name="a91ef57fad6fb6339447bf42ac8269815"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91ef57fad6fb6339447bf42ac8269815">&#9670;&#160;</a></span>CreatureTemplate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -155,11 +177,6 @@ int&#160;</td><td class="memItemRight"><b>InventoryCapacity</b><code> [get, set]
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>unarmedDmg</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">List&lt; <a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_arena_object.html">IArenaObject</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>inventory</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -194,14 +211,14 @@ int&#160;</td><td class="memItemRight"><b>InventoryCapacity</b><code> [get, set]
 </table>
 </div><div class="memdoc">
 
-<p>Constructor method for the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> template clas that sets the argument constraint for the inventory that the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> is capable of carrying - regarding weapons and armour. </p>
+<p>Constructor method for the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> template class that sets the argument constraint for the inventory that the creature is capable of carrying - regarding weapons and armour. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>Type: string - <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> name</td></tr>
-    <tr><td class="paramname">health</td><td>Type: int - <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> health</td></tr>
-    <tr><td class="paramname">unarmedDmg</td><td>Type: int - Unarmed damage dealt by <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a></td></tr>
-    <tr><td class="paramname">inventory</td><td>Type: List&lt;ArenaObject&gt; - Creatures inventory</td></tr>
-    <tr><td class="paramname">inventoryCapacity</td><td>Type: int - Maximum inventory capacity</td></tr>
+    <tr><td class="paramname">health</td><td>Type: int - <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> hitpoints</td></tr>
+    <tr><td class="paramname">unarmedDmg</td><td>Type: int - Amount of unarmed damage the creature can deal</td></tr>
+    <tr><td class="paramname">inventory</td><td>Type: <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory.html" title="Composite class representing a creature&#39;s inventory - Also containing Weapon and Armour Collections.">CreatureInventory</a> - <a class="el" href="namespace_arena_game_lib_1_1_game_objects_1_1_composite.html">Composite</a> class representing a creature's inventory</td></tr>
+    <tr><td class="paramname">inventoryCapacity</td><td>Type: int - <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a>'s inventory capacity</td></tr>
     <tr><td class="paramname">weaponCapacity</td><td>Type: int - Maximum weapon collection capacity</td></tr>
     <tr><td class="paramname">armourCapacity</td><td>Type: int - Maxumum armour collection capacity</td></tr>
     <tr><td class="paramname">locX</td><td>Type: int - Positional X coordinate</td></tr>
@@ -211,7 +228,7 @@ int&#160;</td><td class="memItemRight"><b>InventoryCapacity</b><code> [get, set]
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">ArgumentOutOfRangeException</td><td>Exception thrown if weapons and armour capacity exceeds inventory capacity</td></tr>
+    <tr><td class="paramname">ArgumentOutOfRangeException</td><td>Argument Out of Range Exception thrown if weapons and armour capacity exceeds inventory capacity</td></tr>
   </table>
   </dd>
 </dl>
@@ -219,6 +236,121 @@ int&#160;</td><td class="memItemRight"><b>InventoryCapacity</b><code> [get, set]
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a0220348171ecea15f2ceb917eddda81d" name="a0220348171ecea15f2ceb917eddda81d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0220348171ecea15f2ceb917eddda81d">&#9670;&#160;</a></span>AddObserver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate.AddObserver </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_observers_1_1_i_combat_notifier.html">ICombatNotifier</a></td>          <td class="paramname"><span class="paramname"><em>notifier</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel abstract">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Abstract template method AddObserver that the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> subclass overrides. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">notifier</td><td>Type: <a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_observers_1_1_i_combat_notifier.html">ICombatNotifier</a> - Combat notifier observer class object</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template.html">ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate</a>.</p>
+
+</div>
+</div>
+<a id="a8b3a35d6dc966a25ced75ea6e2b22c04" name="a8b3a35d6dc966a25ced75ea6e2b22c04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b3a35d6dc966a25ced75ea6e2b22c04">&#9670;&#160;</a></span>ArmourDegrade()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate.ArmourDegrade </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_i_armour.html">IArmour</a></td>          <td class="paramname"><span class="paramname"><em>armour</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>modifier</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel abstract">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Abstract template method ArmourDegrade that the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> subclass overrides. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">armour</td><td>Type: <a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_i_armour.html">IArmour</a> - <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html" title="Class defining Armour objects, inheriting from ArenaObject template class.">Armour</a> that is degraded</td></tr>
+    <tr><td class="paramname">modifier</td><td>Type: int - Factor that the armour durability is improved by</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template.html">ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate</a>.</p>
+
+</div>
+</div>
+<a id="a0aa2f876634a9da816ebab193e70c356" name="a0aa2f876634a9da816ebab193e70c356"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0aa2f876634a9da816ebab193e70c356">&#9670;&#160;</a></span>ArmourImprove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate.ArmourImprove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_i_armour.html">IArmour</a></td>          <td class="paramname"><span class="paramname"><em>armour</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>modifier</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel abstract">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Abstract template method ArmourImprove that the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> subclass overrides. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">armour</td><td>Type: <a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_i_armour.html">IArmour</a> - <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_armour.html" title="Class defining Armour objects, inheriting from ArenaObject template class.">Armour</a> that is improved</td></tr>
+    <tr><td class="paramname">modifier</td><td>Type: int - Factor that the armour durability is improved by</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template.html">ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate</a>.</p>
+
+</div>
+</div>
 <a id="aa58433136f0bf98ebdd4852986f01286" name="aa58433136f0bf98ebdd4852986f01286"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa58433136f0bf98ebdd4852986f01286">&#9670;&#160;</a></span>Attack()</h2>
 
@@ -260,6 +392,41 @@ int&#160;</td><td class="memItemRight"><b>InventoryCapacity</b><code> [get, set]
 
 </div>
 </div>
+<a id="a96728c2152f40cbb3f8111c4186c0a26" name="a96728c2152f40cbb3f8111c4186c0a26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96728c2152f40cbb3f8111c4186c0a26">&#9670;&#160;</a></span>Drop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate.Drop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object.html">ArenaObject</a></td>          <td class="paramname"><span class="paramname"><em>item</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel abstract">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Abstract template method Drop that the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> subclass overrides. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">item</td><td>Type: <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object.html" title="Template class for Arena Object classes - Abstract class that the individual objects in the arena inh...">ArenaObject</a> - The item dropped by the creature</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template.html">ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate</a>.</p>
+
+</div>
+</div>
 <a id="ad7d288e8d5472f9a3a04c2f2a580a064" name="ad7d288e8d5472f9a3a04c2f2a580a064"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad7d288e8d5472f9a3a04c2f2a580a064">&#9670;&#160;</a></span>Loot()</h2>
 
@@ -295,6 +462,75 @@ int&#160;</td><td class="memItemRight"><b>InventoryCapacity</b><code> [get, set]
 
 </div>
 </div>
+<a id="a8bba2560035ca5dc8e1368a12b93ab66" name="a8bba2560035ca5dc8e1368a12b93ab66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bba2560035ca5dc8e1368a12b93ab66">&#9670;&#160;</a></span>NotifyAllDamageTaken()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate.NotifyAllDamageTaken </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>damage</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>absorbed</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel abstract">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Abstract template method NotifyAllDamageTaken that the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> subclass overrides. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">damage</td><td>Type: int - Damage that the notifiers notify</td></tr>
+    <tr><td class="paramname">absorbed</td><td>Type: int - Damage absorbed that the notifiers notify</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template.html">ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate</a>.</p>
+
+</div>
+</div>
+<a id="a1202662ab6cbaaf5ba1037d7c11d2bb3" name="a1202662ab6cbaaf5ba1037d7c11d2bb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1202662ab6cbaaf5ba1037d7c11d2bb3">&#9670;&#160;</a></span>NotifyAllDefeated()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate.NotifyAllDefeated </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel abstract">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Abstract template method NotifyAllDefeated that the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> subclass overrides. </p>
+
+<p>Implements <a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template.html">ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate</a>.</p>
+
+</div>
+</div>
 <a id="a361d42d4c5a89e0e28ab496ff9a18023" name="a361d42d4c5a89e0e28ab496ff9a18023"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a361d42d4c5a89e0e28ab496ff9a18023">&#9670;&#160;</a></span>operator+()</h2>
 
@@ -305,9 +541,9 @@ int&#160;</td><td class="memItemRight"><b>InventoryCapacity</b><code> [get, set]
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a3a65c6b00c588ccee7b2144ac56e8715">CreatureTemplate</a> ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate.operator+ </td>
+          <td class="memname"><a class="el" href="#a91ef57fad6fb6339447bf42ac8269815">CreatureTemplate</a> ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate.operator+ </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#a3a65c6b00c588ccee7b2144ac56e8715">CreatureTemplate</a></td>          <td class="paramname"><span class="paramname"><em>creature</em></span>, </td>
+          <td class="paramtype"><a class="el" href="#a91ef57fad6fb6339447bf42ac8269815">CreatureTemplate</a></td>          <td class="paramname"><span class="paramname"><em>creature</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -330,7 +566,42 @@ int&#160;</td><td class="memItemRight"><b>InventoryCapacity</b><code> [get, set]
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Type: <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> - <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> that looted the item</dd></dl>
+
+</div>
+</div>
+<a id="a804e376d5640b1e0da031456f1e7fb4c" name="a804e376d5640b1e0da031456f1e7fb4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a804e376d5640b1e0da031456f1e7fb4c">&#9670;&#160;</a></span>RemoveObserver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate.RemoveObserver </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_observers_1_1_i_combat_notifier.html">ICombatNotifier</a></td>          <td class="paramname"><span class="paramname"><em>notifier</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel abstract">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Abstract template method AddObserver that the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> subclass overrides. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">notifier</td><td>Type: <a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_observers_1_1_i_combat_notifier.html">ICombatNotifier</a> - Combat notifier observer class object</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template.html">ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate</a>.</p>
 
 </div>
 </div>
@@ -374,6 +645,86 @@ int&#160;</td><td class="memItemRight"><b>InventoryCapacity</b><code> [get, set]
 
 </div>
 </div>
+<a id="ae5ce9d307d5ac0e7173d6b69b70f80c7" name="ae5ce9d307d5ac0e7173d6b69b70f80c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5ce9d307d5ac0e7173d6b69b70f80c7">&#9670;&#160;</a></span>WeaponDegrade()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate.WeaponDegrade </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon.html">IWeapon</a></td>          <td class="paramname"><span class="paramname"><em>weapon</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>modifier</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel abstract">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Abstract template method WeaponDegrade that the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> subclass overrides. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">weapon</td><td>Type: <a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon.html">IWeapon</a> - <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_weapon.html">Weapon</a> that is degraded</td></tr>
+    <tr><td class="paramname">modifier</td><td>Type: int - Factor that the damage is degraded by</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template.html">ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate</a>.</p>
+
+</div>
+</div>
+<a id="a8cbe870a72c782ec6968a81fac4d0e50" name="a8cbe870a72c782ec6968a81fac4d0e50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cbe870a72c782ec6968a81fac4d0e50">&#9670;&#160;</a></span>WeaponImprove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate.WeaponImprove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon.html">IWeapon</a></td>          <td class="paramname"><span class="paramname"><em>weapon</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>modifier</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel abstract">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Abstract template method WeaponImprove that the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_creature.html" title="Class defining Creatures combating in the arena, inheriting from CreatureTemplate Class.">Creature</a> subclass overrides. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">weapon</td><td>Type: <a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon.html">IWeapon</a> - <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_weapon.html">Weapon</a> that is improved</td></tr>
+    <tr><td class="paramname">modifier</td><td>Type: int - Factor that the damage is imrpoved by</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template.html">ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate</a>.</p>
+
+</div>
+</div>
 <a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">Property Documentation</h2>
 <a id="a892c10dc9433a6137bbbcd1b07d81652" name="a892c10dc9433a6137bbbcd1b07d81652"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a892c10dc9433a6137bbbcd1b07d81652">&#9670;&#160;</a></span>Health</h2>
@@ -386,30 +737,6 @@ int&#160;</td><td class="memItemRight"><b>InventoryCapacity</b><code> [get, set]
       <table class="memname">
         <tr>
           <td class="memname">int ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate.Health</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implements <a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_creature_template.html">ArenaGameLib.GameInterfaces.Templates.ICreatureTemplate</a>.</p>
-
-</div>
-</div>
-<a id="ae98146b0b128d0448d5ede5a6486ce8e" name="ae98146b0b128d0448d5ede5a6486ce8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae98146b0b128d0448d5ede5a6486ce8e">&#9670;&#160;</a></span>Inventory</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">List&lt;<a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_arena_object.html">IArenaObject</a>&gt; ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate.Inventory</td>
         </tr>
       </table>
   </td>
@@ -499,10 +826,21 @@ int&#160;</td><td class="memItemRight"><b>InventoryCapacity</b><code> [get, set]
 <li>C:/Users/magnu/OneDrive/Skrivebord/Datamatiker/4-Sem/Advanced-Software-Construction/ArenaGameLib/ArenaGameLib/GameObjects/Templates/<b>CreatureTemplate.cs</b></li>
 </ul>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1
-</small></address>
 </div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_arena_game_lib.html">ArenaGameLib</a></li><li class="navelem"><a href="namespace_arena_game_lib_1_1_game_objects.html">GameObjects</a></li><li class="navelem"><a href="namespace_arena_game_lib_1_1_game_objects_1_1_abstract_classes.html">AbstractClasses</a></li><li class="navelem"><a href="class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template.html">CreatureTemplate</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
 </body>
 </html>

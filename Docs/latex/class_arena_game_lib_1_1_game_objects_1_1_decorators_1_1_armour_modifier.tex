@@ -1,5 +1,10 @@
 \doxysection{Arena\+Game\+Lib.\+Game\+Objects.\+Decorators.\+Armour\+Modifier Class Reference}
 \hypertarget{class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_armour_modifier}{}\label{class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_armour_modifier}\index{ArenaGameLib.GameObjects.Decorators.ArmourModifier@{ArenaGameLib.GameObjects.Decorators.ArmourModifier}}
+
+
+Decorator class for improving or degrading the creature\textquotesingle{}s armour.  
+
+
 Inheritance diagram for Arena\+Game\+Lib.\+Game\+Objects.\+Decorators.\+Armour\+Modifier:\+\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,13 +14,35 @@ Inheritance diagram for Arena\+Game\+Lib.\+Game\+Objects.\+Decorators.\+Armour\+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_armour_modifier_a7d2c289b4c4205106563a9936937d3e3}\label{class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_armour_modifier_a7d2c289b4c4205106563a9936937d3e3} 
-{\bfseries Armour\+Modifier} (\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_armour}{IArmour}} armour)
-\item 
+\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_armour_modifier_a7d2c289b4c4205106563a9936937d3e3}{Armour\+Modifier}} (\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_armour}{IArmour}} armour)
+\begin{DoxyCompactList}\small\item\em Constructor method for instanciating the armour modifier. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_armour}{Armour}} \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_armour_modifier_a1c338a16d04d0d22537834b36b1a80cb}{Degrade\+Armour\+Durability}} (int modifier)
-\item 
+\begin{DoxyCompactList}\small\item\em Method for degrading an armour piece\textquotesingle{}s durability -\/ Debuff from opponent creature. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_armour}{Armour}} \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_armour_modifier_a2daf86e28760c69219bb5562681106f3}{Improve\+Armour\+Durability}} (int modifier)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Method for improving an armour piece\textquotesingle{}s durability -\/ Buff from creature itself. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Decorator class for improving or degrading the creature\textquotesingle{}s armour. 
+
+\label{doc-constructors}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_armour_modifier_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_armour_modifier_a7d2c289b4c4205106563a9936937d3e3}\index{ArenaGameLib.GameObjects.Decorators.ArmourModifier@{ArenaGameLib.GameObjects.Decorators.ArmourModifier}!ArmourModifier@{ArmourModifier}}
+\index{ArmourModifier@{ArmourModifier}!ArenaGameLib.GameObjects.Decorators.ArmourModifier@{ArenaGameLib.GameObjects.Decorators.ArmourModifier}}
+\doxysubsubsection{\texorpdfstring{ArmourModifier()}{ArmourModifier()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_armour_modifier_a7d2c289b4c4205106563a9936937d3e3} 
+Arena\+Game\+Lib.\+Game\+Objects.\+Decorators.\+Armour\+Modifier.\+Armour\+Modifier (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_armour}{IArmour}}}]{armour}{}\end{DoxyParamCaption})}
+
+
+
+Constructor method for instanciating the armour modifier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em armour} & Type:\+ \doxylink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_armour}{IArmour} -\/ The armour that is modified\\
+\hline
+\end{DoxyParams}
 
 
 \label{doc-func-members}
@@ -29,6 +56,18 @@ Inheritance diagram for Arena\+Game\+Lib.\+Game\+Objects.\+Decorators.\+Armour\+
 
 
 
+Method for degrading an armour piece\textquotesingle{}s durability -\/ Debuff from opponent creature. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em modifier} & Type:\+ int -\/ Modifying factor for the armour\textquotesingle{}s durability degrading\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Type:\+ \doxylink{class_arena_game_lib_1_1_game_objects_1_1_armour}{Armour} -\/ The armour with degraded durability
+\end{DoxyReturn}
+
+
 Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_decorators_1_1_i_armour_modify}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Decorators.\+IArmour\+Modify}}.
 
 \Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_armour_modifier_a2daf86e28760c69219bb5562681106f3}\index{ArenaGameLib.GameObjects.Decorators.ArmourModifier@{ArenaGameLib.GameObjects.Decorators.ArmourModifier}!ImproveArmourDurability@{ImproveArmourDurability}}
@@ -37,6 +76,18 @@ Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1
 {\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_armour_modifier_a2daf86e28760c69219bb5562681106f3} 
 \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_armour}{Armour}} Arena\+Game\+Lib.\+Game\+Objects.\+Decorators.\+Armour\+Modifier.\+Improve\+Armour\+Durability (\begin{DoxyParamCaption}\item[{int}]{modifier}{}\end{DoxyParamCaption})}
 
+
+
+Method for improving an armour piece\textquotesingle{}s durability -\/ Buff from creature itself. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em modifier} & Type:\+ int -\/ Modifying factor for the armour\textquotesingle{}s durability degrading\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 
 
 Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_decorators_1_1_i_armour_modify}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Decorators.\+IArmour\+Modify}}.

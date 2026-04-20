@@ -1,0 +1,149 @@
+\doxysection{Arena\+Game\+Lib.\+Game\+Objects.\+Composites.\+Creature\+Inventory Class Reference}
+\hypertarget{class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory}{}\label{class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory}\index{ArenaGameLib.GameObjects.Composites.CreatureInventory@{ArenaGameLib.GameObjects.Composites.CreatureInventory}}
+
+
+\doxylink{namespace_arena_game_lib_1_1_game_objects_1_1_composite}{Composite} class representing a creature\textquotesingle{}s inventory -\/ Also containing \doxylink{class_arena_game_lib_1_1_game_objects_1_1_weapon}{Weapon} and \doxylink{class_arena_game_lib_1_1_game_objects_1_1_armour}{Armour} Collections.  
+
+
+Inheritance diagram for Arena\+Game\+Lib.\+Game\+Objects.\+Composites.\+Creature\+Inventory:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory_a2bd4ff6492090ec55ddad9e97a6af3e4}{Creature\+Inventory}} (int capacity)
+\begin{DoxyCompactList}\small\item\em Constructor method for instanciating the inventory list (Items). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory_a1706a9948a7de001561e41920c996354}{Add}} (\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_arena_object}{IArena\+Object}} item)
+\begin{DoxyCompactList}\small\item\em Method for adding an item to the inventory list. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory_ad8e330851f8331232a6f16bfdcb3bed7}{Remove}} (\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_arena_object}{IArena\+Object}} item)
+\begin{DoxyCompactList}\small\item\em Method for removing an item from the inventory list. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory_afb739441a910b2fb4627febe03fc6e9b}{Total\+Weight}} ()
+\begin{DoxyCompactList}\small\item\em Method for computing the total weight of the inventory list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_arena_object}{IArena\+Object}} $>$ \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory_af29cfcbd7a30df35c532fcecf7c9a1f1}{Items}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\item 
+int \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory_a64682d17fadd4725b8c6ef1038920b00}{Capacity}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{namespace_arena_game_lib_1_1_game_objects_1_1_composite}{Composite} class representing a creature\textquotesingle{}s inventory -\/ Also containing \doxylink{class_arena_game_lib_1_1_game_objects_1_1_weapon}{Weapon} and \doxylink{class_arena_game_lib_1_1_game_objects_1_1_armour}{Armour} Collections. 
+
+\label{doc-constructors}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory_a2bd4ff6492090ec55ddad9e97a6af3e4}\index{ArenaGameLib.GameObjects.Composites.CreatureInventory@{ArenaGameLib.GameObjects.Composites.CreatureInventory}!CreatureInventory@{CreatureInventory}}
+\index{CreatureInventory@{CreatureInventory}!ArenaGameLib.GameObjects.Composites.CreatureInventory@{ArenaGameLib.GameObjects.Composites.CreatureInventory}}
+\doxysubsubsection{\texorpdfstring{CreatureInventory()}{CreatureInventory()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory_a2bd4ff6492090ec55ddad9e97a6af3e4} 
+Arena\+Game\+Lib.\+Game\+Objects.\+Composites.\+Creature\+Inventory.\+Creature\+Inventory (\begin{DoxyParamCaption}\item[{int}]{capacity}{}\end{DoxyParamCaption})}
+
+
+
+Constructor method for instanciating the inventory list (Items). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacity} & Type:\+ int -\/ The capacity of the inventory\\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory_a1706a9948a7de001561e41920c996354}\index{ArenaGameLib.GameObjects.Composites.CreatureInventory@{ArenaGameLib.GameObjects.Composites.CreatureInventory}!Add@{Add}}
+\index{Add@{Add}!ArenaGameLib.GameObjects.Composites.CreatureInventory@{ArenaGameLib.GameObjects.Composites.CreatureInventory}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory_a1706a9948a7de001561e41920c996354} 
+void Arena\+Game\+Lib.\+Game\+Objects.\+Composites.\+Creature\+Inventory.\+Add (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_arena_object}{IArena\+Object}}}]{item}{}\end{DoxyParamCaption})}
+
+
+
+Method for adding an item to the inventory list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & Type:\+ \doxylink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_arena_object}{IArena\+Object} -\/ Item to be added to the inventory list\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Out\+Of\+Range\+Exception} & Argument Out of Range Exception thrown if the added item\textquotesingle{}s weight and the total inventory weight exceeds the inventory capacity\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_composites_1_1_i_object_collection}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Composites.\+IObject\+Collection}}.
+
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory_ad8e330851f8331232a6f16bfdcb3bed7}\index{ArenaGameLib.GameObjects.Composites.CreatureInventory@{ArenaGameLib.GameObjects.Composites.CreatureInventory}!Remove@{Remove}}
+\index{Remove@{Remove}!ArenaGameLib.GameObjects.Composites.CreatureInventory@{ArenaGameLib.GameObjects.Composites.CreatureInventory}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory_ad8e330851f8331232a6f16bfdcb3bed7} 
+void Arena\+Game\+Lib.\+Game\+Objects.\+Composites.\+Creature\+Inventory.\+Remove (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_arena_object}{IArena\+Object}}}]{item}{}\end{DoxyParamCaption})}
+
+
+
+Method for removing an item from the inventory list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & Type:\+ \doxylink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_arena_object}{IArena\+Object} -\/ Item to be removed from the inventory list\\
+\hline
+\end{DoxyParams}
+
+
+Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_composites_1_1_i_object_collection}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Composites.\+IObject\+Collection}}.
+
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory_afb739441a910b2fb4627febe03fc6e9b}\index{ArenaGameLib.GameObjects.Composites.CreatureInventory@{ArenaGameLib.GameObjects.Composites.CreatureInventory}!TotalWeight@{TotalWeight}}
+\index{TotalWeight@{TotalWeight}!ArenaGameLib.GameObjects.Composites.CreatureInventory@{ArenaGameLib.GameObjects.Composites.CreatureInventory}}
+\doxysubsubsection{\texorpdfstring{TotalWeight()}{TotalWeight()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory_afb739441a910b2fb4627febe03fc6e9b} 
+int Arena\+Game\+Lib.\+Game\+Objects.\+Composites.\+Creature\+Inventory.\+Total\+Weight (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Method for computing the total weight of the inventory list. 
+
+\begin{DoxyReturn}{Returns}
+Type:\+ int -\/ Total weight of the inventory list
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_composites_1_1_i_object_collection}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Composites.\+IObject\+Collection}}.
+
+
+
+\label{doc-property-members}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory_a64682d17fadd4725b8c6ef1038920b00}\index{ArenaGameLib.GameObjects.Composites.CreatureInventory@{ArenaGameLib.GameObjects.Composites.CreatureInventory}!Capacity@{Capacity}}
+\index{Capacity@{Capacity}!ArenaGameLib.GameObjects.Composites.CreatureInventory@{ArenaGameLib.GameObjects.Composites.CreatureInventory}}
+\doxysubsubsection{\texorpdfstring{Capacity}{Capacity}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory_a64682d17fadd4725b8c6ef1038920b00} 
+int Arena\+Game\+Lib.\+Game\+Objects.\+Composites.\+Creature\+Inventory.\+Capacity\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_composites_1_1_i_object_collection}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Composites.\+IObject\+Collection}}.
+
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory_af29cfcbd7a30df35c532fcecf7c9a1f1}\index{ArenaGameLib.GameObjects.Composites.CreatureInventory@{ArenaGameLib.GameObjects.Composites.CreatureInventory}!Items@{Items}}
+\index{Items@{Items}!ArenaGameLib.GameObjects.Composites.CreatureInventory@{ArenaGameLib.GameObjects.Composites.CreatureInventory}}
+\doxysubsubsection{\texorpdfstring{Items}{Items}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory_af29cfcbd7a30df35c532fcecf7c9a1f1} 
+List$<$\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_templates_1_1_i_arena_object}{IArena\+Object}}$>$ Arena\+Game\+Lib.\+Game\+Objects.\+Composites.\+Creature\+Inventory.\+Items\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_composites_1_1_i_object_collection}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Composites.\+IObject\+Collection}}.
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+C:\+/\+\+Users/\+magnu/\+\+One\+Drive/\+\+Skrivebord/\+\+Datamatiker/\+4-\/\+Sem/\+\+Advanced-\/\+Software-\/\+Construction/\+\+Arena\+Game\+Lib/\+\+Arena\+Game\+Lib/\+\+Game\+Objects/\+\+Composites/\+Creature\+Inventory.\+cs\end{DoxyCompactItemize}

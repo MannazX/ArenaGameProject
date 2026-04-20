@@ -1,5 +1,10 @@
 \doxysection{Arena\+Game\+Lib.\+Game\+Objects.\+Composite.\+Weapon\+Collection Class Reference}
 \hypertarget{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection}{}\label{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection}\index{ArenaGameLib.GameObjects.Composite.WeaponCollection@{ArenaGameLib.GameObjects.Composite.WeaponCollection}}
+
+
+\doxylink{namespace_arena_game_lib_1_1_game_objects_1_1_composite}{Composite} class representing a creature\textquotesingle{}s collection of weapons.  
+
+
 Inheritance diagram for Arena\+Game\+Lib.\+Game\+Objects.\+Composite.\+Weapon\+Collection:\+\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,23 +14,44 @@ Inheritance diagram for Arena\+Game\+Lib.\+Game\+Objects.\+Composite.\+Weapon\+C
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection_a22d46d79bab899887935f64b4bfada4f}\label{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection_a22d46d79bab899887935f64b4bfada4f} 
-{\bfseries Weapon\+Collection} (int capacity)
-\item 
+\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection_a22d46d79bab899887935f64b4bfada4f}{Weapon\+Collection}} (int capacity)
+\begin{DoxyCompactList}\small\item\em Constructor method for instanciating the weapon collection. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection_a50b4abd893c0de586469ebceb029cbc1}{Add}} (\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon}{IWeapon}} item)
-\item 
+\begin{DoxyCompactList}\small\item\em Method for adding an weapon piece to the collection. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection_ac3a977c004062c29422de76e77fdf266}{Remove}} (\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon}{IWeapon}} item)
-\item 
+\begin{DoxyCompactList}\small\item\em Method for removing a weapon from the collection. \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection_a54ff53e16a9a866d4276659353e9d4b8}{Total\+Weight}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Method for computing the total weight of the collection. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 List$<$ \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon}{IWeapon}} $>$ \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection_a2873255ad8dc36d03c0b73dacd72576a}{Weapons}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
 \item 
-\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection_a74931c2b83080d5738c1446e5b04caee}\label{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection_a74931c2b83080d5738c1446e5b04caee} 
-int {\bfseries Capacity}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+int \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection_a74931c2b83080d5738c1446e5b04caee}{Capacity}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{namespace_arena_game_lib_1_1_game_objects_1_1_composite}{Composite} class representing a creature\textquotesingle{}s collection of weapons. 
+
+\label{doc-constructors}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection_a22d46d79bab899887935f64b4bfada4f}\index{ArenaGameLib.GameObjects.Composite.WeaponCollection@{ArenaGameLib.GameObjects.Composite.WeaponCollection}!WeaponCollection@{WeaponCollection}}
+\index{WeaponCollection@{WeaponCollection}!ArenaGameLib.GameObjects.Composite.WeaponCollection@{ArenaGameLib.GameObjects.Composite.WeaponCollection}}
+\doxysubsubsection{\texorpdfstring{WeaponCollection()}{WeaponCollection()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection_a22d46d79bab899887935f64b4bfada4f} 
+Arena\+Game\+Lib.\+Game\+Objects.\+Composite.\+Weapon\+Collection.\+Weapon\+Collection (\begin{DoxyParamCaption}\item[{int}]{capacity}{}\end{DoxyParamCaption})}
+
+
+
+Constructor method for instanciating the weapon collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacity} & Type:\+ int -\/ Capacity of the weapon collection\\
+\hline
+\end{DoxyParams}
 
 
 \label{doc-func-members}
@@ -39,6 +65,20 @@ void Arena\+Game\+Lib.\+Game\+Objects.\+Composite.\+Weapon\+Collection.\+Add (\b
 
 
 
+Method for adding an weapon piece to the collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & Type:\+ \doxylink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon}{IWeapon} -\/ \doxylink{class_arena_game_lib_1_1_game_objects_1_1_weapon}{Weapon} to be added to the collection\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Out\+Of\+Range\+Exception} & Exception thrown if total weight exceeds the capacity\\
+\hline
+\end{DoxyExceptions}
+
+
 Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_composites_1_1_i_weapon_collection}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Composites.\+IWeapon\+Collection}}.
 
 \Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection_ac3a977c004062c29422de76e77fdf266}\index{ArenaGameLib.GameObjects.Composite.WeaponCollection@{ArenaGameLib.GameObjects.Composite.WeaponCollection}!Remove@{Remove}}
@@ -47,6 +87,20 @@ Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1
 {\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection_ac3a977c004062c29422de76e77fdf266} 
 void Arena\+Game\+Lib.\+Game\+Objects.\+Composite.\+Weapon\+Collection.\+Remove (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon}{IWeapon}}}]{item}{}\end{DoxyParamCaption})}
 
+
+
+Method for removing a weapon from the collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & Type:\+ \doxylink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon}{IWeapon} -\/ \doxylink{class_arena_game_lib_1_1_game_objects_1_1_weapon}{Weapon} to be removed from the collection\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Exception} & Exception thrown if the weapon is not in the collection\\
+\hline
+\end{DoxyExceptions}
 
 
 Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_composites_1_1_i_weapon_collection}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Composites.\+IWeapon\+Collection}}.
@@ -59,6 +113,13 @@ int Arena\+Game\+Lib.\+Game\+Objects.\+Composite.\+Weapon\+Collection.\+Total\+W
 
 
 
+Method for computing the total weight of the collection. 
+
+\begin{DoxyReturn}{Returns}
+Type:\+ int -\/ Total weight of weapons in the collection
+\end{DoxyReturn}
+
+
 Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_composites_1_1_i_weapon_collection}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Composites.\+IWeapon\+Collection}}.
 
 
@@ -66,6 +127,16 @@ Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1
 \label{doc-property-members}
 \Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection_doc-property-members}
 \doxysubsection{Property Documentation}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection_a74931c2b83080d5738c1446e5b04caee}\index{ArenaGameLib.GameObjects.Composite.WeaponCollection@{ArenaGameLib.GameObjects.Composite.WeaponCollection}!Capacity@{Capacity}}
+\index{Capacity@{Capacity}!ArenaGameLib.GameObjects.Composite.WeaponCollection@{ArenaGameLib.GameObjects.Composite.WeaponCollection}}
+\doxysubsubsection{\texorpdfstring{Capacity}{Capacity}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection_a74931c2b83080d5738c1446e5b04caee} 
+int Arena\+Game\+Lib.\+Game\+Objects.\+Composite.\+Weapon\+Collection.\+Capacity\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_composites_1_1_i_weapon_collection}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Composites.\+IWeapon\+Collection}}.
+
 \Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection_a2873255ad8dc36d03c0b73dacd72576a}\index{ArenaGameLib.GameObjects.Composite.WeaponCollection@{ArenaGameLib.GameObjects.Composite.WeaponCollection}!Weapons@{Weapons}}
 \index{Weapons@{Weapons}!ArenaGameLib.GameObjects.Composite.WeaponCollection@{ArenaGameLib.GameObjects.Composite.WeaponCollection}}
 \doxysubsubsection{\texorpdfstring{Weapons}{Weapons}}

@@ -1,5 +1,10 @@
 \doxysection{Arena\+Game\+Lib.\+Game\+Objects.\+Strategies.\+Absorb\+Damage Class Reference}
 \hypertarget{class_arena_game_lib_1_1_game_objects_1_1_strategies_1_1_absorb_damage}{}\label{class_arena_game_lib_1_1_game_objects_1_1_strategies_1_1_absorb_damage}\index{ArenaGameLib.GameObjects.Strategies.AbsorbDamage@{ArenaGameLib.GameObjects.Strategies.AbsorbDamage}}
+
+
+Strategy class for methods that compute the total damage absorbed from an incoming attack on creature.  
+
+
 Inheritance diagram for Arena\+Game\+Lib.\+Game\+Objects.\+Strategies.\+Absorb\+Damage:\+\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,8 +15,11 @@ Inheritance diagram for Arena\+Game\+Lib.\+Game\+Objects.\+Strategies.\+Absorb\+
 \begin{DoxyCompactItemize}
 \item 
 int \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_strategies_1_1_absorb_damage_aa721099d301e189fcf2dd3d4b93c63ea}{Absorbed\+Damage}} (int damage, \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection}{Armour\+Collection}} armour\+Set)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Strategy class for absorbing the damage that a creature takes from an incoming attack, provided the creature is wearing armour. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Strategy class for methods that compute the total damage absorbed from an incoming attack on creature. 
 
 \label{doc-func-members}
 \Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_strategies_1_1_absorb_damage_doc-func-members}
@@ -22,6 +30,20 @@ int \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_strategies_1_
 {\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_strategies_1_1_absorb_damage_aa721099d301e189fcf2dd3d4b93c63ea} 
 int Arena\+Game\+Lib.\+Game\+Objects.\+Strategies.\+Absorb\+Damage.\+Absorbed\+Damage (\begin{DoxyParamCaption}\item[{int}]{damage}{, }\item[{\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection}{Armour\+Collection}}}]{armour\+Set}{}\end{DoxyParamCaption})}
 
+
+
+Strategy class for absorbing the damage that a creature takes from an incoming attack, provided the creature is wearing armour. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em damage} & Type:\+ int -\/ Damage from incoming attack\\
+\hline
+{\em armour\+Set} & Type:\+ \doxylink{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection}{Armour\+Collection} -\/ All the armour that the creature possesses\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Type:\+ int -\/ Damage absorbed by creature\textquotesingle{}s armour
+\end{DoxyReturn}
 
 
 Implements \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_strategies_1_1_i_absorb_damage_strategy}{Arena\+Game\+Lib.\+Game\+Interfaces.\+Strategies.\+IAbsorb\+Damage\+Strategy}}.

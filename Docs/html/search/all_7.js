@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['remove_0',['Remove',['../class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection.html#a0008c9bbb0e35e8a1d395121e0cdc5e7',1,'ArenaGameLib::GameObjects::Composite::ArmourCollection']]],
-  ['removeobserver_1',['RemoveObserver',['../class_arena_game_lib_1_1_game_objects_1_1_creature.html#a3ad64dc91df52422907e44e3d92947dc',1,'ArenaGameLib::GameObjects::Creature']]]
+  ['remove_0',['Remove',['../class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection.html#a0008c9bbb0e35e8a1d395121e0cdc5e7',1,'ArenaGameLib.GameObjects.Composite.ArmourCollection.Remove()'],['../class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory.html#ad8e330851f8331232a6f16bfdcb3bed7',1,'ArenaGameLib.GameObjects.Composites.CreatureInventory.Remove()'],['../class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection.html#ac3a977c004062c29422de76e77fdf266',1,'ArenaGameLib.GameObjects.Composite.WeaponCollection.Remove()']]],
+  ['removeobserver_1',['RemoveObserver',['../class_arena_game_lib_1_1_game_objects_1_1_creature.html#ae1717c990df53fc1e7febf37361448de',1,'ArenaGameLib.GameObjects.Creature.RemoveObserver()'],['../class_arena_game_lib_1_1_game_objects_1_1_abstract_classes_1_1_creature_template.html#a804e376d5640b1e0da031456f1e7fb4c',1,'ArenaGameLib.GameObjects.AbstractClasses.CreatureTemplate.RemoveObserver()']]]
 ];

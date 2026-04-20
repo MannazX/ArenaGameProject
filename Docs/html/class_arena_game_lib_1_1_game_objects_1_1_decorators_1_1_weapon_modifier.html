@@ -10,6 +10,9 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -42,11 +45,27 @@ $(function() { codefold.init(); });
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_weapon_modifier.html','','class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_weapon_modifier-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -68,19 +87,13 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a href="namespace_arena_game_lib.html">ArenaGameLib</a></li><li class="navelem"><a href="namespace_arena_game_lib_1_1_game_objects.html">GameObjects</a></li><li class="navelem"><a href="namespace_arena_game_lib_1_1_game_objects_1_1_decorators.html">Decorators</a></li><li class="navelem"><a href="class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_weapon_modifier.html">WeaponModifier</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
-  <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_weapon_modifier-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">ArenaGameLib.GameObjects.Decorators.WeaponModifier Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Decorator class for improving or degrading the creature's weapons.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for ArenaGameLib.GameObjects.Decorators.WeaponModifier:</div>
 <div class="dyncontent">
@@ -93,11 +106,41 @@ Inheritance diagram for ArenaGameLib.GameObjects.Decorators.WeaponModifier:</div
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab50d869e34268e7e9761a31a2822933d" id="r_ab50d869e34268e7e9761a31a2822933d"><td class="memItemLeft"><a id="ab50d869e34268e7e9761a31a2822933d" name="ab50d869e34268e7e9761a31a2822933d"></a>
-&#160;</td><td class="memItemRight"><b>WeaponModifier</b> (<a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon.html">IWeapon</a> weapon)</td></tr>
+<tr class="memitem:ab50d869e34268e7e9761a31a2822933d" id="r_ab50d869e34268e7e9761a31a2822933d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab50d869e34268e7e9761a31a2822933d">WeaponModifier</a> (<a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon.html">IWeapon</a> weapon)</td></tr>
+<tr class="memdesc:ab50d869e34268e7e9761a31a2822933d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor method for instanciating the weapon modifier.  <br /></td></tr>
 <tr class="memitem:ac37804508ba3a2a8bb05408c9cac2e1b" id="r_ac37804508ba3a2a8bb05408c9cac2e1b"><td class="memItemLeft"><a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_weapon.html">Weapon</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac37804508ba3a2a8bb05408c9cac2e1b">DegradeWeaponDamage</a> (int modifier)</td></tr>
+<tr class="memdesc:ac37804508ba3a2a8bb05408c9cac2e1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method for degrading a creatures weapon - Debuff from opponent creature.  <br /></td></tr>
 <tr class="memitem:a1607f24182b3e4c78cdcfab7efd71cf1" id="r_a1607f24182b3e4c78cdcfab7efd71cf1"><td class="memItemLeft"><a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_weapon.html">Weapon</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1607f24182b3e4c78cdcfab7efd71cf1">ImproveWeaponDamage</a> (int modifier)</td></tr>
+<tr class="memdesc:a1607f24182b3e4c78cdcfab7efd71cf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method for improving a creatures weapon - Buff from creature itself.  <br /></td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Decorator class for improving or degrading the creature's weapons. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ab50d869e34268e7e9761a31a2822933d" name="ab50d869e34268e7e9761a31a2822933d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab50d869e34268e7e9761a31a2822933d">&#9670;&#160;</a></span>WeaponModifier()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ArenaGameLib.GameObjects.Decorators.WeaponModifier.WeaponModifier </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon.html">IWeapon</a></td>          <td class="paramname"><span class="paramname"><em>weapon</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor method for instanciating the weapon modifier. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">weapon</td><td>Type: <a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon.html">IWeapon</a> - <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_weapon.html">Weapon</a> that is modified</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="ac37804508ba3a2a8bb05408c9cac2e1b" name="ac37804508ba3a2a8bb05408c9cac2e1b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac37804508ba3a2a8bb05408c9cac2e1b">&#9670;&#160;</a></span>DegradeWeaponDamage()</h2>
@@ -113,6 +156,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Method for degrading a creatures weapon - Debuff from opponent creature. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">modifier</td><td>Type: int - Modifying factor for the weapon degrading</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Type: <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_weapon.html">Weapon</a> - Returns the degraded weapon</dd></dl>
 
 <p>Implements <a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_decorators_1_1_i_weapon_modify.html">ArenaGameLib.GameInterfaces.Decorators.IWeaponModify</a>.</p>
 
@@ -133,6 +185,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Method for improving a creatures weapon - Buff from creature itself. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">modifier</td><td>Type: int - Modifying factor for the weapon improvement</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Type: <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_weapon.html">Weapon</a> - Returning the improved weapon</dd></dl>
+
 <p>Implements <a class="el" href="interface_arena_game_lib_1_1_game_interfaces_1_1_decorators_1_1_i_weapon_modify.html">ArenaGameLib.GameInterfaces.Decorators.IWeaponModify</a>.</p>
 
 </div>
@@ -141,10 +202,21 @@ Public Member Functions</h2></td></tr>
 <li>C:/Users/magnu/OneDrive/Skrivebord/Datamatiker/4-Sem/Advanced-Software-Construction/ArenaGameLib/ArenaGameLib/GameObjects/Decorators/<b>WeaponModifier.cs</b></li>
 </ul>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1
-</small></address>
 </div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_arena_game_lib.html">ArenaGameLib</a></li><li class="navelem"><a href="namespace_arena_game_lib_1_1_game_objects.html">GameObjects</a></li><li class="navelem"><a href="namespace_arena_game_lib_1_1_game_objects_1_1_decorators.html">Decorators</a></li><li class="navelem"><a href="class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_weapon_modifier.html">WeaponModifier</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
 </body>
 </html>
