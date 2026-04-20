@@ -37,13 +37,12 @@ namespace ArenaGameLib.GameObjects
 		/// <param name="name">Type: string - Creature's name</param>
 		/// <param name="health">Type: int - Creature's hitpoints</param>
 		/// <param name="unarmedDmg">Type: int - Amount of unarmed damage the creature can deal</param>
-		/// <param name="inventory">Type: CreatureInventory - Composite class representing a creature's inventory</param>
 		/// <param name="inventoryCapacity">Type: int - Creature's inventory capacity</param>
 		/// <param name="weaponCapacity">Type: int - Creature's weapon collection capacity</param>
 		/// <param name="armourCapacity">Type: int - Creature's armour collection capacity</param>
 		/// <param name="locX">Type: int - Positional X coordinate</param>
 		/// <param name="locY">Type: int - Positional Y coordinate</param>
-		public Creature(string name, int health, int unarmedDmg, CreatureInventory inventory, int inventoryCapacity, int weaponCapacity, int armourCapacity, int locX, int locY) : base(name, health, unarmedDmg, inventoryCapacity, weaponCapacity, armourCapacity, locX, locY)
+		public Creature(string name, int health, int unarmedDmg, int inventoryCapacity, int weaponCapacity, int armourCapacity, int locX, int locY) : base(name, health, unarmedDmg, inventoryCapacity, weaponCapacity, armourCapacity, locX, locY)
 		{
 			XmlDocument configDoc = new XmlDocument();
 			logger = Logger.InitLogger();

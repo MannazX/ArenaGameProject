@@ -12,6 +12,7 @@ namespace ArenaGameLib.GameObjects
 		public int MaxY { get; set; }
 		public List<Creature> Creatures { get; set; }
 		public List<ArenaObject> LootItems { get; set; }
+		public List<Wall> Walls { get; set; }
 
 		/// <summary>
 		/// Constructor method for instanciating the Arena object.
@@ -22,6 +23,42 @@ namespace ArenaGameLib.GameObjects
 		{
 			MaxX = maxX;
 			MaxY = maxY;
+		}
+
+		public void AddCreature(Creature creature)
+		{
+			if ((creature.LocationX >= 0 && creature.LocationX <= MaxX) && (creature.LocationY >= 0 && creature.LocationY <= MaxY))
+			{
+				Creatures.Add(creature);
+			}
+			else
+			{
+				throw new ArgumentOutOfRangeException("Creature coordinates are outside of the Arena Grid");
+			}
+		}
+
+		public void AddLootableItem(ArenaObject item)
+		{
+			if ((item.LocationX >= 0 && item.LocationX <= MaxX) && (item.LocationY >= 0 && item.LocationY <= MaxY))
+			{
+				LootItems.Add(item);
+			}
+			else
+			{
+				throw new ArgumentOutOfRangeException("Item coordinates are outside of the Arena Grid");
+			}
+		}
+
+		public void AddWall(Wall wall)
+		{
+			if ((wall.LocationX >= 0 && wall.LocationX + wall.LengthX <= MaxX && wall.LocationX <= MaxX) && (wall.LocationY >= 0 && wall.LocationY + wall.LengthY <= MaxY && wall.LocationY <= MaxY))
+			{
+				Walls.Add(wall);
+			}
+			else
+			{
+				throw new ArgumentOutOfRangeException("Wall coordinates are outside or its length extends outside the Arena Grid");
+			}
 		}
 	}
 }
