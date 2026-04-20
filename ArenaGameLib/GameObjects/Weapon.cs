@@ -66,7 +66,7 @@ namespace ArenaGameLib.GameObjects
 				LocationX = null;
 				LocationY = null;
 			}
-			else if (!Claimed)
+			else
 			{
 				LocationX = locX;
 				LocationY = locY;
