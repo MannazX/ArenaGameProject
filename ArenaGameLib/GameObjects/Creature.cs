@@ -111,6 +111,7 @@ namespace ArenaGameLib.GameObjects
 				logger.WriteInfo($"Creature has been defeated");
 				NotifyAllDefeated();
 				CombatNotifications.Clear();
+				logger.CloseLogger();
 			}
 		}
 
@@ -120,7 +121,7 @@ namespace ArenaGameLib.GameObjects
 		/// <param name="item">Type: ArenaObject - The item looted, if Weapon - Added to WeaponCollection, if Armour - Added to ArmourCollection.</param>
 		public override void Loot(ArenaObject item)
 		{
-			if ((LocationX - item.LocationX <= 1 || LocationY - item.LocationY <= 1) && Inventory.Sum(x => x.Weight) + item.Weight < InventoryCapacity)
+			if ((LocationX - item.LocationX <= 1 || LocationY - item.LocationY <= 1) && Inventory.Items.Sum(x => x.Weight) + item.Weight < Inventory.Capacity)
 			{
 				try
 				{
@@ -133,7 +134,7 @@ namespace ArenaGameLib.GameObjects
 						ArmourCollection.ArmourSet.Add((Armour)item);
 					}
 					logger.WriteInfo($"Creature {Name} looted item {item}");
-					Inventory.Add(item);
+					Inventory.Items.Add(item);
 				}
 				catch (ArgumentOutOfRangeException ex)
 				{
@@ -178,6 +179,7 @@ namespace ArenaGameLib.GameObjects
 			{
 				IWeaponModify wepDecor = new WeaponModifier(weapon);
 				wepDecor.ImproveWeaponDamage(modifier);
+				logger.WriteInfo($"Weapon - {weapon.Name}'s damage was improved by a factor of {modifier}");
 			}
 		}
 
@@ -192,6 +194,7 @@ namespace ArenaGameLib.GameObjects
 			{
 				IWeaponModify wepDecor = new WeaponModifier(weapon);
 				wepDecor.DegradeWeaponDamage(modifier);
+				logger.WriteInfo($"Weapon - {weapon.Name}'s damage was degraded by a factor of {modifier}");
 			}
 		}
 
@@ -206,6 +209,7 @@ namespace ArenaGameLib.GameObjects
 			{
 				IArmourModify armDecor = new ArmourModifier(armour);
 				armDecor.ImproveArmourDurability(modifier);
+				logger.WriteInfo($"Armour - {armour.Name}'s armour durability was improved by a factor of {modifier}");
 			}
 		}
 
@@ -220,6 +224,7 @@ namespace ArenaGameLib.GameObjects
 			{
 				IArmourModify armDecor = new ArmourModifier(armour);
 				armDecor.DegradeArmourDurability(modifier);
+				logger.WriteInfo($"Armour - {armour.Name}'s armour durability was improved by a factor of {modifier}");
 			}
 		}
 
@@ -227,7 +232,7 @@ namespace ArenaGameLib.GameObjects
 		/// Method for adding a new observer to notify this Creature object.
 		/// </summary>
 		/// <param name="notifier"></param>
-		public void AddObserver(ICombatNotifier notifier)
+		public override void AddObserver(ICombatNotifier notifier)
 		{
 			CombatNotifications.Add(notifier);
 			logger.WriteInfo($"New combat notifier added on {notifier.Creature}");
@@ -237,7 +242,7 @@ namespace ArenaGameLib.GameObjects
 		/// Metod for removing an observer in on this Creature object.
 		/// </summary>
 		/// <param name="notifier"></param>
-		public void RemoveObserver(ICombatNotifier notifier)
+		public override void RemoveObserver(ICombatNotifier notifier)
 		{
 			CombatNotifications.Remove(notifier);
 			logger.WriteInfo($"Combat notifier removed from {notifier.Creature}");
@@ -248,7 +253,7 @@ namespace ArenaGameLib.GameObjects
 		/// </summary>
 		/// <param name="damage"></param>
 		/// <param name="absorbed"></param>
-		public void NotifyAllDamageTaken(int damage, int absorbed)
+		public override void NotifyAllDamageTaken(int damage, int absorbed)
 		{
 			foreach (ICombatNotifier notifier in CombatNotifications)
 			{
@@ -259,7 +264,7 @@ namespace ArenaGameLib.GameObjects
 		/// <summary>
 		/// Method for executing Defeat notification from all observers.
 		/// </summary>
-		public void NotifyAllDefeated()
+		public override void NotifyAllDefeated()
 		{
 			foreach (ICombatNotifier notifier in CombatNotifications)
 			{

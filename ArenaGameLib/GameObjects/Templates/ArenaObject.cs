@@ -26,7 +26,7 @@ namespace ArenaGameLib.GameObjects.Templates
 		/// <param name="weight">Type: int (nullable) - Weight of object</param>
 		/// <param name="locX">Type: int (nullable) - Positional X coordinate of item</param>
 		/// <param name="locY">Type: int (nullable) - Postitonal Y coordinate of item</param>
-		protected ArenaObject(string name, int weight, int locX, int locY)
+		protected ArenaObject(string name, int? weight, int? locX, int? locY)
 		{
 			if (!Lootable)
 			{

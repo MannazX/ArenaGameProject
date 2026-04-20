@@ -10,14 +10,24 @@ namespace ArenaGameLib.GameObjects.Composites
 {
 	public class CreatureInventory : IObjectCollection
 	{
-		public List<IArenaObject> Inventory { get; set; }
+		public List<IArenaObject> Items { get; set; }
 		public int Capacity { get; set; }
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="capacity"></param>
 		public CreatureInventory(int capacity)
 		{
-			Inventory = new List<IArenaObject>();
+			Items = new List<IArenaObject>();
 			Capacity = capacity;
 		}
 
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="item"></param>
+		/// <exception cref="ArgumentOutOfRangeException"></exception>
 		public void Add(IArenaObject item)
 		{
 			if (item.Weight + TotalWeight() > Capacity)
@@ -26,15 +36,19 @@ namespace ArenaGameLib.GameObjects.Composites
 			}
 			else
 			{
-				Inventory.Add(item);
+				Items.Add(item);
 			}
 		}
 
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="item"></param>
 		public void Remove(IArenaObject item)
 		{
-			if (Inventory.Contains(item))
+			if (Items.Contains(item))
 			{
-				Inventory.Remove(item);
+				Items.Remove(item);
 			}
 			else
 			{
@@ -42,9 +56,13 @@ namespace ArenaGameLib.GameObjects.Composites
 			}
 		}
 
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <returns></returns>
 		public int TotalWeight()
 		{
-			return (int)Inventory.Sum(x => x.Weight != null ? x.Weight : 0);
+			return (int)Items.Sum(x => x.Weight != null ? x.Weight : 0);
 		}
 	}
 }

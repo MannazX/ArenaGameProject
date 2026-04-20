@@ -9,7 +9,7 @@ namespace ArenaGameLib.GameInterfaces.Composites
 {
 	public interface IObjectCollection
 	{
-		List<IArenaObject> Inventory { get; set; }
+		List<IArenaObject> Items { get; set; }
 		int Capacity { get; set; }
 
 		void Add(IArenaObject item);
