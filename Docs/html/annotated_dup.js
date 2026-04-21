@@ -1,6 +1,9 @@
 var annotated_dup =
 [
     [ "ArenaGameLib", "namespace_arena_game_lib.html", [
+      [ "Configuration", "namespace_arena_game_lib_1_1_configuration.html", [
+        [ "ConfigGamespecsReader", "class_arena_game_lib_1_1_configuration_1_1_config_gamespecs_reader.html", "class_arena_game_lib_1_1_configuration_1_1_config_gamespecs_reader" ]
+      ] ],
       [ "GameInterfaces", "namespace_arena_game_lib_1_1_game_interfaces.html", [
         [ "Composites", "namespace_arena_game_lib_1_1_game_interfaces_1_1_composites.html", [
           [ "IArmourCollection", "interface_arena_game_lib_1_1_game_interfaces_1_1_composites_1_1_i_armour_collection.html", null ],
@@ -24,6 +27,7 @@ var annotated_dup =
         ] ],
         [ "IArena", "interface_arena_game_lib_1_1_game_interfaces_1_1_i_arena.html", null ],
         [ "IArmour", "interface_arena_game_lib_1_1_game_interfaces_1_1_i_armour.html", null ],
+        [ "IWall", "interface_arena_game_lib_1_1_game_interfaces_1_1_i_wall.html", null ],
         [ "IWeapon", "interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon.html", null ]
       ] ],
       [ "GameLogger", "namespace_arena_game_lib_1_1_game_logger.html", [
@@ -57,6 +61,7 @@ var annotated_dup =
         [ "Arena", "class_arena_game_lib_1_1_game_objects_1_1_arena.html", "class_arena_game_lib_1_1_game_objects_1_1_arena" ],
         [ "Armour", "class_arena_game_lib_1_1_game_objects_1_1_armour.html", "class_arena_game_lib_1_1_game_objects_1_1_armour" ],
         [ "Creature", "class_arena_game_lib_1_1_game_objects_1_1_creature.html", "class_arena_game_lib_1_1_game_objects_1_1_creature" ],
+        [ "Wall", "class_arena_game_lib_1_1_game_objects_1_1_wall.html", "class_arena_game_lib_1_1_game_objects_1_1_wall" ],
         [ "Weapon", "class_arena_game_lib_1_1_game_objects_1_1_weapon.html", "class_arena_game_lib_1_1_game_objects_1_1_weapon" ]
       ] ]
     ] ]

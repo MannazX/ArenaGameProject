@@ -114,9 +114,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa3a8b42af195876328e6c8e7954d3327" id="r_aa3a8b42af195876328e6c8e7954d3327"><td class="memItemLeft"><a id="aa3a8b42af195876328e6c8e7954d3327" name="aa3a8b42af195876328e6c8e7954d3327"></a>
 void&#160;</td><td class="memItemRight"><b>SetClaim</b> ()</td></tr>
 <tr class="memdesc:aa3a8b42af195876328e6c8e7954d3327"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method for setting the Claimed Boolean to true or false, if the armour has been looted by a creature. <br /></td></tr>
-<tr class="memitem:a03a89538ec63f283dce6c46833681ae4" id="r_a03a89538ec63f283dce6c46833681ae4"><td class="memItemLeft"><a id="a03a89538ec63f283dce6c46833681ae4" name="a03a89538ec63f283dce6c46833681ae4"></a>
-void&#160;</td><td class="memItemRight"><b>SetLocation</b> ()</td></tr>
-<tr class="memdesc:a03a89538ec63f283dce6c46833681ae4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method for setting the X and Y locations to null, if the armour has been looted by a creature. <br /></td></tr>
+<tr class="memitem:a4a99dc85564efc93666af2d2bf00a4c7" id="r_a4a99dc85564efc93666af2d2bf00a4c7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4a99dc85564efc93666af2d2bf00a4c7">SetLocation</a> (int locX, int locY)</td></tr>
+<tr class="memdesc:a4a99dc85564efc93666af2d2bf00a4c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the location X and Y coordinates based on the armour piece being claimed or not.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
@@ -188,6 +187,37 @@ Additional Inherited Members</h2></td></tr>
     <tr><td class="paramname">armourDur</td><td>Type: int - The amount of hits the armour object can take before it breaks and is unable to reduce damage</td></tr>
     <tr><td class="paramname">locX</td><td>Type: int (nullable) - The X coordinate of the armour object in the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_arena.html" title="Class defining the Arena for the creatures to combat in.">Arena</a></td></tr>
     <tr><td class="paramname">locY</td><td>Type: int (nullable) - The Y coordinate of the armour object in the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_arena.html" title="Class defining the Arena for the creatures to combat in.">Arena</a></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a4a99dc85564efc93666af2d2bf00a4c7" name="a4a99dc85564efc93666af2d2bf00a4c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a99dc85564efc93666af2d2bf00a4c7">&#9670;&#160;</a></span>SetLocation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArenaGameLib.GameObjects.Armour.SetLocation </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>locX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>locY</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the location X and Y coordinates based on the armour piece being claimed or not. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">locX</td><td>Type: int - X location</td></tr>
+    <tr><td class="paramname">locY</td><td>Type: int - Y location</td></tr>
   </table>
   </dd>
 </dl>

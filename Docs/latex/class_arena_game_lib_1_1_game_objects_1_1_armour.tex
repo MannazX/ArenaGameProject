@@ -19,9 +19,8 @@ Inheritance diagram for Arena\+Game\+Lib.\+Game\+Objects.\+Armour:\+\begin{figur
 \Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_armour_aa3a8b42af195876328e6c8e7954d3327}\label{class_arena_game_lib_1_1_game_objects_1_1_armour_aa3a8b42af195876328e6c8e7954d3327} 
 void {\bfseries Set\+Claim} ()
 \begin{DoxyCompactList}\small\item\em Method for setting the Claimed Boolean to true or false, if the armour has been looted by a creature. \end{DoxyCompactList}\item 
-\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_armour_a03a89538ec63f283dce6c46833681ae4}\label{class_arena_game_lib_1_1_game_objects_1_1_armour_a03a89538ec63f283dce6c46833681ae4} 
-void {\bfseries Set\+Location} ()
-\begin{DoxyCompactList}\small\item\em Method for setting the X and Y locations to null, if the armour has been looted by a creature. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_armour_a4a99dc85564efc93666af2d2bf00a4c7}{Set\+Location}} (int locX, int locY)
+\begin{DoxyCompactList}\small\item\em Sets the location X and Y coordinates based on the armour piece being claimed or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
@@ -83,6 +82,28 @@ Constructor for instanciating the \doxylink{class_arena_game_lib_1_1_game_object
 {\em locX} & Type:\+ int (nullable) -\/ The X coordinate of the armour object in the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_arena}{Arena}\\
 \hline
 {\em locY} & Type:\+ int (nullable) -\/ The Y coordinate of the armour object in the \doxylink{class_arena_game_lib_1_1_game_objects_1_1_arena}{Arena}\\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_armour_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_armour_a4a99dc85564efc93666af2d2bf00a4c7}\index{ArenaGameLib.GameObjects.Armour@{ArenaGameLib.GameObjects.Armour}!SetLocation@{SetLocation}}
+\index{SetLocation@{SetLocation}!ArenaGameLib.GameObjects.Armour@{ArenaGameLib.GameObjects.Armour}}
+\doxysubsubsection{\texorpdfstring{SetLocation()}{SetLocation()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_armour_a4a99dc85564efc93666af2d2bf00a4c7} 
+void Arena\+Game\+Lib.\+Game\+Objects.\+Armour.\+Set\+Location (\begin{DoxyParamCaption}\item[{int}]{locX}{, }\item[{int}]{locY}{}\end{DoxyParamCaption})}
+
+
+
+Sets the location X and Y coordinates based on the armour piece being claimed or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em locX} & Type:\+ int -\/ X location\\
+\hline
+{\em locY} & Type:\+ int -\/ Y location\\
 \hline
 \end{DoxyParams}
 

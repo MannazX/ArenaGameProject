@@ -1,6 +1,6 @@
 var class_arena_game_lib_1_1_game_objects_1_1_creature =
 [
-    [ "Creature", "class_arena_game_lib_1_1_game_objects_1_1_creature.html#a2aa22124f486041967ef5992befedf59", null ],
+    [ "Creature", "class_arena_game_lib_1_1_game_objects_1_1_creature.html#a94ed4772e1d60b53128db98a540171ea", null ],
     [ "AddObserver", "class_arena_game_lib_1_1_game_objects_1_1_creature.html#ade0b85b4186fea4cfdb4b77a5768a5b2", null ],
     [ "ArmourDegrade", "class_arena_game_lib_1_1_game_objects_1_1_creature.html#ae48c4b741a8d1691c76773d256a22620", null ],
     [ "ArmourImprove", "class_arena_game_lib_1_1_game_objects_1_1_creature.html#a9fa571689a514345b83b080d730224de", null ],

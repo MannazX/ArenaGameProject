@@ -1,5 +1,6 @@
 var hierarchy =
 [
+    [ "ArenaGameLib.Configuration.ConfigGamespecsReader", "class_arena_game_lib_1_1_configuration_1_1_config_gamespecs_reader.html", null ],
     [ "ArenaGameLib.GameInterfaces.Strategies.IAbsorbDamageStrategy", "interface_arena_game_lib_1_1_game_interfaces_1_1_strategies_1_1_i_absorb_damage_strategy.html", [
       [ "ArenaGameLib.GameObjects.Strategies.AbsorbDamage", "class_arena_game_lib_1_1_game_objects_1_1_strategies_1_1_absorb_damage.html", null ]
     ] ],
@@ -37,6 +38,9 @@ var hierarchy =
     ] ],
     [ "ArenaGameLib.GameInterfaces.Composites.IObjectCollection", "interface_arena_game_lib_1_1_game_interfaces_1_1_composites_1_1_i_object_collection.html", [
       [ "ArenaGameLib.GameObjects.Composites.CreatureInventory", "class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory.html", null ]
+    ] ],
+    [ "ArenaGameLib.GameInterfaces.IWall", "interface_arena_game_lib_1_1_game_interfaces_1_1_i_wall.html", [
+      [ "ArenaGameLib.GameObjects.Wall", "class_arena_game_lib_1_1_game_objects_1_1_wall.html", null ]
     ] ],
     [ "ArenaGameLib.GameInterfaces.Composites.IWeaponCollection", "interface_arena_game_lib_1_1_game_interfaces_1_1_composites_1_1_i_weapon_collection.html", [
       [ "ArenaGameLib.GameObjects.Composite.WeaponCollection", "class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_weapon_collection.html", null ]

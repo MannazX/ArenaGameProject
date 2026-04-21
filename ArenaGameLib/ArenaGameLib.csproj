@@ -7,12 +7,21 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageId>ArenaGame</PackageId>
-    <Title>ArenaGame</Title>
+    <Title>MannazXArenaGameFramework</Title>
     <Version>0.0.9</Version>
-    <Authors>mas019</Authors>
-    <Company>mas019</Company>
+    <Authors>MannazX</Authors>
+    <Company>MannazX</Company>
     <Product>Arena Game Library</Product>
     <Description>This package contains the source code files for the Arena Game.</Description>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/MannazX/ArenaGameProject/tree/master/ArenaGameLib</RepositoryUrl>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="bin\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>

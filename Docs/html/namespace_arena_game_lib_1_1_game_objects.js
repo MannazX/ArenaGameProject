@@ -10,5 +10,6 @@ var namespace_arena_game_lib_1_1_game_objects =
     [ "Arena", "class_arena_game_lib_1_1_game_objects_1_1_arena.html", "class_arena_game_lib_1_1_game_objects_1_1_arena" ],
     [ "Armour", "class_arena_game_lib_1_1_game_objects_1_1_armour.html", "class_arena_game_lib_1_1_game_objects_1_1_armour" ],
     [ "Creature", "class_arena_game_lib_1_1_game_objects_1_1_creature.html", "class_arena_game_lib_1_1_game_objects_1_1_creature" ],
+    [ "Wall", "class_arena_game_lib_1_1_game_objects_1_1_wall.html", "class_arena_game_lib_1_1_game_objects_1_1_wall" ],
     [ "Weapon", "class_arena_game_lib_1_1_game_objects_1_1_weapon.html", "class_arena_game_lib_1_1_game_objects_1_1_weapon" ]
 ];

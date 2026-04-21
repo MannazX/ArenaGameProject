@@ -12,7 +12,7 @@ namespace ArenaGameLib.GameLogger
 	/// </summary>
 	public class Logger
 	{
-		public TraceSource TraceSource { get; set; }
+		public TraceSource TraceSource { get; private set; }
 		private static Logger _instanceLogger = new Logger();
 
 		private Logger()
@@ -34,7 +34,7 @@ namespace ArenaGameLib.GameLogger
 		/// </summary>
 		public void StartLogger()
 		{
-			TraceSource = new TraceSource("Game Log", SourceLevels.All);
+			TraceSource = new TraceSource("GameLog", SourceLevels.All);
 			TraceSource.Switch = new SourceSwitch("Log", SourceLevels.All.ToString());
 			TraceSource.Listeners.Add(new ConsoleTraceListener());
 			TraceListener textListener = new TextWriterTraceListener("gameLog.txt");

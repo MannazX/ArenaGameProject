@@ -8,21 +8,21 @@ using System.Threading.Tasks;
 namespace ArenaGameLib.GameObjects
 {
 	/// <summary>
-	/// Class that represents a wall as an impassible terrain for the creatures.
+	/// Class that represents a wall as an impassible terrain for the creatures. The properties are not allowed to change value once set.
 	/// </summary>
 	public class Wall : IWall
 	{
-		public int LengthX { get; set; }
-		public int LengthY { get; set; }
-		public string Name { get; set; }
-		public bool Lootable { get; set; }
-		public bool Removeable { get; set; }
-		public int? Weight { get; set; }
-		public int? LocationX { get; set; }
-		public int? LocationY { get; set; }
+		private int _lenX;
+		private int _lenY;
+		private int _locX;
+		private int _locY;
+		public int LengthX { get { return _lenX; } set { if (value != _lenX) { throw new ArgumentException("You cannot change the value of this property"); } } }
+		public int LengthY { get { return _lenY; } set { if (value != _lenY) { throw new ArgumentException("You cannot change the value of this property"); } } }
+		public int LocationX { get { return _locX; } set { if (value != _locX) { throw new ArgumentException("You cannot change the value of this property"); } } }
+		public int LocationY { get { return _locY; } set { if (value != _locY) { throw new ArgumentException("You cannot change the value of this property"); } } }
 
 		/// <summary>
-		/// Constructor class for instanciating a wall object.
+		/// Constructor class for instanciating a wall object;.
 		/// </summary>
 		/// <param name="lenX">Type: int - Length on X axis</param>
 		/// <param name="lenY">Type: int - Length on Y axis</param>
@@ -30,14 +30,14 @@ namespace ArenaGameLib.GameObjects
 		/// <param name="locY">Type: int - Y coordinate of wall</param>
 		public Wall(int lenX, int lenY, int locX, int locY)
 		{
-			LengthX = lenX;
-			LengthY = lenY;
-			LocationX = locX;
-			LocationY = locY;
-			Name = null;
-			Lootable = false;
-			Removeable = false;
-			Weight = null;
+			_lenX = lenX;
+			_lenY = lenY;
+			_locX = locX;
+			_locY = locY;
+			LengthX = _lenX;
+			LengthY = _lenY;
+			LocationX = _locX;
+			LocationY = _locY;
 		}
 	}
 }

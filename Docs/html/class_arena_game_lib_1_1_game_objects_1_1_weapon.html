@@ -111,9 +111,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a874e5853168a828e003ce336ce31c660" id="r_a874e5853168a828e003ce336ce31c660"><td class="memItemLeft"><a id="a874e5853168a828e003ce336ce31c660" name="a874e5853168a828e003ce336ce31c660"></a>
 void&#160;</td><td class="memItemRight"><b>SetClaim</b> ()</td></tr>
 <tr class="memdesc:a874e5853168a828e003ce336ce31c660"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method for setting the Claimed boolean to true or false, if the weapon has been looted by a creature. <br /></td></tr>
-<tr class="memitem:a31fe3ebfea151d9f9a50006e8c97e649" id="r_a31fe3ebfea151d9f9a50006e8c97e649"><td class="memItemLeft"><a id="a31fe3ebfea151d9f9a50006e8c97e649" name="a31fe3ebfea151d9f9a50006e8c97e649"></a>
-void&#160;</td><td class="memItemRight"><b>SetLocation</b> ()</td></tr>
-<tr class="memdesc:a31fe3ebfea151d9f9a50006e8c97e649"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method for setting the X and Y locations to null, if the weapon has been looted by a creature. <br /></td></tr>
+<tr class="memitem:ab80c85762594e8af01b4c72f838724f9" id="r_ab80c85762594e8af01b4c72f838724f9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab80c85762594e8af01b4c72f838724f9">SetLocation</a> (int locX, int locY)</td></tr>
+<tr class="memdesc:ab80c85762594e8af01b4c72f838724f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the location X and Y coordinates based on the weapon being claimed or not.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
@@ -184,6 +183,37 @@ Additional Inherited Members</h2></td></tr>
     <tr><td class="paramname">locY</td><td>Type: int (nullable) - The Y coordinate of the weapon object in the <a class="el" href="class_arena_game_lib_1_1_game_objects_1_1_arena.html" title="Class defining the Arena for the creatures to combat in.">Arena</a></td></tr>
     <tr><td class="paramname">damage</td><td>Type: int - Damage that the weapon object deals</td></tr>
     <tr><td class="paramname">range</td><td>Type: int - Range in which the weapon is capable of dealing damage</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ab80c85762594e8af01b4c72f838724f9" name="ab80c85762594e8af01b4c72f838724f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab80c85762594e8af01b4c72f838724f9">&#9670;&#160;</a></span>SetLocation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArenaGameLib.GameObjects.Weapon.SetLocation </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>locX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>locY</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the location X and Y coordinates based on the weapon being claimed or not. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">locX</td><td>Type: int - X location</td></tr>
+    <tr><td class="paramname">locY</td><td>Type: int - Y location</td></tr>
   </table>
   </dd>
 </dl>

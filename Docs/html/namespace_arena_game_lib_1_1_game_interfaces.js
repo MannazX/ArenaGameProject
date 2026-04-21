@@ -7,5 +7,6 @@ var namespace_arena_game_lib_1_1_game_interfaces =
     [ "Templates", "namespace_arena_game_lib_1_1_game_interfaces_1_1_templates.html", "namespace_arena_game_lib_1_1_game_interfaces_1_1_templates" ],
     [ "IArena", "interface_arena_game_lib_1_1_game_interfaces_1_1_i_arena.html", null ],
     [ "IArmour", "interface_arena_game_lib_1_1_game_interfaces_1_1_i_armour.html", null ],
+    [ "IWall", "interface_arena_game_lib_1_1_game_interfaces_1_1_i_wall.html", null ],
     [ "IWeapon", "interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon.html", null ]
 ];

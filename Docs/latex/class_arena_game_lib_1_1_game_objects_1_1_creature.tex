@@ -14,16 +14,16 @@ Inheritance diagram for Arena\+Game\+Lib.\+Game\+Objects.\+Creature:\+\begin{fig
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_creature_a2aa22124f486041967ef5992befedf59}{Creature}} (string name, int health, int unarmed\+Dmg, \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory}{Creature\+Inventory}} inventory, int inventory\+Capacity, int weapon\+Capacity, int armour\+Capacity, int locX, int locY)
+\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_creature_a94ed4772e1d60b53128db98a540171ea}{Creature}} (string name, int health, int unarmed\+Dmg, int inventory\+Capacity, int weapon\+Capacity, int armour\+Capacity, int locX, int locY)
 \begin{DoxyCompactList}\small\item\em Constructor for instanciating \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature} object and logging of creature actions. \end{DoxyCompactList}\item 
 override int \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_creature_a892cd360344668af1fb6f63e4c8dd892}{Attack}} (int target\+Dist, \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_strategies_1_1_i_attack_strategy}{IAttack\+Strategy}} attack)
 \begin{DoxyCompactList}\small\item\em Method for a creatures attack, that is predicated on the distance that a creature has to its opponent. \end{DoxyCompactList}\item 
 override void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_creature_a6696e46549278a20025b09dfa9973c70}{Take\+Damage}} (int damage, \doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_strategies_1_1_i_absorb_damage_strategy}{IAbsorb\+Damage\+Strategy}} reduced\+Damage)
 \begin{DoxyCompactList}\small\item\em Method for the creature to take damage from an opponent\textquotesingle{}s attack, the armour rating of its \doxylink{class_arena_game_lib_1_1_game_objects_1_1_composite_1_1_armour_collection}{Armour\+Collection} will reduce the amount of health the creature will take, it ensures that if the absorbtion is higher than the damage the damage the creature takes is zero. \end{DoxyCompactList}\item 
 override void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_creature_abbe4e376ed26017fdc337b79b307b457}{Loot}} (\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object}{Arena\+Object}} item)
-\begin{DoxyCompactList}\small\item\em Method for the creatures action of looting an item and adding it to \doxylink{class_arena_game_lib_1_1_game_objects_1_1_armour}{Armour} Collection or \doxylink{class_arena_game_lib_1_1_game_objects_1_1_weapon}{Weapon} Collection and the Inventory. The Method is predicated on the creature being in reaching distance (1 Square) of item and on the item itself being lootable. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Method for the creatures action of looting an item and adding it to \doxylink{class_arena_game_lib_1_1_game_objects_1_1_armour}{Armour} Collection or \doxylink{class_arena_game_lib_1_1_game_objects_1_1_weapon}{Weapon} Collection and the Inventory making it unclaimable. The Method is predicated on the creature being in reaching distance (1 Square) of item and on the item itself being lootable. \end{DoxyCompactList}\item 
 override void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_creature_a736731e142dad59b677140db8772e6db}{Drop}} (\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_templates_1_1_arena_object}{Arena\+Object}} item)
-\begin{DoxyCompactList}\small\item\em Method for creatures action of dropping an item and removing it from \doxylink{class_arena_game_lib_1_1_game_objects_1_1_weapon}{Weapon} Collection or \doxylink{class_arena_game_lib_1_1_game_objects_1_1_armour}{Armour} Collection and the Inventory. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Method for creatures action of dropping an item and removing it from \doxylink{class_arena_game_lib_1_1_game_objects_1_1_weapon}{Weapon} Collection or \doxylink{class_arena_game_lib_1_1_game_objects_1_1_armour}{Armour} Collection and the Inventory making it claimable. \end{DoxyCompactList}\item 
 override void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_creature_a49db6619824aeb2a055cbcf453959d86}{Weapon\+Improve}} (\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon}{IWeapon}} weapon, int modifier)
 \begin{DoxyCompactList}\small\item\em Method for creature\textquotesingle{}s action to improve damage of one of it\textquotesingle{}s weapons -\/ using instance of \doxylink{interface_arena_game_lib_1_1_game_interfaces_1_1_decorators_1_1_i_weapon_modify}{IWeapon\+Modify} decorator class. \end{DoxyCompactList}\item 
 override void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_creature_a14485547510a4e1964263e507e20b20d}{Weapon\+Degrade}} (\doxymbox{\hyperlink{interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon}{IWeapon}} weapon, int modifier)
@@ -114,11 +114,11 @@ Class defining Creatures combating in the arena, inheriting from Creature\+Templ
 \label{doc-constructors}
 \Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_creature_doc-constructors}
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_creature_a2aa22124f486041967ef5992befedf59}\index{ArenaGameLib.GameObjects.Creature@{ArenaGameLib.GameObjects.Creature}!Creature@{Creature}}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_creature_a94ed4772e1d60b53128db98a540171ea}\index{ArenaGameLib.GameObjects.Creature@{ArenaGameLib.GameObjects.Creature}!Creature@{Creature}}
 \index{Creature@{Creature}!ArenaGameLib.GameObjects.Creature@{ArenaGameLib.GameObjects.Creature}}
 \doxysubsubsection{\texorpdfstring{Creature()}{Creature()}}
-{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_creature_a2aa22124f486041967ef5992befedf59} 
-Arena\+Game\+Lib.\+Game\+Objects.\+Creature.\+Creature (\begin{DoxyParamCaption}\item[{string}]{name}{, }\item[{int}]{health}{, }\item[{int}]{unarmed\+Dmg}{, }\item[{\doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory}{Creature\+Inventory}}}]{inventory}{, }\item[{int}]{inventory\+Capacity}{, }\item[{int}]{weapon\+Capacity}{, }\item[{int}]{armour\+Capacity}{, }\item[{int}]{locX}{, }\item[{int}]{locY}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_creature_a94ed4772e1d60b53128db98a540171ea} 
+Arena\+Game\+Lib.\+Game\+Objects.\+Creature.\+Creature (\begin{DoxyParamCaption}\item[{string}]{name}{, }\item[{int}]{health}{, }\item[{int}]{unarmed\+Dmg}{, }\item[{int}]{inventory\+Capacity}{, }\item[{int}]{weapon\+Capacity}{, }\item[{int}]{armour\+Capacity}{, }\item[{int}]{locX}{, }\item[{int}]{locY}{}\end{DoxyParamCaption})}
 
 
 
@@ -131,8 +131,6 @@ Constructor for instanciating \doxylink{class_arena_game_lib_1_1_game_objects_1_
 {\em health} & Type:\+ int -\/ \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature}\textquotesingle{}s hitpoints\\
 \hline
 {\em unarmed\+Dmg} & Type:\+ int -\/ Amount of unarmed damage the creature can deal\\
-\hline
-{\em inventory} & Type:\+ \doxylink{class_arena_game_lib_1_1_game_objects_1_1_composites_1_1_creature_inventory}{Creature\+Inventory} -\/ \doxylink{namespace_arena_game_lib_1_1_game_objects_1_1_composite}{Composite} class representing a creature\textquotesingle{}s inventory\\
 \hline
 {\em inventory\+Capacity} & Type:\+ int -\/ \doxylink{class_arena_game_lib_1_1_game_objects_1_1_creature}{Creature}\textquotesingle{}s inventory capacity\\
 \hline
@@ -243,7 +241,7 @@ override void Arena\+Game\+Lib.\+Game\+Objects.\+Creature.\+Drop (\begin{DoxyPar
 
 
 
-Method for creatures action of dropping an item and removing it from \doxylink{class_arena_game_lib_1_1_game_objects_1_1_weapon}{Weapon} Collection or \doxylink{class_arena_game_lib_1_1_game_objects_1_1_armour}{Armour} Collection and the Inventory. 
+Method for creatures action of dropping an item and removing it from \doxylink{class_arena_game_lib_1_1_game_objects_1_1_weapon}{Weapon} Collection or \doxylink{class_arena_game_lib_1_1_game_objects_1_1_armour}{Armour} Collection and the Inventory making it claimable. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -262,7 +260,7 @@ override void Arena\+Game\+Lib.\+Game\+Objects.\+Creature.\+Loot (\begin{DoxyPar
 
 
 
-Method for the creatures action of looting an item and adding it to \doxylink{class_arena_game_lib_1_1_game_objects_1_1_armour}{Armour} Collection or \doxylink{class_arena_game_lib_1_1_game_objects_1_1_weapon}{Weapon} Collection and the Inventory. The Method is predicated on the creature being in reaching distance (1 Square) of item and on the item itself being lootable. 
+Method for the creatures action of looting an item and adding it to \doxylink{class_arena_game_lib_1_1_game_objects_1_1_armour}{Armour} Collection or \doxylink{class_arena_game_lib_1_1_game_objects_1_1_weapon}{Weapon} Collection and the Inventory making it unclaimable. The Method is predicated on the creature being in reaching distance (1 Square) of item and on the item itself being lootable. 
 
 
 \begin{DoxyParams}{Parameters}

@@ -13,7 +13,8 @@ var searchData=
   ['improveweapondamage_10',['ImproveWeaponDamage',['../class_arena_game_lib_1_1_game_objects_1_1_decorators_1_1_weapon_modifier.html#a1607f24182b3e4c78cdcfab7efd71cf1',1,'ArenaGameLib::GameObjects::Decorators::WeaponModifier']]],
   ['initlogger_11',['InitLogger',['../class_arena_game_lib_1_1_game_logger_1_1_logger.html#a338a5f21c43756446a6d62a33818e10a',1,'ArenaGameLib::GameLogger::Logger']]],
   ['iobjectcollection_12',['IObjectCollection',['../interface_arena_game_lib_1_1_game_interfaces_1_1_composites_1_1_i_object_collection.html',1,'ArenaGameLib::GameInterfaces::Composites']]],
-  ['iweapon_13',['IWeapon',['../interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon.html',1,'ArenaGameLib::GameInterfaces']]],
-  ['iweaponcollection_14',['IWeaponCollection',['../interface_arena_game_lib_1_1_game_interfaces_1_1_composites_1_1_i_weapon_collection.html',1,'ArenaGameLib::GameInterfaces::Composites']]],
-  ['iweaponmodify_15',['IWeaponModify',['../interface_arena_game_lib_1_1_game_interfaces_1_1_decorators_1_1_i_weapon_modify.html',1,'ArenaGameLib::GameInterfaces::Decorators']]]
+  ['iwall_13',['IWall',['../interface_arena_game_lib_1_1_game_interfaces_1_1_i_wall.html',1,'ArenaGameLib::GameInterfaces']]],
+  ['iweapon_14',['IWeapon',['../interface_arena_game_lib_1_1_game_interfaces_1_1_i_weapon.html',1,'ArenaGameLib::GameInterfaces']]],
+  ['iweaponcollection_15',['IWeaponCollection',['../interface_arena_game_lib_1_1_game_interfaces_1_1_composites_1_1_i_weapon_collection.html',1,'ArenaGameLib::GameInterfaces::Composites']]],
+  ['iweaponmodify_16',['IWeaponModify',['../interface_arena_game_lib_1_1_game_interfaces_1_1_decorators_1_1_i_weapon_modify.html',1,'ArenaGameLib::GameInterfaces::Decorators']]]
 ];

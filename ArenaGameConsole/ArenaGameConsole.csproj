@@ -5,7 +5,13 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ArenaGame" Version="0.0.9" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ArenaGameLib\ArenaGameLib.csproj" />

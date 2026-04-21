@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ArenaGame>
+	<MaxX>20</MaxX>
+	<MaxY>20</MaxY>
+	<Difficulty>normal</Difficulty>
+</ArenaGame>

@@ -14,9 +14,8 @@ Inheritance diagram for Arena\+Game\+Lib.\+Game\+Objects.\+Weapon:\+\begin{figur
 \Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_weapon_a874e5853168a828e003ce336ce31c660}\label{class_arena_game_lib_1_1_game_objects_1_1_weapon_a874e5853168a828e003ce336ce31c660} 
 void {\bfseries Set\+Claim} ()
 \begin{DoxyCompactList}\small\item\em Method for setting the Claimed boolean to true or false, if the weapon has been looted by a creature. \end{DoxyCompactList}\item 
-\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_weapon_a31fe3ebfea151d9f9a50006e8c97e649}\label{class_arena_game_lib_1_1_game_objects_1_1_weapon_a31fe3ebfea151d9f9a50006e8c97e649} 
-void {\bfseries Set\+Location} ()
-\begin{DoxyCompactList}\small\item\em Method for setting the X and Y locations to null, if the weapon has been looted by a creature. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \doxymbox{\hyperlink{class_arena_game_lib_1_1_game_objects_1_1_weapon_ab80c85762594e8af01b4c72f838724f9}{Set\+Location}} (int locX, int locY)
+\begin{DoxyCompactList}\small\item\em Sets the location X and Y coordinates based on the weapon being claimed or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
@@ -75,6 +74,28 @@ Constructor for instanciating \doxylink{class_arena_game_lib_1_1_game_objects_1_
 {\em damage} & Type:\+ int -\/ Damage that the weapon object deals\\
 \hline
 {\em range} & Type:\+ int -\/ Range in which the weapon is capable of dealing damage\\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_weapon_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_arena_game_lib_1_1_game_objects_1_1_weapon_ab80c85762594e8af01b4c72f838724f9}\index{ArenaGameLib.GameObjects.Weapon@{ArenaGameLib.GameObjects.Weapon}!SetLocation@{SetLocation}}
+\index{SetLocation@{SetLocation}!ArenaGameLib.GameObjects.Weapon@{ArenaGameLib.GameObjects.Weapon}}
+\doxysubsubsection{\texorpdfstring{SetLocation()}{SetLocation()}}
+{\footnotesize\ttfamily \label{class_arena_game_lib_1_1_game_objects_1_1_weapon_ab80c85762594e8af01b4c72f838724f9} 
+void Arena\+Game\+Lib.\+Game\+Objects.\+Weapon.\+Set\+Location (\begin{DoxyParamCaption}\item[{int}]{locX}{, }\item[{int}]{locY}{}\end{DoxyParamCaption})}
+
+
+
+Sets the location X and Y coordinates based on the weapon being claimed or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em locX} & Type:\+ int -\/ X location\\
+\hline
+{\em locY} & Type:\+ int -\/ Y location\\
 \hline
 \end{DoxyParams}
 

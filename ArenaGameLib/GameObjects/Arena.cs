@@ -25,6 +25,11 @@ namespace ArenaGameLib.GameObjects
 			MaxY = maxY;
 		}
 
+		/// <summary>
+		/// Method for adding a creature to the arena grid, provided the coordinates are not outside the boundaries of the grid area.
+		/// </summary>
+		/// <param name="creature">Type: Creature - The creature to be added</param>
+		/// <exception cref="ArgumentOutOfRangeException">Argument Out of Range Exception </exception>
 		public void AddCreature(Creature creature)
 		{
 			if ((creature.LocationX >= 0 && creature.LocationX <= MaxX) && (creature.LocationY >= 0 && creature.LocationY <= MaxY))
